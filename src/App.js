@@ -2,9 +2,7 @@ import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Exit Room</h1>
-    </div>
+    <h1>Exit Room</h1>
   );
 }
 
