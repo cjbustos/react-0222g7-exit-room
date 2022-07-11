@@ -19,7 +19,7 @@ body {
   background-color: var(--black-color);
   font-family: var(--first-font-family);
   color: var(--white-color);
-   scroll-behavior: border-box;
+  scroll-behavior: border-box;
 }
 
 h1 {
@@ -29,21 +29,21 @@ h1 {
   font-weight: 700;
 }
 
-h2 {
+.texto-titulo {
   font-size: 2.5em;
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
 }
 
-h3 {
+.texto-bajo-titulo {
   font-size: 2em;
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
 }
 
-p {
+.texto-descripcion {
   font-size: 1em;
   font-family: var(--first-font-family);
   color: var(--white-color);

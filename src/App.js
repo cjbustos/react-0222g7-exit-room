@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       <h1>Exit Room</h1>
 
-      <h2>SALAS</h2>
-      <h3>60 MINUTOS PARA ESCAPAR</h3>
-      <p>
+      <h2 className="texto-titulo">SALAS</h2>
+      <h3 className="texto-bajo-titulo">60 MINUTOS PARA ESCAPAR</h3>
+      <p className="texto-descripcion">
         Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser una
         pista.
       </p>
@@ -16,17 +16,17 @@ function App() {
         <Card
           nombre="ALICIA´S ROOM"
           imagen="alice"
-          texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida? "
+          texto= " Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida? "
         />
         <Card
           nombre="SCHRöDINGER ROOM"
           imagen="schrödinger"
-          texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?? "
+          texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
         />
         <Card
           nombre="STRANGER ROOM"
           imagen="stranger"
-          texto="The upside down is here! Podrás escapar de la maldad que se avecina? ? "
+          texto="The upside down is here! Podrás escapar de la maldad que se avecina? "
         />
       </div>
     </div>
