@@ -11,15 +11,28 @@ const Navbar = () => {
         { id: 5, name: 'contacto' }
     ]
 
+    const buttonStyle = {
+        color: 'white',
+        background: 'none',
+        border: 'none',
+        margin: 0,
+        padding: 0,
+        cursor: 'pointer',
+    }
+
+    const handleClick = () => {
+        console.log('From parent component...')
+    }
+
     return (
-            <nav className="nav">
-                <a href="/" className="site-title">Exit Room</a>
-                <ul>
-                    {listOfItems.map(item => (
-                        <Button key={item.id} name={item.name} />
-                    ))}
-                </ul>
-            </nav>
+        <nav className="nav">
+            <a href="/" className="site-title">Exit Room</a>
+            <ul>
+                {listOfItems.map(item => (
+                    <li key={item.id}><Button style={buttonStyle} label={item.name} to={item.name} inNavbar={true} handler={handleClick} /></li>
+                ))}
+            </ul>
+        </nav>
     )
 }
 
