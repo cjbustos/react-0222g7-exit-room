@@ -1,2 +1,16 @@
-.App {
+.App{
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.button {
+    color: crimson;
+    background: '#0c9d9c';
+    border: '2px solid';
+    border-radius: 5;
+    width: 100px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }

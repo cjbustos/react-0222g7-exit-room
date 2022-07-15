@@ -1,15 +1,7 @@
 import '../styles/Navbar.css'
 import Button from './Button'
 
-const Navbar = () => {
-
-    const listOfItems = [
-        { id: 1, name: 'salas' },
-        { id: 2, name: 'sucursales' },
-        { id: 3, name: 'precios' },
-        { id: 4, name: 'productos' },
-        { id: 5, name: 'contacto' }
-    ]
+const Navbar = (props) => {
 
     const buttonStyle = {
         color: 'white',
@@ -17,19 +9,23 @@ const Navbar = () => {
         border: 'none',
         margin: 0,
         padding: 0,
+        height: '25px',
         cursor: 'pointer',
+        lineHeight: 23,
+        fontSize: 20,
+        fontWeight: 400,
+        fontStyle: 'normal',
+        fontFamily: 'Rationale'
     }
 
-    const handleClick = () => {
-        console.log('From parent component...')
-    }
+    const data = props.data
 
     return (
         <nav className="nav">
             <a href="/" className="site-title">Exit Room</a>
             <ul>
-                {listOfItems.map(item => (
-                    <li key={item.id}><Button style={buttonStyle} label={item.name} to={item.name} inNavbar={true} handler={handleClick} /></li>
+                {data.map(item => (
+                    <li key={item.id}><Button style={buttonStyle} label={item.name} to={item.name} inNavbar={true} /></li>
                 ))}
             </ul>
         </nav>

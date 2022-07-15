@@ -4,7 +4,6 @@
 
 .nav {
     background-color: #000000;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -28,10 +27,6 @@
     align-items: center;
     padding: .25rem;
 }
-
-/* .nav li:active {
-    background-color: crimson;
-} */
 
 .nav li:hover {
     background-color: #4a074a;
