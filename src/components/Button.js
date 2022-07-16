@@ -5,15 +5,14 @@ import { useState } from "react"
 export default function Button(props) {
 
     const isNavbarElement = props.inNavbar
-    let showText = false
     const text = props.text
 
-    const [textToShow, setTextToShow] = useState([''])
+    const [toShow, setToShow] = useState(true)
 
     const handleClick = (e) => {
         e.preventDefault()
         if (e.target.tagName.toLowerCase() === 'a' && e.target !== undefined) {
-            console.log(e.target.href.toLowerCase())
+            //console.log(e.target.href.toLowerCase())
             window.history.replaceState({}, '', e.target.href.toLowerCase())
         }
     }
@@ -27,12 +26,13 @@ export default function Button(props) {
     } else {
         return (<>
             <button style={props.style} onClick={() => {
-                setTextToShow(showText ? text : '')
-                showText = !showText
+                setToShow(!toShow)
             }}>
                 {props.label}
             </button>
-            <div>{textToShow}</div>
+            <div style={{ display: toShow ? "none" : 'block' }}>
+                {text}
+            </div>
         </>
         )
     }
