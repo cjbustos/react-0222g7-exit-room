@@ -1,5 +1,5 @@
 import React from 'react';
-import '../hojas-de-estilo/Card.css';
+import '../Styles/Card.css';
 
 function Card(props) {
   return (
@@ -14,7 +14,7 @@ function Card(props) {
           <p className="nombre-card">
             <span className="nombre-card-color">{props.nombre} </span>
           </p>
-          <p className="texto-card">"{props.texto}"</p>
+          <p className="texto-card">{props.texto}</p>
         </div>
       </div>
     </div>

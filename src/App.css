@@ -17,23 +17,17 @@
 html,
 body {
   background-color: var(--black-color);
-  font-family: var(--first-font-family);
+  font-family: var(--first-font);
   color: var(--white-color);
   scroll-behavior: border-box;
 }
 
-h1 {
-  font-size: 4em;
-  font-family: var(--first-font-family);
-  color: var(--white-color);
-  font-weight: 700;
-}
-
 .texto-titulo {
-  font-size: 2.5em;
-  font-family: var(--first-font-family);
+  font-size: 3em;
+  font-family: var(--first-font);
   color: var(--white-color);
   text-align: center;
+  margin: 50px;
 }
 
 .texto-bajo-titulo {
@@ -44,9 +38,26 @@ h1 {
 }
 
 .texto-descripcion {
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
   padding-bottom: 3rem;
+}
+
+.contenedor-form {
+  width: 80%;
+  margin: auto;
+  padding: 14px;
+  background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.input-form {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
