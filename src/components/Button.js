@@ -1,5 +1,4 @@
-//import { useEffect, useState } from "react"
-
+import styles from '../styles/button.module.css'
 import { useState } from "react"
 
 export default function Button(props) {
@@ -12,7 +11,6 @@ export default function Button(props) {
     const handleClick = (e) => {
         e.preventDefault()
         if (e.target.tagName.toLowerCase() === 'a' && e.target !== undefined) {
-            //console.log(e.target.href.toLowerCase())
             window.history.replaceState({}, '', e.target.href.toLowerCase())
         }
     }
@@ -28,11 +26,17 @@ export default function Button(props) {
             <button style={props.style} onClick={() => {
                 setToShow(!toShow)
             }}>
-                {props.label}
+                {toShow ? props.label : 'CERRAR'}
             </button>
-            <div style={{ display: toShow ? "none" : 'block' }}>
+            <div style={{
+                color: props.style.color,
+                backgroundColor: '#111111',
+                opacity: 0.8,
+                display: toShow ? "none" : 'block'
+            }}>
                 {text}
             </div>
+            {<h1 className={styles.button}>Hola</h1>}
         </>
         )
     }

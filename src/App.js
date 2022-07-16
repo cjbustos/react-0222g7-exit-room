@@ -15,20 +15,21 @@ function App() {
   const buttonStyle = {
     color: '#ffffff',
     background: '#0c9d9c',
-    border: 2,
+    border: 1,
     borderRadius: 5,
     width: 100,
     height: 28,
     margin: 2,
     padding: 0,
+    textAlign: 'center',
     cursor: 'pointer',
   }
 
   return (
     <>
-      <div className="App">
+      <div className='App'>
         <Navbar data={listOfItems} />
-        <Button style={buttonStyle} label={'LEER MAS'} inNavbar={false} text={'Este texto se desplegará con la ejecución del botón'} />
+        <Button style={buttonStyle} label={'LEER MAS'} inNavbar={false} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui urna, rutrum nec aliquam in, vulputate sed urna. Sed pretium dapibus sollicitudin. Integer scelerisque orci.'} />
       </div>
     </>
   );
