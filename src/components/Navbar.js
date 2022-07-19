@@ -1,36 +1,32 @@
 import '../styles/Navbar.css'
-import Button from './Button'
+import CustomLink from './CustomLink'
 
 const Navbar = (props) => {
 
-    const buttonStyle = {
-        color: 'white',
-        background: 'none',
-        border: 'none',
-        margin: 0,
-        padding: 0,
-        height: '25px',
-        cursor: 'pointer',
-        lineHeight: 23,
-        fontSize: 20,
-        fontWeight: 400,
-        fontStyle: 'normal',
-        fontFamily: 'Rationale'
-    }
-
-    const data = props.data
+    const { data } = props
+    console.log(data)
 
     return (
-        <nav className="nav">
-            <a href="/" className="site-title">Exit Room</a>
+        <nav>
             <ul>
-                {data.map(item => (
-                    <li key={item.id}><Button style={buttonStyle} label={item.name} to={item.name} inNavbar={true} /></li>
-                ))}
+                {data
+                    .map(e => <CustomLink
+                        key={e.id}
+                        id={e.id}
+                        label={e.label}
+                        path={e.path}
+                        content={e.subcategory ? e.content : undefined} />
+                    )}
             </ul>
         </nav>
     )
 }
+
+/* data
+    .filter(f => f.subcategory)
+    .map(item => (
+        <CustomLink key={item.id} path={item.name} content={item.content} />
+    )) */
 
 //Componente Contenedor de sección
 //Componente Contacto

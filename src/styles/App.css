@@ -2,3 +2,29 @@
     font-family: sans-serif;
     text-align: left;
 }
+
+header {
+    height: 110px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.div1 {
+    flex: 1 1 auto;
+    background-color: green;
+}
+
+div {
+    padding: 1em;
+    margin: 0.2em;
+    background-color: grey;
+}
+
+.row {
+    width: 80%;
+    padding: 1em;
+    overflow: hidden;
+}
