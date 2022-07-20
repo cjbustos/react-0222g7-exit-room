@@ -1,2 +1,10 @@
-App{
+.App {
+    font-family: sans-serif;
+    text-align: left;
+}
+
+
+div {
+    padding: 1em;
+    margin: 0.2em;
 }
