@@ -4,7 +4,6 @@ import CustomLink from './CustomLink'
 const Navbar = (props) => {
 
     const { data } = props
-    console.log(data)
 
     return (
         <nav>
@@ -22,11 +21,7 @@ const Navbar = (props) => {
     )
 }
 
-/* data
-    .filter(f => f.subcategory)
-    .map(item => (
-        <CustomLink key={item.id} path={item.name} content={item.content} />
-    )) */
+/* data.filter(f => f.subcategory).map(item => (<CustomLink key={item.id} path={item.name} content={item.content} />)) */
 
 //Componente Contenedor de sección
 //Componente Contacto
