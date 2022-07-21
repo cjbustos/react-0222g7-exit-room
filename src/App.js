@@ -2,7 +2,7 @@ import './styles/App.css';
 import logo from './img/logo.png'
 import Navbar from './components/Navbar';
 import Image from './components/Image';
-//import Button from './components/Button'
+import Button from './components/Button'
 //import CustomModal from './components/CustomModal'
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
       </header>
       <main></main>
       <h2 id='episode'>Salas</h2>
+      <Button onClick={() => console.log('Click me!')}>Click</Button>
       <section>
       </section>
       <h2 id='cities'>Sucursales</h2>
