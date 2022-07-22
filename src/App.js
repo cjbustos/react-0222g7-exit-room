@@ -2,24 +2,22 @@ import './styles/App.css';
 import logo from './img/logo.png'
 import Navbar from './components/Navbar';
 import Image from './components/Image';
-//import Button from './components/Button'
-//import CustomModal from './components/CustomModal'
 
 function App() {
 
-  const listOfItems = [
-    { id: 1, label: 'Contacto', subcategory: false, path: 'contacto' },
-    { id: 2, label: 'Productos', subcategory: false, path: 'productos' },
+  const navItems = [
+    { id: 1, label: 'Salas', subcategory: true, path: 'episode', content: ['Chernobyl', 'John Wick', 'Friday 13th'] },
+    { id: 2, label: 'Sucursales', subcategory: true, path: 'cities', content: ['Buenos Aires', 'Rosario', 'Mendoza', 'Cordoba'] },
     { id: 3, label: 'Precios', subcategory: false, path: 'precios' },
-    { id: 4, label: 'Sucursales', subcategory: true, path: 'cities', content: ['Buenos Aires', 'Rosario', 'Mendoza', 'Cordoba'] },
-    { id: 5, label: 'Salas', subcategory: true, path: 'episode', content: ['Chernobyl', 'John Wick', 'Friday 13th'] }
+    { id: 4, label: 'Productos', subcategory: false, path: 'productos' },
+    { id: 5, label: 'Contacto', subcategory: false, path: 'contacto' }
   ]
 
   return (
     <div className='App'>
       <header>
-        <Image path={logo} width={115} height={110} position={'left'} />
-        <Navbar data={listOfItems} />
+        <a href='/'><Image path={logo} width={115} height={110} position={'left'} /></a>
+        <Navbar data={navItems} />
       </header>
       <main></main>
       <h2 id='episode'>Salas</h2>

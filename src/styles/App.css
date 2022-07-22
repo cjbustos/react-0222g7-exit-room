@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
 .App {
-    font-family: sans-serif;
-    text-align: left;
+    font-family: 'Rationale', sans-serif;
 }
 
+body {
+    background-color: grey;
+}
 
-div {
-    padding: 1em;
-    margin: 0.2em;
+h1, h2 {
+    color: #FFFFFF;
+    font-family: "Rationale", sans-serif;
+    padding: 5px;
 }
