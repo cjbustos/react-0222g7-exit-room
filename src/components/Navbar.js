@@ -14,7 +14,7 @@ const Navbar = (props) => {
                         id={e.id}
                         label={e.label}
                         path={e.path}
-                        content={e.subcategory ? e.content : undefined} />
+                        content={e.subcategory ? e.content : []} />
                     )}
             </ul>
         </nav>

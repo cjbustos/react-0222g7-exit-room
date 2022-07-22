@@ -1,10 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
 .App {
-    font-family: sans-serif;
-    text-align: left;
+    font-family: 'Rationale', sans-serif;
 }
 
+body {
+    background-color: grey;
+}
 
-div {
-    padding: 1em;
-    margin: 0.2em;
+main {
+    height: 460px;
+    width: 100%;
+    background-image: url(../img/main-background.jpeg);
+    background-size: cover;
+    opacity: 0.75;
+}
+
+h1, h2 {
+    color: #FFFFFF;
+    font-family: "Rationale", sans-serif;
+    padding: 5px;
+}
+
+.container {
+    height: auto;
+    width: 50%;
+    float: left;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+
+.container-steps {
+    color: #FFFFFF;
+    width: 80%;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(180deg, #404040 0%, #000000 100%);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.container-who-play {
+    height: 240px;
+    width: 100%;
+    background-color: #404040;
+    text-align: center;
+    line-height: 100px;
+}
+
+footer {
+    color: lightgrey;
+    height: 80px;
+    width: 100%;
+    background-color: #111111;
+    text-align: center;
+    font-size: 24px;
+    line-height: 80px;
 }

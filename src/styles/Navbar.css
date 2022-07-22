@@ -1,19 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
 * {
     margin: 0;
     padding: 0;
 }
 
 ul {
+    display: flex;
     height: 110px;
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    padding: 0 38px;
     background-color: #111111;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 li {
-    float: right;
+    font-family: "Rationale", sans-serif;
+    font-size: 20px;
 }
 
 li a,
@@ -21,12 +27,13 @@ li a,
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
 }
 
 li a:hover,
 .dropdown:hover .dropbtn {
+    border-radius: 3px 3px 3px 3px;
     background-color: #bf54ad;
 }
 
@@ -41,6 +48,7 @@ li.dropdown {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    padding: 5px;
 }
 
 .dropdown-content a {
@@ -52,7 +60,8 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #b8ebeb;
 }
 
 .dropdown:hover .dropdown-content {

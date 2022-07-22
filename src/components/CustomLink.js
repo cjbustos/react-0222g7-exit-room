@@ -7,9 +7,11 @@ const CustomLink = (props) => {
     return (
         <li className='dropdown'>
             <a href={"#".concat(path)}>{label}</a>
-            <div className='dropdown-content'>
-                {content !== undefined ? content.map(e => <a key={e} href={"#".concat(path)}>{e}</a>) : label}
-            </div>
+            {
+                content.length !== 0 && <div className='dropdown-content'>
+                    {content.map(e => <a key={e} href={"#".concat(path)}>{e}</a>)}
+                </div>
+            }
         </li>
     )
 }
