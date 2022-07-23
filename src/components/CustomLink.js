@@ -12,7 +12,6 @@ const CustomLink = (props) => {
                     {content.map(e => <a key={e} href={"#".concat(path)}>{e}</a>)}
                 </div>
             }
-
         </li>
     )
 }
