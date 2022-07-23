@@ -3,6 +3,7 @@ import logo from './img/logo.png'
 import Navbar from './components/Navbar';
 import Image from './components/Image';
 import Button from './components/Button'
+import Ad from './components/Ad';
 //import CustomModal from './components/CustomModal'
 
 function App() {
@@ -15,17 +16,28 @@ function App() {
     { id: 5, label: 'Contacto', subcategory: false, path: 'contacto' }
   ]
 
+  /* const btnStyle = {
+    width: 180,
+    height: 42,
+    backgroundColor: '#0C9D9C',
+    color: '#FFFFFF',
+    borderRadius: 10,
+    fontFamily: 'Rationale',
+    fontSize: 20
+  } */
+
   return (
     <div className='App'>
       <header>
+        <Ad />
         <a href='/'><Image path={logo} width={115} height={110} position={'left'} /></a>
-        <Navbar data={navItems} />
+        <Navbar navContent={navItems} />
       </header>
       <main>
         <div className='container'>
           <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
           <h2>Desafiar tus cinco sentidos es clave</h2>
-          <Button style={{ width: 180, height: 42, backgroundColor: '#0C9D9C', color: '#FFFFFF', borderRadius: 10, fontFamily: 'Rationale', fontSize: 20 }} onClick={() => alert('Click!')}>RESERVAR SALA</Button>
+          <Button onClick={(e) => { console.log(e) }}>LEER MAS</Button>
         </div>
       </main>
       <br />

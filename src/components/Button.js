@@ -1,7 +1,7 @@
 
 const Button = ({ type = 'button', onClick, children, ...rest }) => {
     return (
-        <button type={type} onClick={onClick} {...rest}>
+        <button type={type} style={styles} onClick={onClick} {...rest}>
             {children}
         </button>
     )

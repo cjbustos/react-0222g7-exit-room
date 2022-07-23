@@ -3,7 +3,7 @@ import CustomLink from './CustomLink'
 
 const Navbar = (props) => {
 
-    const { data } = props
+    const { navContent: data } = props
 
     return (
         <nav>
