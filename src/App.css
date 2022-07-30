@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--black-color);
+  font-family: var(--first-font);
+  color: var(--white-color);
+  scroll-behavior: border-box;
+}
+
+.texto-titulo {
+  font-size: 3em;
+  font-family: var(--first-font);
+  color: var(--white-color);
+  text-align: center;
+  margin: 50px;
+}
+
+.texto-bajo-titulo {
+  font-size: 2em;
+  font-family: var(--first-font-family);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.texto-descripcion {
+  font-size: 1.5em;
+  font-family: var(--first-font-family);
+  color: var(--white-color);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.contenedor-form {
+  width: 80%;
+  margin: auto;
+  padding: 14px;
+  background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.input-form {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

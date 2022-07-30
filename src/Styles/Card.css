@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --grey-color: #EEE0FE;
+  --first-font: "Rationale", sans-serif;
+}
+
+.contenedor-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15em;
+}
+
+.cards {
+  width: 15em;
+    position: relative;
+    margin-top: 40px;
+  }
+
+.imagen-card {
+  height: 20em;
+  width: 20em;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  outline: 1px solid var(--white-color);
+  outline-offset: -8px;
+  box-shadow: 3px 5px 20px var(--grey-color);
+ object-fit: cover;
+  transition: transform 0.75s;
+}
+
+.cards:hover .imagen-card {
+  transform: scale(1.15);
+  opacity: 0.6;
+}
+.nombre-card {
+  color: var(--pink-color);
+  font-weight: 700;
+  font-family: var(--first-font);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.texto-card {
+  color: var(--white-color);
+  font-family: var(--first-font);
+  font-size: 20px;
+}
+
+/* MEDIA QUERY */
+
+/* @media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+} */
