@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    height: 110px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 38px;
+    background-color: #111111;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li {
+    font-family: "Rationale", sans-serif;
+    font-size: 20px;}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    border-radius: 3px 3px 3px 3px;
+    background-color: #bf54ad;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    border-radius: 3px 3px 3px 3px;
+    background-color: #b8ebeb;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
