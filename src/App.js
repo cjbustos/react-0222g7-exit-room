@@ -1,7 +1,7 @@
 import "./App.css";
 import Card from "./components/Card";
 import Form from "./components/Form";
-import "./styles/App.css";
+import "./Styles/App.css";
 import logo from "./img/logo.png";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
