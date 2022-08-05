@@ -1,11 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-color: #c65385;
+    --blue-color: #0c9d9c;
+    --black-color: #111111;
+    --white-color: #ffffff;
+    --first-font: "Rationale", sans-serif;
+}
+
 .App {
     font-family: 'Rationale', sans-serif;
 }
 
 body {
-    background-color: grey;
+    background-color: var(--black-color);
+    font-family: var(--first-font);
+    color: var(--white-color);
+    scroll-behavior: border-box;
 }
 
 main {
@@ -16,7 +33,8 @@ main {
     opacity: 0.75;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #FFFFFF;
     font-family: "Rationale", sans-serif;
     padding: 5px;
@@ -58,4 +76,44 @@ footer {
     text-align: center;
     font-size: 24px;
     line-height: 80px;
-} 
+}
+
+.text-title {
+    font-size: 3em;
+    font-family: var(--first-font);
+    color: var(--white-color);
+    text-align: center;
+    margin: 50px;
+}
+
+.text-undertitle {
+    font-size: 2em;
+    font-family: var(--first-font-family);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.text-description {
+    font-size: 1.5em;
+    font-family: var(--first-font-family);
+    color: var(--white-color);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.contenedor-form {
+    width: 80%;
+    margin: auto;
+    padding: 14px;
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.input-form {
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

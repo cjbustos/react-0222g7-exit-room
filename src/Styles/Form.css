@@ -9,7 +9,8 @@
   --first-font: "Rationale", sans-serif;
 }
 
-.contenedor-inputs {
+.container-inputs {
+  background-color: blue;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -35,7 +36,7 @@
 
 .comments-form {
   height: 150px;
-  width: 2100px;
+  width: 900px;
   background-color: var(--white-color);
   color: var(--black-color);
   border-radius: 15px;

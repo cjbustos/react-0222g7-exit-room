@@ -1,7 +1,7 @@
-import "./App.css";
+//import "./App.css";
 import Card from "./components/Card";
 import Form from "./components/Form";
-import "./Styles/App.css";
+import "./styles/App.css";
 import logo from "./img/logo.png";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
@@ -38,23 +38,24 @@ function App() {
         <Navbar data={navItems} />
       </header>
       <main>
-        <div className="container"></div>
-        <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
-        <h2>Desafiar tus cinco sentidos es clave</h2>
-        <Button
-          style={{
-            width: 180,
-            height: 42,
-            backgroundColor: "#0C9D9C",
-            color: "#FFFFFF",
-            borderRadius: 10,
-            fontFamily: "Rationale",
-            fontSize: 20,
-          }}
-          onClick={() => alert("Click!")}
-        >
-          RESERVAR SALA
-        </Button>
+        <div className="container">
+          <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
+          <h2>Desafiar tus cinco sentidos es clave</h2>
+          <Button
+            style={{
+              width: 180,
+              height: 42,
+              backgroundColor: "#0C9D9C",
+              color: "#FFFFFF",
+              borderRadius: 10,
+              fontFamily: "Rationale",
+              fontSize: 20,
+            }}
+            onClick={() => alert("Click!")}
+          >
+            RESERVAR SALA
+          </Button>
+        </div>
       </main>
       <br />
       <div className="container-steps">
@@ -65,7 +66,7 @@ function App() {
         <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
       </div>
       <br />
-      <h2 id="episode">Salas</h2>
+      <h2 id="episode"></h2>
       <section>
         <h2 className="texto-titulo">SALAS</h2>
         <h3 className="texto-bajo-titulo">60 MINUTOS PARA ESCAPAR</h3>
@@ -91,7 +92,7 @@ function App() {
           />
         </div>
       </section>
-      <h2 id="cities">Sucursales</h2>
+      <h2 id="cities"></h2>
       <section>
         <h2 className="texto-titulo">SUCURSALES</h2>
         <h3 className="texto-bajo-titulo">
@@ -107,11 +108,11 @@ function App() {
           <Card nombre="Palermo" imagen="palermo" texto="DIRECCION" />
         </div>
       </section>
-      <h2 id="precios">Precios</h2>
+      <h2 id="precios"></h2>
       <section></section>
-      <h2 id="productos">Productos</h2>
+      <h2 id="productos"></h2>
       <section></section>
-      <h2 id="contacto">Contacto</h2>
+      <h2 id="contacto"></h2>
       <section>
         <div className="contenedor-form">
           <h2 className="texto-titulo">CONTACTO</h2>

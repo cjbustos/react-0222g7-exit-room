@@ -1,4 +1,4 @@
-import '../Styles/Navbar.css'
+import '../styles/Navbar.css'
 import CustomLink from './CustomLink'
 
 const Navbar = (props) => {
