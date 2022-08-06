@@ -5,7 +5,7 @@ Modal.setAppElement("#root")
 
 const CustomModal = (props) => {
 
-    const { openLabel, closeLabel, description } = props
+    const { style, openLabel, closeLabel, description } = props
     
     const [isOpen, setIsOpen] = useState(false)
 
@@ -15,7 +15,7 @@ const CustomModal = (props) => {
 
     return (
         <div>
-            <button onClick={toggleModal}>{openLabel}</button>
+            <button style={style} onClick={toggleModal}>{openLabel}</button>
             <Modal isOpen={isOpen} onRequestClose={toggleModal}>
                 <div>
                     {description}

@@ -1,12 +1,10 @@
-//import "./App.css";
-import Card from "./components/Card";
-import Form from "./components/Form";
 import "./styles/App.css";
 import logo from "./img/logo.png";
+import Card from "./components/Card";
+import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
 import Button from "./components/Button";
-//import CustomModal from './components/CustomModal'
 
 function App() {
   const navItems = [
@@ -24,10 +22,20 @@ function App() {
       path: "cities",
       content: ["Buenos Aires", "Rosario", "Mendoza", "Cordoba"],
     },
-    { id: 3, label: "Precios", subcategory: false, path: "precios" },
-    { id: 4, label: "Productos", subcategory: false, path: "productos" },
-    { id: 5, label: "Contacto", subcategory: false, path: "contacto" },
+    { id: 3, label: "Precios", subcategory: false, path: "prices" },
+    { id: 4, label: "Productos", subcategory: false, path: "products" },
+    { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
+
+  const style = {
+    width: 180,
+    height: 42,
+    backgroundColor: "#0C9D9C",
+    color: "#FFFFFF",
+    borderRadius: 10,
+    fontFamily: "Rationale",
+    fontSize: 20,
+  }
 
   return (
     <div className="App">
@@ -41,18 +49,7 @@ function App() {
         <div className="container">
           <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
           <h2>Desafiar tus cinco sentidos es clave</h2>
-          <Button
-            style={{
-              width: 180,
-              height: 42,
-              backgroundColor: "#0C9D9C",
-              color: "#FFFFFF",
-              borderRadius: 10,
-              fontFamily: "Rationale",
-              fontSize: 20,
-            }}
-            onClick={() => alert("Click!")}
-          >
+          <Button style={style} onClick={() => alert("Click!")}>
             RESERVAR SALA
           </Button>
         </div>
@@ -66,15 +63,16 @@ function App() {
         <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
       </div>
       <br />
-      <h2 id="episode"></h2>
-      <section>
-        <h2 className="texto-titulo">SALAS</h2>
-        <h3 className="texto-bajo-titulo">60 MINUTOS PARA ESCAPAR</h3>
-        <p className="texto-descripcion">
-          Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser una
-          pista.
-        </p>
-        <div className="contenedor-card">
+      <section id="episode">
+        <div className="container-episodes">
+          <h2 className="text-title">SALAS</h2>
+          <h3 className="text-undertitle">60 MINUTOS PARA ESCAPAR</h3>
+          <p className="text-description">
+            Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser una
+            pista.
+          </p>
+        </div>
+        <div className="cards-container">
           <Card
             nombre="ALICIA´S ROOM"
             imagen="alice"
@@ -92,30 +90,36 @@ function App() {
           />
         </div>
       </section>
-      <h2 id="cities"></h2>
-      <section>
-        <h2 className="texto-titulo">SUCURSALES</h2>
-        <h3 className="texto-bajo-titulo">
-          Busca aquí tu sucursal mas cercana
-        </h3>
-        <div className="contenedor-card">
+      <br />
+      <div className="container-social-media">
+        <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
+      </div>
+      <br />
+      <section id="cities">
+        <div className="container-shops">
+          <h2 className="text-title">SUCURSALES</h2>
+          <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
+        </div>
+        <div className="cards-container">
           <Card nombre="San Telmo" imagen="san-telmo" texto="DIRECCION" />
-          <Card
-            nombre="Vicente Lopez"
-            imagen="vicente-lopez"
-            texto="DIRECCION"
-          />
+          <Card nombre="Vicente Lopez" imagen="vicente-lopez" texto="DIRECCION" />
           <Card nombre="Palermo" imagen="palermo" texto="DIRECCION" />
         </div>
       </section>
-      <h2 id="precios"></h2>
-      <section></section>
-      <h2 id="productos"></h2>
-      <section></section>
-      <h2 id="contacto"></h2>
-      <section>
-        <div className="contenedor-form">
-          <h2 className="texto-titulo">CONTACTO</h2>
+      <br />
+      <section id="prices">
+        <div className="container-prices">
+          <h2 className="text-title">PRECIOS</h2>
+          <p className="text-description">
+            Los precios varian según la cantidad de jugadores
+          </p>
+        </div>
+      </section>
+      <section id="products">
+      </section>
+      <section id="contact">
+        <div className="form-container">
+          <h2 className="text-title">CONTACTO</h2>
           <Form />
         </div>
       </section>

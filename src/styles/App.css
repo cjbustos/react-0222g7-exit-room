@@ -68,22 +68,40 @@ h2 {
     line-height: 100px;
 }
 
-footer {
-    color: lightgrey;
-    height: 80px;
+.container-episodes {
+    height: 120px;
     width: 100%;
-    background-color: #111111;
+    background-color: var(--black-color);
     text-align: center;
-    font-size: 24px;
-    line-height: 80px;
+}
+
+.container-social-media {
+    height: 240px;
+    width: 100%;
+    background-image: url(../img/redes-fondo.jpg);
+    text-align: center;
+    line-height: 100px;
+}
+
+.container-shops {
+    height: 120px;
+    width: 100%;
+    background-color: var(--black-color);
+    text-align: center;
+}
+
+.container-prices {
+    height: 120px;
+    width: 100%;
+    background-image: url(../img/redes-fondo.jpg);
+    text-align: center;
 }
 
 .text-title {
     font-size: 3em;
+    text-align: center;
     font-family: var(--first-font);
     color: var(--white-color);
-    text-align: center;
-    margin: 50px;
 }
 
 .text-undertitle {
@@ -101,19 +119,22 @@ footer {
     padding-bottom: 3rem;
 }
 
-.contenedor-form {
+.form-container {
     width: 80%;
     margin: auto;
-    padding: 14px;
+    padding: 18px;
     background-image: linear-gradient(to bottom, #434343 0%, black 100%);
     border-radius: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.input-form {
-    background-color: pink;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+footer {
+    color: lightgrey;
+    height: 80px;
+    width: 100%;
+    background-color: #111111;
+    text-align: center;
+    font-size: 24px;
+    line-height: 80px;
 }

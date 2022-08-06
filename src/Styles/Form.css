@@ -10,7 +10,7 @@
 }
 
 .container-inputs {
-  background-color: blue;
+  background-color: inherit;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -56,4 +56,11 @@
   font-size: 25px;
   border-radius: 15px;
   margin: 8px;
+}
+
+.input-form {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
