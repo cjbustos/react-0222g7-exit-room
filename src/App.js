@@ -27,16 +27,6 @@ function App() {
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
 
-  const style = {
-    width: 180,
-    height: 42,
-    backgroundColor: "#0C9D9C",
-    color: "#FFFFFF",
-    borderRadius: 10,
-    fontFamily: "Rationale",
-    fontSize: 20,
-  }
-
   return (
     <div className="App">
       <header>
@@ -49,7 +39,7 @@ function App() {
         <div className="container">
           <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
           <h2>Desafiar tus cinco sentidos es clave</h2>
-          <Button style={style} onClick={() => alert("Click!")}>
+          <Button className="button-regular" onClick={() => alert("Click!")}>
             RESERVAR SALA
           </Button>
         </div>
