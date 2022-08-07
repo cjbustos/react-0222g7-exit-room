@@ -1,26 +1,38 @@
-import React, { useState } from "react";
+import "../styles/CustomModal.css"
+import React, { useContext, useState } from "react";
 import Modal from "react-modal";
+import Button from "./Button";
+import { ShopCartContext } from "../App";
 
 Modal.setAppElement("#root")
 
-const CustomModal = (props) => {
+const CustomModal = ({ label, children }) => {
 
-    const { style, openLabel, closeLabel, description } = props
-    
+    const { counter } = useContext(ShopCartContext)
     const [isOpen, setIsOpen] = useState(false)
 
     function toggleModal() {
         setIsOpen(!isOpen)
     }
 
+    const handleModalClose = () => {
+        counter()
+        toggleModal()
+    }
+
     return (
         <div>
-            <button style={style} onClick={toggleModal}>{openLabel}</button>
+            <Button className="button-small" onClick={toggleModal}>{label}</Button>
             <Modal isOpen={isOpen} onRequestClose={toggleModal}>
-                <div>
-                    {description}
+                <div className="modal-dialog">
+                    {children}
                 </div>
-                <button onClick={toggleModal}>{closeLabel}</button>
+                <div className="modal-dialog-ok-button">
+                    <Button className="button-small" onClick={handleModalClose}>{label}</Button>
+                </div>
+                <div className="modal-dialog-close-button">
+                    <Button className="button-small" onClick={toggleModal}>Cancelar</Button>
+                </div>
             </Modal>
         </div>
     )

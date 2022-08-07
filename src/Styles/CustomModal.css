@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+.modal-dialog {
+    color: black;
+    display: inline-block;
+}
+
+.modal-dialog-ok-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.modal-dialog-close-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

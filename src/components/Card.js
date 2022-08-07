@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Card.css';
+import CustomModal from './CustomModal';
+import Text from './Text';
 
 function Card(props) {
   return (
@@ -16,6 +18,9 @@ function Card(props) {
           </p>
           <p className="card-text">{props.texto}</p>
         </div>
+        <CustomModal label={'RESERVAR'}>
+          <Text text={props.texto} />
+        </CustomModal>
       </div>
     </div>
   );
