@@ -1,6 +1,9 @@
 import "./styles/App.css";
 import logo from "./img/logo.png";
 import { RiHome4Line } from 'react-icons/ri';
+import { RiServiceLine } from "react-icons/ri";
+import { MdWork } from "react-icons/md";
+import { BsFillPeopleFill } from "react-icons/bs";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
@@ -14,14 +17,14 @@ function App() {
       label: "Salas",
       subcategory: true,
       path: "episode",
-      content: ["Chernobyl", "John Wick", "Friday 13th"],
+      content: ["ALICIA", "SCHRöDINGER", "STRANGER ROOM"],
     },
     {
       id: 2,
       label: "Sucursales",
       subcategory: true,
       path: "cities",
-      content: ["Buenos Aires", "Rosario", "Mendoza", "Cordoba"],
+      content: ["San Telmo", "Vicente Lopez", "Palermo"],
     },
     { id: 3, label: "Precios", subcategory: false, path: "prices" },
     { id: 4, label: "Productos", subcategory: false, path: "products" },
@@ -62,7 +65,18 @@ function App() {
       <br />
       <div className="container-who-play">
         <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
-        <RiHome4Line style={{color: 'red'}} />
+        <div className="icons-participants">
+          <RiHome4Line />
+          <RiServiceLine />
+          <MdWork />
+          <BsFillPeopleFill />
+        </div>
+        <div className="name-participants">
+            <p>Colegios</p>
+            <p>Familia</p>
+            <p>Empresas</p>
+            <p>Amigos</p>
+        </div>
       </div>
       <br />
       <section id="episode">
@@ -104,7 +118,11 @@ function App() {
         </div>
         <div className="cards-container">
           <Card nombre="San Telmo" imagen="san-telmo" texto="DIRECCION" />
-          <Card nombre="Vicente Lopez" imagen="vicente-lopez" texto="DIRECCION" />
+          <Card
+            nombre="Vicente Lopez"
+            imagen="vicente-lopez"
+            texto="DIRECCION"
+          />
           <Card nombre="Palermo" imagen="palermo" texto="DIRECCION" />
         </div>
       </section>
@@ -117,8 +135,7 @@ function App() {
           </p>
         </div>
       </section>
-      <section id="products">
-      </section>
+      <section id="products"></section>
       <section id="contact">
         <div className="form-container">
           <h2 className="text-title">CONTACTO</h2>

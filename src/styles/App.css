@@ -1,140 +1,168 @@
 @import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --pink-color: #c65385;
-    --blue-color: #0c9d9c;
-    --black-color: #111111;
-    --white-color: #ffffff;
-    --first-font: "Rationale", sans-serif;
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
 }
 
 .App {
-    font-family: 'Rationale', sans-serif;
+  font-family: "Rationale", sans-serif;
 }
 
 body {
-    background-color: var(--black-color);
-    font-family: var(--first-font);
-    color: var(--white-color);
-    scroll-behavior: border-box;
+  background-color: var(--black-color);
+  font-family: var(--first-font);
+  color: var(--white-color);
+  scroll-behavior: border-box;
 }
 
 main {
-    height: 460px;
-    width: 100%;
-    background-image: url(../img/main-background.jpeg);
-    background-size: cover;
-    opacity: 0.75;
+  height: 460px;
+  width: 100%;
+  background-image: url(../img/main-background.jpeg);
+  background-size: cover;
+  opacity: 0.75;
 }
 
 h1,
 h2 {
-    color: #FFFFFF;
-    font-family: "Rationale", sans-serif;
-    padding: 5px;
+  color: #ffffff;
+  font-family: "Rationale", sans-serif;
+  padding: 5px;
 }
 
 .container {
-    height: auto;
-    width: 50%;
-    float: left;
-    padding-top: 60px;
-    padding-left: 60px;
+  height: auto;
+  width: 50%;
+  float: left;
+  padding-top: 60px;
+  padding-left: 60px;
 }
 
 .container-steps {
-    color: #FFFFFF;
-    width: 80%;
-    height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(180deg, #404040 0%, #000000 100%);
-    border-radius: 15px;
-    text-align: center;
-    line-height: 120px;
+  color: #ffffff;
+  width: 80%;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(180deg, #404040 0%, #000000 100%);
+  border-radius: 15px;
+  text-align: center;
+  line-height: 120px;
 }
 
 .container-who-play {
-    height: 240px;
-    width: 100%;
-    background-color: #404040;
-    text-align: center;
-    line-height: 100px;
+  height: 320px;
+  width: 100%;
+  background-color: #404040;
+  text-align: center;
+  line-height: 100px;
 }
 
 .container-episodes {
-    height: 120px;
-    width: 100%;
-    background-color: var(--black-color);
-    text-align: center;
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
 }
 
 .container-social-media {
-    height: 240px;
-    width: 100%;
-    background-image: url(../img/redes-fondo.jpg);
-    text-align: center;
-    line-height: 100px;
+  height: 240px;
+  width: 100%;
+  background-image: url(../img/redes-fondo.jpg);
+  text-align: center;
+  line-height: 100px;
 }
 
 .container-shops {
-    height: 120px;
-    width: 100%;
-    background-color: var(--black-color);
-    text-align: center;
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
 }
 
 .container-prices {
-    height: 120px;
-    width: 100%;
-    background-image: url(../img/redes-fondo.jpg);
-    text-align: center;
+  height: 120px;
+  width: 100%;
+  background-image: url(../img/redes-fondo.jpg);
+  text-align: center;
 }
 
 .text-title {
-    font-size: 3em;
-    text-align: center;
-    font-family: var(--first-font);
-    color: var(--white-color);
+  font-size: 3em;
+  text-align: center;
+  font-family: var(--first-font);
+  color: var(--white-color);
 }
 
 .text-undertitle {
-    font-size: 2em;
-    font-family: var(--first-font-family);
-    color: var(--white-color);
-    text-align: center;
+  font-size: 2em;
+  font-family: var(--first-font-family);
+  color: var(--white-color);
+  text-align: center;
 }
 
 .text-description {
-    font-size: 1.5em;
-    font-family: var(--first-font-family);
-    color: var(--white-color);
-    text-align: center;
-    padding-bottom: 3rem;
+  font-size: 1.5em;
+  font-family: var(--first-font-family);
+  color: var(--white-color);
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 .form-container {
-    width: 80%;
-    margin: auto;
-    padding: 18px;
-    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
-    border-radius: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  width: 80%;
+  margin: auto;
+  padding: 18px;
+  background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.icons-participants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 100px;
+ color: var(--blue-color);
+}
+
+.name-participants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 40px;
+ color: var(--white-color);  
+}
+
+@media screen and (max-width: 600px) {
+  .icons-participants{
+    font-size: 50px;
+  }  
+  .name-participants {
+    font-size: 20px;
+  }
+  .container-who-play {
+  height: 250px;
+  }
 }
 
 footer {
-    color: lightgrey;
-    height: 80px;
-    width: 100%;
-    background-color: #111111;
-    text-align: center;
-    font-size: 24px;
-    line-height: 80px;
+  color: lightgrey;
+  height: 80px;
+  width: 100%;
+  background-color: #111111;
+  text-align: center;
+  font-size: 24px;
+  line-height: 80px;
 }
