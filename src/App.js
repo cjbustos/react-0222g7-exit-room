@@ -5,7 +5,6 @@ import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal"
-import Text from "./components/Text";
 import { createContext, useState } from "react";
 
 export const ShopCartContext = createContext()
@@ -49,7 +48,7 @@ function App() {
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
             <h2>Desafiar tus cinco sentidos es clave</h2>
             <CustomModal label={'RESERVAR SALA'}>
-              <Text text={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora cum vitae aspernatur velit ipsam voluptatum quas iusto consequuntur atque, officia obcaecati tenetur harum quos. Nam facilis delectus laborum officiis porro. orem ipsum dolor sit, amet consectetur adipisicing elit. Tempora cum vitae aspernatur velit ipsam voluptatum quas iusto consequuntur atque, officia obcaecati tenetur harum quos. Nam facilis delectus laborum officiis porro. orem ipsum dolor sit, amet consectetur adipisicing elit. Tempora cum vitae aspernatur velit ipsam voluptatum quas iusto consequuntur atque, officia obcaecati tenetur harum quos. Nam facilis delectus laborum officiis porro.'} />
+              <h3>Texto dentro del Modal</h3>
             </CustomModal>
           </div>
         </main>

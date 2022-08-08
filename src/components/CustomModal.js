@@ -1,10 +1,10 @@
 import "../styles/CustomModal.css"
 import React, { useContext, useState } from "react";
-import Modal from "react-modal";
-import Button from "./Button";
 import { ShopCartContext } from "../App";
+import ReactModal from "react-modal";
+import Button from "./Button";
 
-Modal.setAppElement("#root")
+ReactModal.setAppElement("#root")
 
 const CustomModal = ({ label, children }) => {
 
@@ -23,7 +23,7 @@ const CustomModal = ({ label, children }) => {
     return (
         <div>
             <Button className="button-small" onClick={toggleModal}>{label}</Button>
-            <Modal isOpen={isOpen} onRequestClose={toggleModal}>
+            <ReactModal  isOpen={isOpen} onRequestClose={toggleModal} className="Modal" overlayClassName="Overlay">
                 <div className="modal-dialog">
                     {children}
                 </div>
@@ -33,7 +33,7 @@ const CustomModal = ({ label, children }) => {
                 <div className="modal-dialog-close-button">
                     <Button className="button-small" onClick={toggleModal}>Cancelar</Button>
                 </div>
-            </Modal>
+            </ReactModal>
         </div>
     )
 }

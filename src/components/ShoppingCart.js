@@ -7,6 +7,8 @@ export default function ShoppingCart() {
     const { count } = useContext(ShopCartContext)
 
     return (
-        <li>{count}</li>
+        <div className="counter">
+            <li>{count}</li>
+        </div>
     )
 }
