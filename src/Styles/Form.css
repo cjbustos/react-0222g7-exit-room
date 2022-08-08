@@ -9,10 +9,22 @@
   --first-font: "Rationale", sans-serif;
 }
 
+.form-container {
+    width: 80%;
+    margin: auto;
+    padding: 18px;
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .container-inputs {
+  display: flex;
+  flex-direction: column;
   background-color: inherit;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   font-weight: bold;
   border-radius: 25px;
   margin: 4px;
@@ -21,7 +33,7 @@
 }
 
 .name-form {
-  flex: 1 1;
+    /* flex: 1 1; */
   height: 50px;
   justify-content: center;
   align-items: center;

@@ -47,8 +47,8 @@ const Form = () => {
             type="number"
             name="number"
             onChange={handleInputChange} />
-        </div>
-        <div className="input-form">
+        {/* </div> */}
+        {/* <div className="input-form"> */}
           <input
             placeholder="Dejanos tu mensaje"
             className="comments-form"
