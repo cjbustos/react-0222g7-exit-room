@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import logo from "./img/logo.png";
+import { RiHome4Line } from 'react-icons/ri';
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
@@ -61,6 +62,7 @@ function App() {
       <br />
       <div className="container-who-play">
         <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
+        <RiHome4Line style={{color: 'red'}} />
       </div>
       <br />
       <section id="episode">
