@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
+}
+
+.container-boxes {
+  color: #ffffff;
+  width: 80%;
+  height: 230px;
+  margin: 30px auto;
+  background: linear-gradient(180deg, #404040 0%, #000000 100%);
+  border-radius: 15px;
+  text-align: center;
+  line-height: 120px;
+}
+
+.name-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 30px;
+  color: var(--white-color);
+}
+
+.icon-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 50px;
+  color: var(--pink-color);
+}
+
+@media screen and (max-width: 600px) {
+  .name-boxes {
+    font-size: 10px;
+  }
+  .icon-boxes {
+    font-size: 20px;
+  }
+.container-boxes {
+height: 180px;
+}
+}

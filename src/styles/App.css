@@ -33,68 +33,13 @@ main {
   opacity: 0.75;
 }
 
+/* TEXTOS */
+
 h1,
 h2 {
   color: #ffffff;
   font-family: "Rationale", sans-serif;
   padding: 5px;
-}
-
-.container {
-  height: auto;
-  width: 50%;
-  float: left;
-  padding-top: 60px;
-  padding-left: 60px;
-}
-
-.container-steps {
-  color: #ffffff;
-  width: 80%;
-  height: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(180deg, #404040 0%, #000000 100%);
-  border-radius: 15px;
-  text-align: center;
-  line-height: 120px;
-}
-
-.container-who-play {
-  height: 320px;
-  width: 100%;
-  background-color: #404040;
-  text-align: center;
-  line-height: 100px;
-}
-
-.container-episodes {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-}
-
-.container-social-media {
-  height: 240px;
-  width: 100%;
-  background-image: url(../img/redes-fondo.jpg);
-  text-align: center;
-  line-height: 100px;
-}
-
-.container-shops {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-}
-
-.container-prices {
-  height: 120px;
-  width: 100%;
-  background-image: url(../img/redes-fondo.jpg);
-  text-align: center;
 }
 
 .text-title {
@@ -119,6 +64,51 @@ h2 {
   padding-bottom: 3rem;
 }
 
+.container {
+  height: auto;
+  width: 50%;
+  float: left;
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+/* CARDS */
+
+.container-episodes {
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+/* .container-shops {
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
+} */
+
+/* PRECIOS */
+
+.container-prices {
+  height: 120px;
+  width: 100%;
+  background-image: url(../img/redes-fondo.jpg);
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* PARTICIPANTES */
+
+.container-who-play {
+  height: 320px;
+  width: 100%;
+  background-color: #404040;
+  text-align: center;
+  line-height: 100px;
+  margin: 30px 0;
+}
+
 .icons-participants {
   display: flex;
   flex-wrap: wrap;
@@ -135,16 +125,15 @@ h2 {
   color: var(--white-color);
 }
 
-@media screen and (max-width: 600px) {
-  .icons-participants {
-    font-size: 50px;
-  }
-  .name-participants {
-    font-size: 20px;
-  }
-  .container-who-play {
-    height: 250px;
-  }
+/* REDES */
+
+.container-social-media {
+  height: 200px;
+  width: 100%;
+  background-image: url(../img/redes-fondo.jpg);
+  text-align: center;
+  line-height: 100px;
+  margin: 30px auto;
 }
 
 .icons-redes {
@@ -158,6 +147,9 @@ h2 {
 #instagram {
   border-radius: 50%;
 }
+
+/* FOOTER */
+
 footer {
   color: lightgrey;
   height: 80px;
@@ -166,4 +158,24 @@ footer {
   text-align: center;
   font-size: 24px;
   line-height: 80px;
+}
+
+/* REPONSIVE */
+
+@media screen and (max-width: 600px) {
+  .icons-participants {
+    font-size: 50px;
+  }
+  .name-participants {
+    font-size: 20px;
+  }
+  .container-who-play {
+    height: 250px;
+  }
+  .icons-redes {
+   font-size: 30px; 
+  }
+  .container-social-media{
+     height: 180px;
+  }
 }

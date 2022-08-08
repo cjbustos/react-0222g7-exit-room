@@ -1,21 +1,34 @@
 import "./styles/App.css";
-import logo from "./img/logo.png";
+// ICONS BOXES
+import { BsSearch } from "react-icons/bs";
+import { BsHandIndexThumb } from "react-icons/bs";
+import { BsBookmarkCheck } from "react-icons/bs";
+import { FaPeopleArrows } from "react-icons/fa";
+import { GiExitDoor } from "react-icons/gi";
+// ICONS PARTICIPANTES
 import { RiHome4Line } from "react-icons/ri";
 import { RiServiceLine } from "react-icons/ri";
 import { MdWork } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
+// ICONS REDES
 import { BsFacebook } from "react-icons/bs";
 import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
+// COMPONENTS
+import logo from "./img/logo.png";
 import Card from "./components/Card";
+import Boxes from "./components/Boxes";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
 import Button from "./components/Button";
 
 function App() {
+  
+  // NAV BAR CODE
+
   const navItems = [
     {
       id: 1,
@@ -48,12 +61,17 @@ function App() {
 
   return (
     <div className="App">
+      {/* NAVBAR */}
+
       <header>
         <a href="/">
           <Image path={logo} width={115} height={110} position={"left"} />
         </a>
         <Navbar data={navItems} />
       </header>
+
+      {/* MAIN */}
+
       <main>
         <div className="container">
           <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
@@ -63,28 +81,33 @@ function App() {
           </Button>
         </div>
       </main>
-      <br />
-      <div className="container-steps">
-        <h1>CARDS</h1>
-      </div>
-      <br />
-      <div className="container-who-play">
-        <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
-        <div className="icons-participants">
-          <RiHome4Line />
-          <RiServiceLine />
-          <MdWork />
-          <BsFillPeopleFill />
+
+      {/* BOXES */}
+
+      <div className="container-boxes">
+
+        <div className="name-boxes">
+          <p>Busca tu sucursal</p>
+          <p>Elegi tu sala</p>
+          <p>Reserva turno</p>
+          <p>Arma tu equipo</p>
+          <p>Podras escapar?</p>
         </div>
-        <div className="name-participants">
-          <p>Colegios</p>
-          <p>Familia</p>
-          <p>Empresas</p>
-          <p>Amigos</p>
+
+        <div className="icon-boxes">
+          <BsSearch />
+          <BsHandIndexThumb />
+          <BsBookmarkCheck />
+          <FaPeopleArrows />
+          <GiExitDoor />
+         
         </div>
       </div>
-      <br />
+
+      {/* SALAS */}
+
       <section id="episode">
+
         <div className="container-episodes">
           <h2 className="text-title">SALAS</h2>
           <h3 className="text-undertitle">60 MINUTOS PARA ESCAPAR</h3>
@@ -93,6 +116,7 @@ function App() {
             pista.
           </p>
         </div>
+
         <div className="cards-container">
           <Card
             nombre="ALICIA´S ROOM"
@@ -110,24 +134,56 @@ function App() {
             texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
           />
         </div>
+
       </section>
-      <br />
+
+      {/* PARTICIPANTES */}
+
+      <div className="container-who-play">
+
+        <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
+
+        <div className="icons-participants">
+          <RiHome4Line />
+          <RiServiceLine />
+          <MdWork />
+          <BsFillPeopleFill />
+        </div>
+
+        <div className="name-participants">
+          <p>Colegios</p>
+          <p>Familia</p>
+          <p>Empresas</p>
+          <p>Amigos</p>
+        </div>
+
+      </div>
+
+      {/* REDES */}
+
       <div className="container-social-media">
+
         <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
+
         <div className="icons-redes">
           <BsFacebook />
-          <FaInstagramSquare id="instagram"/>
-          <AiFillTwitterCircle/>
-          <FaFacebookMessenger/>
-          <BsTelegram/>
+          <FaInstagramSquare id="instagram" />
+          <AiFillTwitterCircle />
+          <FaFacebookMessenger />
+          <BsTelegram />
         </div>
+
       </div>
-      <br />
+
+      {/* SUCURSALES */}
+
       <section id="cities">
+
         <div className="container-shops">
           <h2 className="text-title">SUCURSALES</h2>
           <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
         </div>
+
         <div className="cards-container">
           <Card nombre="San Telmo" imagen="san-telmo" texto="DIRECCION" />
           <Card
@@ -137,24 +193,39 @@ function App() {
           />
           <Card nombre="Palermo" imagen="palermo" texto="DIRECCION" />
         </div>
+
       </section>
-      <br />
+
+      {/* PRECIOS */}
+
       <section id="prices">
+
         <div className="container-prices">
           <h2 className="text-title">PRECIOS</h2>
           <p className="text-description">
             Los precios varian según la cantidad de jugadores
           </p>
         </div>
+
       </section>
+
+      {/* PRODUCTOS O CARROUSEL */}
+
       <section id="products"></section>
+
+      {/* FORM */}
+
       <section id="contact">
+
         <div className="form-container">
           <h2 className="text-title">CONTACTO</h2>
           <Form />
         </div>
+        
       </section>
-      <br />
+
+      {/* FOOTER */}
+
       <footer>Footer</footer>
     </div>
   );
