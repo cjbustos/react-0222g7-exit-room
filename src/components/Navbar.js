@@ -1,5 +1,6 @@
 import '../styles/Navbar.css'
 import CustomLink from './CustomLink'
+import ShoppingCart from './ShoppingCart'
 
 const Navbar = (props) => {
 
@@ -16,16 +17,12 @@ const Navbar = (props) => {
                         path={e.path}
                         content={e.subcategory ? e.content : []} />
                     )}
+                <ShoppingCart />
             </ul>
         </nav>
     )
 }
 
 /* data.filter(f => f.subcategory).map(item => (<CustomLink key={item.id} path={item.name} content={item.content} />)) */
-
-//Componente Contenedor de sección
-//Componente Contacto
-//Componente Formulario
-//Componente Redes Sociales
 
 export default Navbar

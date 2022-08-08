@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+.button-small {
+    width: fit-content;
+    height: fit-content;
+    color: #FFFFFF;
+    background-color: #0C9D9C;
+    padding: 2px 14px;
+    font-family: "Rationale";
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.button-regular {
+    width: fit-content;
+    height: fit-content;
+    color: #FFFFFF;
+    background-color: #0C9D9C;
+    padding: 2px 14px;
+    border-radius: 5px;
+    font-family: "Rationale";
+    font-size: 28px;
+}

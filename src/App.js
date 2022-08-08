@@ -23,11 +23,12 @@ import Boxes from "./components/Boxes";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
-import Button from "./components/Button";
+import CustomModal from "./components/CustomModal"
+import { createContext, useState } from "react";
+
+export const ShopCartContext = createContext()
 
 function App() {
-  
-  // NAV BAR CODE
 
   const navItems = [
     {
@@ -49,15 +50,8 @@ function App() {
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
 
-  const style = {
-    width: 180,
-    height: 42,
-    backgroundColor: "#0C9D9C",
-    color: "#FFFFFF",
-    borderRadius: 10,
-    fontFamily: "Rationale",
-    fontSize: 20,
-  };
+  let [count, setCount] = useState(0)
+  const counter = () => setCount(count = count + 1);
 
   return (
     <div className="App">
