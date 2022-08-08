@@ -2,7 +2,6 @@ import React, { Fragment, useState } from "react";
 import "../styles/Form.css";
 
 const Form = () => {
-
   const [datos, setDatos] = useState({
     nombre: "",
     email: "",
@@ -11,12 +10,12 @@ const Form = () => {
   });
 
   const handleInputChange = (event) => {
-    console.log(event.target.value)
+    console.log(event.target.value);
     setDatos({
       ...datos,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
-  }
+  };
 
   const enviarDatos = (event) => {
     event.preventDefault();
@@ -32,31 +31,33 @@ const Form = () => {
             className="name-form"
             type="text"
             name="nombre"
-            onChange={handleInputChange} />
+            onChange={handleInputChange}
+          />
 
           <input
             placeholder="Email"
             className="name-form"
             type="email"
             name="email"
-            onChange={handleInputChange} />
+            onChange={handleInputChange}
+          />
 
           <input
             placeholder="Telefono"
             className="name-form"
             type="number"
             name="number"
-            onChange={handleInputChange} />
-        </div>
-        <div className="input-form">
+            onChange={handleInputChange}
+          />
+
           <input
             placeholder="Dejanos tu mensaje"
             className="comments-form"
             type="text"
             name="mensaje"
-            onChange={handleInputChange} />
-        </div>
-        <div className="button-contenedor">
+            onChange={handleInputChange}
+          />
+
           <button className="button-form" type="submit">
             ENVIAR
           </button>
@@ -64,6 +65,6 @@ const Form = () => {
       </form>
     </Fragment>
   );
-}
+};
 
-export default Form
+export default Form;
