@@ -134,7 +134,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 100px;
- color: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .name-participants {
@@ -142,21 +142,32 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 40px;
- color: var(--white-color);  
+  color: var(--white-color);
 }
 
 @media screen and (max-width: 600px) {
-  .icons-participants{
+  .icons-participants {
     font-size: 50px;
-  }  
+  }
   .name-participants {
     font-size: 20px;
   }
   .container-who-play {
-  height: 250px;
+    height: 250px;
   }
 }
 
+.icons-redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  font-size: 40px;
+  margin-top: 20px;
+}
+#instagram {
+  border-radius: 50%;
+}
 footer {
   color: lightgrey;
   height: 80px;

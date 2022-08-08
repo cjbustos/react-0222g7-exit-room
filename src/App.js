@@ -1,9 +1,14 @@
 import "./styles/App.css";
 import logo from "./img/logo.png";
-import { RiHome4Line } from 'react-icons/ri';
+import { RiHome4Line } from "react-icons/ri";
 import { RiServiceLine } from "react-icons/ri";
 import { MdWork } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { FaInstagramSquare } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaFacebookMessenger } from "react-icons/fa";
+import { BsTelegram } from "react-icons/bs";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
@@ -39,7 +44,7 @@ function App() {
     borderRadius: 10,
     fontFamily: "Rationale",
     fontSize: 20,
-  }
+  };
 
   return (
     <div className="App">
@@ -72,10 +77,10 @@ function App() {
           <BsFillPeopleFill />
         </div>
         <div className="name-participants">
-            <p>Colegios</p>
-            <p>Familia</p>
-            <p>Empresas</p>
-            <p>Amigos</p>
+          <p>Colegios</p>
+          <p>Familia</p>
+          <p>Empresas</p>
+          <p>Amigos</p>
         </div>
       </div>
       <br />
@@ -109,6 +114,13 @@ function App() {
       <br />
       <div className="container-social-media">
         <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
+        <div className="icons-redes">
+          <BsFacebook />
+          <FaInstagramSquare id="instagram"/>
+          <AiFillTwitterCircle/>
+          <FaFacebookMessenger/>
+          <BsTelegram/>
+        </div>
       </div>
       <br />
       <section id="cities">
