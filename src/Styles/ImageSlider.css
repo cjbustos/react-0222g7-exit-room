@@ -1,0 +1,14 @@
+.tag {
+  text-align: center;
+}
+
+.slick-slide img {
+  margin: auto;
+  width: 50%;
+}
+
+.text-slider {
+  margin: 1em 0 50px 0;
+  font-size: 3em;
+}
+

@@ -19,12 +19,15 @@ import { BsTelegram } from "react-icons/bs";
 // COMPONENTS
 import logo from "./img/logo.png";
 import Card from "./components/Card";
-import Boxes from "./components/Boxes";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
+import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal";
 import { createContext, useState } from "react";
+import Pictures from "./components/Pictures";
+import ImageSlider from "./components/ImageSlider";
+import pictures from "./components/Pictures";
 
 export const ShopCartContext = createContext();
 
@@ -201,9 +204,11 @@ function App() {
           </div>
         </section>
 
-        {/* PRODUCTOS O CARROUSEL */}
+        {/* CARROUSEL */}
 
-        <section id="products"></section>
+        <section id="carrousel">
+          <ImageSlider pictures={pictures} />
+        </section>
 
         {/* FORM */}
 
