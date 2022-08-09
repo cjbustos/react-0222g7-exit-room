@@ -17,14 +17,14 @@
 }
 
 .cards {
-  width: 12em;
+  width: 18em;
   position: relative;
   margin-top: 40px;
 }
 
 .card-image {
-  height: 20em;
-  width: 20em;
+  height: 15em;
+  width: 15em;
   border-radius: 20px;
   margin-bottom: 20px;
   outline: 1px solid var(--white-color);
@@ -43,32 +43,19 @@
   color: var(--pink-color);
   font-weight: 700;
   font-family: var(--first-font);
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .card-text {
   color: var(--white-color);
   font-family: var(--first-font);
-  font-size: 20px;
+  font-size: 1em;
+  margin-bottom: 1em;
 }
 
 /* MEDIA QUERY */
 
-/* @media screen and (min-width: 40em) {
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
- 
-    .card {
-        flex: 0 1 calc(25% - 1em);
-    }
-}
+@media screen and (max-width: 600px) {
 
-@media screen and (min-width: 60em) {
-    .card {
-        flex: 0 1 calc(25% - 1em);
-    }
-} */
+}

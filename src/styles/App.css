@@ -50,14 +50,14 @@ h2 {
 }
 
 .text-undertitle {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
 }
 
 .text-description {
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
@@ -91,13 +91,28 @@ h2 {
 /* PRECIOS */
 
 .container-prices {
-  height: 120px;
+  height: 250px;
   width: 100%;
   background-image: url(../img/redes-fondo.jpg);
   text-align: center;
   margin: 30px auto;
 }
 
+.button-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button-number {
+  width: 150px;
+  height: 90px;
+  color: var(--white-color);
+  background-color: var(--pink-color);
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--white-color);
+}
 /* PARTICIPANTES */
 
 .container-who-play {
@@ -148,6 +163,11 @@ h2 {
   border-radius: 50%;
 }
 
+.icons-redes:hover {
+  color: var(--blue-color);
+}
+
+
 /* FOOTER */
 
 footer {
@@ -173,9 +193,9 @@ footer {
     height: 250px;
   }
   .icons-redes {
-   font-size: 30px; 
+    font-size: 30px;
   }
-  .container-social-media{
-     height: 180px;
+  .container-social-media {
+    height: 180px;
   }
 }

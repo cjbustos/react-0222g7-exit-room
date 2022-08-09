@@ -23,10 +23,10 @@ import Boxes from "./components/Boxes";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import Image from "./components/Image";
-import CustomModal from "./components/CustomModal"
+import CustomModal from "./components/CustomModal";
 import { createContext, useState } from "react";
 
-export const ShopCartContext = createContext()
+export const ShopCartContext = createContext();
 
 function App() {
   const navItems = [
@@ -49,8 +49,8 @@ function App() {
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
 
-  let [count, setCount] = useState(0)
-  const counter = () => setCount(count = count + 1);
+  let [count, setCount] = useState(0);
+  const counter = () => setCount((count = count + 1));
 
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
@@ -70,7 +70,7 @@ function App() {
           <div className="container">
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
             <h2>Desafiar tus cinco sentidos es clave</h2>
-            <CustomModal label={'RESERVAR SALA'}>
+            <CustomModal label={"RESERVAR SALA"}>
               <h3>Texto dentro del Modal</h3>
             </CustomModal>
           </div>
@@ -79,7 +79,6 @@ function App() {
         {/* BOXES */}
 
         <div className="container-boxes">
-
           <div className="name-boxes">
             <p>Busca tu sucursal</p>
             <p>Elegi tu sala</p>
@@ -94,20 +93,18 @@ function App() {
             <BsBookmarkCheck />
             <FaPeopleArrows />
             <GiExitDoor />
-
           </div>
         </div>
 
         {/* SALAS */}
 
         <section id="episode">
-
           <div className="container-episodes">
             <h2 className="text-title">SALAS</h2>
             <h3 className="text-undertitle">60 MINUTOS PARA ESCAPAR</h3>
             <p className="text-description">
-              Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser una
-              pista.
+              Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser
+              una pista.
             </p>
           </div>
 
@@ -128,13 +125,11 @@ function App() {
               texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
             />
           </div>
-
         </section>
 
         {/* PARTICIPANTES */}
 
         <div className="container-who-play">
-
           <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
 
           <div className="icons-participants">
@@ -150,13 +145,11 @@ function App() {
             <p>Empresas</p>
             <p>Amigos</p>
           </div>
-
         </div>
 
         {/* REDES */}
 
         <div className="container-social-media">
-
           <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
 
           <div className="icons-redes">
@@ -166,41 +159,46 @@ function App() {
             <FaFacebookMessenger />
             <BsTelegram />
           </div>
-
         </div>
 
         {/* SUCURSALES */}
 
         <section id="cities">
-
           <div className="container-shops">
             <h2 className="text-title">SUCURSALES</h2>
             <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
           </div>
 
           <div className="cards-container">
-            <Card nombre="San Telmo" imagen="san-telmo" texto="DIRECCION" />
+            <Card nombre="San Telmo" imagen="san-telmo" texto="Balcarce 1235" />
             <Card
               nombre="Vicente Lopez"
               imagen="vicente-lopez"
-              texto="DIRECCION"
+              texto="Av. del Libertador 2411 "
             />
-            <Card nombre="Palermo" imagen="palermo" texto="DIRECCION" />
+            <Card nombre="Palermo" imagen="palermo" texto="Armenia 1782 " />
           </div>
-
         </section>
 
         {/* PRECIOS */}
 
         <section id="prices">
-
           <div className="container-prices">
             <h2 className="text-title">PRECIOS</h2>
             <p className="text-description">
               Los precios varian según la cantidad de jugadores
             </p>
-          </div>
 
+            <div className="button-price">
+              <button className="button-number">2 participantes $2000.-</button>
+              <button className="button-number">3 participantes $1800.-</button>
+              <button className="button-number">4 participantes $1600.-</button>
+              <button className="button-number">5 participantes $1500.-</button>
+              <button className="button-number">
+                6+ participantes $1400.-
+              </button>
+            </div>
+          </div>
         </section>
 
         {/* PRODUCTOS O CARROUSEL */}
@@ -210,12 +208,13 @@ function App() {
         {/* FORM */}
 
         <section id="contact">
-
           <div className="form-container">
-            <h2 className="text-title">CONTACTO</h2>
+            <div className="form-contact">
+              <h2 className="text-title">CONTACTO</h2>
+              <Image path={logo} width={115} height={110} />
+            </div>
             <Form />
           </div>
-
         </section>
 
         {/* FOOTER */}
