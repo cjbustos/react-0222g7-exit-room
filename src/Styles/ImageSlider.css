@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
+}
+
 .tag {
   text-align: center;
 }
@@ -10,5 +26,6 @@
 .text-slider {
   margin: 1em 0 50px 0;
   font-size: 3em;
+  font-family: var(--first-font);
 }
 
