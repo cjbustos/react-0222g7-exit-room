@@ -24,10 +24,10 @@ import Navbar from "./components/Navbar";
 import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal";
-import { createContext, useState } from "react";
 import Pictures from "./components/Pictures";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
+import { createContext, useState } from "react";
 
 export const ShopCartContext = createContext();
 
@@ -57,8 +57,10 @@ function App() {
 
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
+
       <div className="App">
-        {/* NAVBAR */}
+
+       {/* NAVBAR */}
 
         <header>
           <a href="/">
@@ -72,7 +74,7 @@ function App() {
         <main>
           <div className="container">
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
-            <h2>Desafiar tus cinco sentidos es clave</h2>
+            <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
             <CustomModal label={"RESERVAR SALA"}>
               <h3>Texto dentro del Modal</h3>
             </CustomModal>
@@ -228,6 +230,7 @@ function App() {
       </div>
     </ShopCartContext.Provider>
   );
+
 }
 
 export default App;
