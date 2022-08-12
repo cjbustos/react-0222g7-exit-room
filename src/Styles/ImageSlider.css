@@ -29,3 +29,27 @@
   font-family: var(--first-font);
 }
 
+/* REPONSIVE */
+
+/* MobileDevice */
+@media screen and (max-width: 480px) {
+.slick-slide img {
+  width: 90%;
+}
+}
+
+/* TabletDevice */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+
+/* Laptop */
+@media screen and (min-device-width: 1024px) {
+}
+
+/* Desktop */
+@media screen and (min-device-width: 1200px) {
+}
+
+/* BigScreen */
+@media screen and (min-device-width: 1201px) {
+}

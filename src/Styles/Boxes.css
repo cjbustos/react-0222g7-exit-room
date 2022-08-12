@@ -29,6 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   font-size: 30px;
   color: var(--white-color);
 }
@@ -36,19 +37,40 @@
 .icon-boxes {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
   font-size: 50px;
   color: var(--pink-color);
 }
 
-@media screen and (max-width: 600px) {
+/* REPONSIVE */
+
+/* MobileDevice */
+@media screen and (max-width: 480px) {
   .name-boxes {
     font-size: 10px;
   }
   .icon-boxes {
     font-size: 20px;
   }
-.container-boxes {
-height: 180px;
+  .container-boxes {
+    height: 100px;
+    line-height: 50px;
+  }
 }
+
+/* TabletDevice */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+
+/* Laptop */
+@media screen and (min-device-width: 1024px) {
+}
+
+/* Desktop */
+@media screen and (min-device-width: 1200px) {
+}
+
+/* BigScreen */
+@media screen and (min-device-width: 1201px) {
 }

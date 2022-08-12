@@ -40,7 +40,6 @@ h1,
 h2 {
   color: var(--white-color);
   font-family: var(--first-font);
-  padding: 5px;
 }
 
 .h2-main {
@@ -80,14 +79,7 @@ h2 {
   padding-left: 60px;
 }
 
-/* CARDS */
-
-.container-episodes {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-}
+/* GALERY */
 
 .container-shops {
   height: 120px;
@@ -96,37 +88,6 @@ h2 {
   text-align: center;
 }
 
-/* PRECIOS */
-
-.container-prices {
-  height: 250px;
-  width: 100%;
-  background-image: url(../img/redes-fondo.jpg);
-  text-align: center;
-  margin: 30px auto;
-}
-
-.button-number:hover {
-  background-color: var(--white-color);
-  color: var(--pink-color);
-}
-
-.button-price {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.button-number {
-  width: 120px;
-  height: 90px;
-  color: var(--white-color);
-  background-color: var(--pink-color);
-  font-size: 18px;
-  font-family: var(--first-font);
-  border-radius: 10px;
-  border: 1px solid var(--white-color);
-}
 /* PARTICIPANTES */
 
 .container-who-play {
@@ -181,6 +142,38 @@ h2 {
   color: var(--blue-color);
 }
 
+/* PRECIOS */
+
+.container-prices {
+  height: 250px;
+  width: 100%;
+  background-image: url(../img/redes-fondo.jpg);
+  text-align: center;
+  margin: 30px auto;
+}
+
+.button-number:hover {
+  background-color: var(--white-color);
+  color: var(--pink-color);
+}
+
+.button-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button-number {
+  width: 120px;
+  height: 90px;
+  color: var(--white-color);
+  background-color: var(--pink-color);
+  font-size: 18px;
+  font-family: var(--first-font);
+  border-radius: 10px;
+  border: 1px solid var(--white-color);
+}
+
 /* FOOTER */
 
 footer {
@@ -195,20 +188,61 @@ footer {
 
 /* REPONSIVE */
 
-@media screen and (max-width: 600px) {
+/* MobileDevice */
+@media screen and (max-width: 480px) {
+  main {
+    height: 320px;
+  }
+  .container-who-play {
+    height: 150px;
+    font-size: 15px;
+    line-height: 50px;
+  }
   .icons-participants {
-    font-size: 50px;
+    font-size: 35px;
   }
   .name-participants {
     font-size: 20px;
   }
-  .container-who-play {
-    height: 250px;
-  }
   .icons-redes {
-    font-size: 30px;
+    font-size: 25px;
   }
   .container-social-media {
-    height: 180px;
+    height: 120px;
+    line-height: 50px;
   }
+  .text-title {
+    font-size: 2em;
+  }
+  .text-undertitle {
+    font-size: 1em;
+  }
+  .text-description {
+    font-size: 0.8em;
+    padding-bottom: 1.5em;
+  }
+  .container-prices {
+    height: 150px;
+  }
+  .button-number {
+    width: 80px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+/* TabletDevice */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+
+/* Laptop */
+@media screen and (min-device-width: 1024px) {
+}
+
+/* Desktop */
+@media screen and (min-device-width: 1200px) {
+}
+
+/* BigScreen */
+@media screen and (min-device-width: 1201px) {
 }

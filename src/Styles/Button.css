@@ -14,8 +14,6 @@
   --first-font: "Rationale", sans-serif;
 }
 .button-small {
-    /* width: fit-content;
-    height: fit-content; */
     width: 10em;
     height: 2em;
     color: #FFFFFF;
@@ -36,4 +34,30 @@
     border-radius: 5px;
     font-family: "Rationale";
     font-size: 28px;
+}
+
+/* REPONSIVE */
+
+/* MobileDevice */
+@media screen and (max-width: 480px) {
+.button-small {
+    width: 5em;
+    height: 2em;
+}
+}
+
+/* TabletDevice */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+
+/* Laptop */
+@media screen and (min-device-width: 1024px) {
+}
+
+/* Desktop */
+@media screen and (min-device-width: 1200px) {
+}
+
+/* BigScreen */
+@media screen and (min-device-width: 1201px) {
 }

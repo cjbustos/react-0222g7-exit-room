@@ -5,8 +5,15 @@
   --blue-color: #0c9d9c;
   --black-color: #111111;
   --white-color: #ffffff;
-  --grey-color: #EEE0FE;
+  --grey-color: #eee0fe;
   --first-font: "Rationale", sans-serif;
+}
+
+.container-episodes {
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
 }
 
 .cards-container {
@@ -25,11 +32,11 @@
 .card-image {
   height: 15em;
   width: 15em;
-  border-radius: 20px;
-  margin-bottom: 20px;
+  border-radius: 1.25em;
+  margin-bottom: 1.25em;
   outline: 1px solid var(--white-color);
   outline-offset: -8px;
-  box-shadow: 3px 5px 20px var(--grey-color);
+  box-shadow: 3px 5px 1.25em var(--grey-color);
   object-fit: cover;
   transition: transform 0.75s;
 }
@@ -54,8 +61,51 @@
   margin-bottom: 1em;
 }
 
-/* MEDIA QUERY */
+/* REPONSIVE */
 
-@media screen and (max-width: 600px) {
+/* MobileDevice */
+@media screen and (max-width: 480px) {
+  .cards-container {
+    gap: 5em;
+  }
 
+  .cards {
+    width: 5em;
+    margin-top: 0;
+  }
+
+  .card-image {
+    height: 8em;
+    width: 8em;
+    box-shadow: 3px 5px 15px var(--grey-color);
+  }
+
+  .card-name {
+    font-size: 1em;
+  }
+
+  .card-text {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+  }
+
+  #stranger, .card-text {
+    margin-bottom: 1em;
+  }
+}
+
+/* TabletDevice */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+
+/* Laptop */
+@media screen and (min-device-width: 1024px) {
+}
+
+/* Desktop */
+@media screen and (min-device-width: 1200px) {
+}
+
+/* BigScreen */
+@media screen and (min-device-width: 1201px) {
 }

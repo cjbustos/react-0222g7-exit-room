@@ -28,6 +28,7 @@ import Pictures from "./components/Pictures";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import { createContext, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export const ShopCartContext = createContext();
 
@@ -55,12 +56,12 @@ function App() {
   let [count, setCount] = useState(0);
   const counter = () => setCount((count = count + 1));
 
+    // RETURN
+
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
-
       <div className="App">
-
-       {/* NAVBAR */}
+        {/* NAVBAR */}
 
         <header>
           <a href="/">
@@ -115,16 +116,19 @@ function App() {
 
           <div className="cards-container">
             <Card
+              id="alicia"
               nombre="ALICIA´S ROOM"
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
             />
             <Card
+              id="schrodinger"
               nombre="SCHRöDINGER ROOM"
               imagen="schrödinger"
               texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
             />
             <Card
+              id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
               texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
