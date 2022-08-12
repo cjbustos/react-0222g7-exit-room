@@ -4,12 +4,14 @@ import ShoppingCart from './ShoppingCart'
 
 const Navbar = (props) => {
 
-    const { data } = props
+    const { opt } = props
+
+    if (opt === undefined) return null;
 
     return (
         <nav>
             <ul>
-                {data
+                {opt
                     .map(e => <CustomLink
                         key={e.id}
                         id={e.id}

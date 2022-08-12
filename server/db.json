@@ -1,0 +1,46 @@
+{
+    "api": {
+        "nav": [
+            {
+                "id": 1,
+                "label": "Salas",
+                "subcategory": true,
+                "path": "episode",
+                "content": [
+                    "ALICIA",
+                    "SCHRöDINGER",
+                    "STRANGER ROOM"
+                ]
+            },
+            {
+                "id": 2,
+                "label": "Sucursales",
+                "subcategory": true,
+                "path": "cities",
+                "content": [
+                    "San Telmo",
+                    "Vicente Lopez",
+                    "Palermo"
+                ]
+            },
+            {
+                "id": 3,
+                "label": "Precios",
+                "subcategory": false,
+                "path": "prices"
+            },
+            {
+                "id": 4,
+                "label": "Galería",
+                "subcategory": false,
+                "path": "products"
+            },
+            {
+                "id": 5,
+                "label": "Contacto",
+                "subcategory": false,
+                "path": "contact"
+            }
+        ]
+    }
+}

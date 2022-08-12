@@ -28,11 +28,12 @@ import Pictures from "./components/Pictures";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import { createContext, useState } from "react";
+import useAxios from "./hooks/useAxios";
 
 export const ShopCartContext = createContext();
 
 function App() {
-  const navItems = [
+  /* const navItems = [
     {
       id: 1,
       label: "Salas",
@@ -48,25 +49,28 @@ function App() {
       content: ["San Telmo", "Vicente Lopez", "Palermo"],
     },
     { id: 3, label: "Precios", subcategory: false, path: "prices" },
-    { id: 4, label: "Productos", subcategory: false, path: "products" },
+    { id: 4, label: "Galería", subcategory: false, path: "products" },
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
-  ];
+  ]; */
 
   let [count, setCount] = useState(0);
   const counter = () => setCount((count = count + 1));
+
+  const { data } = useAxios('http://localhost:8000/api')
+  const { nav } = data
 
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
 
       <div className="App">
 
-       {/* NAVBAR */}
+        {/* NAVBAR */}
 
         <header>
           <a href="/">
             <Image path={logo} width={115} height={110} position={"left"} />
           </a>
-          <Navbar data={navItems} />
+          <Navbar opt={nav} />
         </header>
 
         {/* MAIN */}

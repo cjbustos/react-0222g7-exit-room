@@ -1,6 +1,13 @@
 .ShoppingCart {
+
 }
 
-.counter li {
-    color: crimson;
+.with-zero {
+    color: #0C9D9C;
+    padding-left: 5px;
+}
+
+.non-zero {
+    color: #c65385;
+    padding-left: 5px;
 }
