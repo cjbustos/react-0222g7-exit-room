@@ -34,7 +34,7 @@ import useAxios from "./hooks/useAxios";
 export const ShopCartContext = createContext();
 
 function App() {
-  /* const navItems = [
+  const navItems = [
     {
       id: 1,
       label: "Salas",
@@ -52,7 +52,7 @@ function App() {
     { id: 3, label: "Precios", subcategory: false, path: "prices" },
     { id: 4, label: "Galería", subcategory: false, path: "products" },
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
-  ]; */
+  ];
 
   let [count, setCount] = useState(0);
   const counter = () => setCount((count = count + 1));
@@ -71,7 +71,7 @@ function App() {
           <a href="/">
             <Image path={logo} width={115} height={110} position={"left"} />
           </a>
-          <Navbar opt={nav} />
+          <Navbar opt={navItems} />
         </header>
 
         {/* MAIN */}
