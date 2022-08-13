@@ -25,6 +25,7 @@ import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal";
 import Pictures from "./components/Pictures";
+import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import { createContext, useState } from "react";
@@ -79,7 +80,7 @@ function App() {
           <div className="container">
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
             <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-            <CustomModal label={"RESERVAR SALA"}>
+            <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
               <h3>Texto dentro del Modal</h3>
             </CustomModal>
           </div>
@@ -122,16 +123,22 @@ function App() {
               nombre="ALICIA´S ROOM"
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
+              showModal={true}
+              sizeButton={'regular'}
             />
             <Card
               nombre="SCHRöDINGER ROOM"
               imagen="schrödinger"
               texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
+              showModal={true}
+              sizeButton={'small'}
             />
             <Card
               nombre="STRANGER ROOM"
               imagen="stranger"
               texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+              showModal={true}
+              sizeButton={'small'}
             />
           </div>
         </section>
@@ -179,13 +186,24 @@ function App() {
           </div>
 
           <div className="cards-container">
-            <Card nombre="San Telmo" imagen="san-telmo" texto="Balcarce 1235" />
+            <Card
+              nombre="San Telmo"
+              imagen="san-telmo"
+              texto="Balcarce 1235"
+              showModal={false}
+            />
             <Card
               nombre="Vicente Lopez"
               imagen="vicente-lopez"
               texto="Av. del Libertador 2411 "
+              showModal={false}
             />
-            <Card nombre="Palermo" imagen="palermo" texto="Armenia 1782 " />
+            <Card
+              nombre="Palermo"
+              imagen="palermo"
+              texto="Armenia 1782"
+              showModal={false}
+            />
           </div>
         </section>
 
@@ -230,7 +248,7 @@ function App() {
 
         {/* FOOTER */}
 
-        <footer>Footer</footer>
+        <footer><Footer text={'Texto integrado al footer'} /></footer>
       </div>
     </ShopCartContext.Provider>
   );

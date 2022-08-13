@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
 export default function ShoppingCart() {
 
     const { count } = useContext(ShopCartContext)
-    
+
     const [style, setStyle] = useState('with-zero')
 
     useEffect(() => {
@@ -14,9 +14,11 @@ export default function ShoppingCart() {
     }, [count, style])
 
     return (
-        <div className={`${style}`}>
-            <FiShoppingCart size={22}/>
-            {count}
+        <div className="shop-cart">
+            <div className={`${style}`}>
+                <div className="shop-number">{count}</div>
+                <FiShoppingCart className="shop-cart-icon" />
+            </div>
         </div>
     )
 }

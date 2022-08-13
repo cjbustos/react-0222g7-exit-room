@@ -13,15 +13,16 @@
   --white-color: #ffffff;
   --first-font: "Rationale", sans-serif;
 }
+
 .button-small {
-    /* width: fit-content;
-    height: fit-content; */
-    width: 10em;
-    height: 2em;
+    width: fit-content;
+    height: fit-content;
+   /*  width: 10em;
+    height: 2em; */
     color: #FFFFFF;
     background-color: #0C9D9C;
     padding: 2px 14px;
-    font-family: "Rationale";
+    font-family: var(--first-font);
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid var(--blue-color);
@@ -34,6 +35,7 @@
     background-color: #0C9D9C;
     padding: 2px 14px;
     border-radius: 5px;
-    font-family: "Rationale";
+    font-family: var(--first-font);
     font-size: 28px;
+    border: 1px solid var(--blue-color);
 }
