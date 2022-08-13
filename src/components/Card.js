@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Card.css';
 import CustomModal from './CustomModal';
+import Image from './Image';
+import Text from './Text';
+import logo from "../img/logo.png";
 
 function Card(props) {
 
@@ -22,7 +25,10 @@ function Card(props) {
         </div>
         {showModal &&
           <CustomModal sizeButton={props.sizeButton} label={'RESERVAR'}>
-            {props.texto}
+            <Text text={'Este es un texto 1'} />
+            <Text text={'Este es un texto 2'} />
+            <Text text={'Este es un texto 3'} />
+            <Image path={logo} width={115} height={110} position={"left"} />
           </CustomModal>
         }
       </div>
