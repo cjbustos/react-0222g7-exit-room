@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Card.css';
 import CustomModal from './CustomModal';
 
 function Card(props) {
+
+  const [showModal, setShowModal] = useState(props.showModal)
+
   return (
     <div className="cards-container">
       <div className="cards">
@@ -17,9 +20,11 @@ function Card(props) {
           </p>
           <p className="card-text">{props.texto}</p>
         </div>
-        <CustomModal label={'RESERVAR'}>
-          {props.texto}
-        </CustomModal>
+        {showModal &&
+          <CustomModal sizeButton={props.sizeButton} label={'RESERVAR'}>
+            {props.texto}
+          </CustomModal>
+        }
       </div>
     </div>
   );
