@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Card.css';
 import CustomModal from './CustomModal';
+import Image from './Image';
+import Text from './Text';
+import logo from "../img/logo.png";
 
 function Card(props) {
+
+  const [showModal, setShowModal] = useState(props.showModal)
+
   return (
     <div className="cards-container">
       <div className="cards">
@@ -17,9 +23,14 @@ function Card(props) {
           </p>
           <p className="card-text">{props.texto}</p>
         </div>
-        <CustomModal label={'RESERVAR'}>
-          {props.texto}
-        </CustomModal>
+        {showModal &&
+          <CustomModal sizeButton={props.sizeButton} label={'RESERVAR'}>
+            <Text text={'Este es un texto 1'} />
+            <Text text={'Este es un texto 2'} />
+            <Text text={'Este es un texto 3'} />
+            <Image path={logo} width={115} height={110} position={"left"} />
+          </CustomModal>
+        }
       </div>
     </div>
   );

@@ -1,6 +1,41 @@
-.ShoppingCart {
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.counter li {
-    color: crimson;
+:root {
+    --pink-color: #c65385;
+    --blue-color: #0c9d9c;
+    --black-color: #111111;
+    --white-color: #ffffff;
+    --first-font: "Rationale", sans-serif;
+}
+
+.with-zero {
+    color: var(--blue-color);
+    padding-left: 5px;
+}
+
+.non-zero {
+    color: var(--pink-color);
+    padding-left: 5px;
+}
+
+.shop-cart {
+    display: flex;
+    justify-content: center;
+}
+
+.shop-number {
+    font-size: 20px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    padding: 0px 8px;
+}
+
+.shop-cart-icon {
+    font-size: 24px;
 }

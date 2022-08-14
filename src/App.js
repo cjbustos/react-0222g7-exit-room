@@ -25,9 +25,11 @@ import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal";
 import Pictures from "./components/Pictures";
+import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import { createContext, useState } from "react";
+import useAxios from "./hooks/useAxios";
 import { useMediaQuery } from "react-responsive";
 
 export const ShopCartContext = createContext();
@@ -49,25 +51,26 @@ function App() {
       content: ["San Telmo", "Vicente Lopez", "Palermo"],
     },
     { id: 3, label: "Precios", subcategory: false, path: "prices" },
-    { id: 4, label: "Productos", subcategory: false, path: "products" },
+    { id: 4, label: "Galería", subcategory: false, path: "products" },
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
 
   let [count, setCount] = useState(0);
   const counter = () => setCount((count = count + 1));
 
-    // RETURN
+  const { data } = useAxios('http://localhost:8000/api')
+  const { nav } = data
 
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
       <div className="App">
-        {/* NAVBAR */}
+         {/* NAVBAR */}
 
         <header>
           <a href="/">
             <Image path={logo} width={115} height={110} position={"left"} />
           </a>
-          <Navbar data={navItems} />
+          <Navbar opt={navItems} />
         </header>
 
         {/* MAIN */}
@@ -76,7 +79,7 @@ function App() {
           <div className="container">
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
             <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-            <CustomModal label={"RESERVAR SALA"}>
+            <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
               <h3>Texto dentro del Modal</h3>
             </CustomModal>
           </div>
@@ -120,18 +123,28 @@ function App() {
               nombre="ALICIA´S ROOM"
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
+              showModal={true}
+              sizeButton={'regular'}
             />
             <Card
               id="schrodinger"
               nombre="SCHRöDINGER ROOM"
               imagen="schrödinger"
               texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
+              showModal={true}
+              sizeButton={'small'}
             />
             <Card
               id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
+<<<<<<< HEAD
               texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
+=======
+              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+              showModal={true}
+              sizeButton={'small'}
+>>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628
             />
           </div>
         </section>
@@ -179,13 +192,24 @@ function App() {
           </div>
 
           <div className="cards-container">
-            <Card nombre="San Telmo" imagen="san-telmo" texto="Balcarce 1235" />
+            <Card
+              nombre="San Telmo"
+              imagen="san-telmo"
+              texto="Balcarce 1235"
+              showModal={false}
+            />
             <Card
               nombre="Vicente Lopez"
               imagen="vicente-lopez"
               texto="Av. del Libertador 2411 "
+              showModal={false}
             />
-            <Card nombre="Palermo" imagen="palermo" texto="Armenia 1782 " />
+            <Card
+              nombre="Palermo"
+              imagen="palermo"
+              texto="Armenia 1782"
+              showModal={false}
+            />
           </div>
         </section>
 
@@ -230,7 +254,7 @@ function App() {
 
         {/* FOOTER */}
 
-        <footer>Footer</footer>
+        <footer><Footer text={'Texto integrado al footer'} /></footer>
       </div>
     </ShopCartContext.Provider>
   );
