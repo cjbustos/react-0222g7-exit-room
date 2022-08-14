@@ -188,6 +188,47 @@ footer {
 
 /* REPONSIVE */
 
+ /* @media only screen and (max-width : 390px) {
+main {
+    height: 2000px;
+  }
+  .container-who-play {
+    height: 150px;
+    font-size: 15px;
+    line-height: 50px;
+  }
+  .icons-participants {
+    font-size: 35px;
+  }
+  .name-participants {
+    font-size: 20px;
+  }
+  .icons-redes {
+    font-size: 25px;
+  }
+  .container-social-media {
+    height: 120px;
+    line-height: 50px;
+  }
+  .text-title {
+    font-size: 2em;
+  }
+  .text-undertitle {
+    font-size: 1em;
+  }
+  .text-description {
+    font-size: 0.8em;
+    padding-bottom: 1.5em;
+  }
+  .container-prices {
+    height: 150px;
+  }
+  .button-number {
+    width: 80px;
+    height: 50px;
+    font-size: 12px;
+  }
+} */
 /* MobileDevice */
 @media screen and (max-width: 480px) {
   main {
@@ -232,7 +273,54 @@ footer {
 }
 
 /* TabletDevice */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+/* @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { */
+  @media only screen and (max-width : 390px) {
+main {
+    height: 200px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .h2-main {
+    font-size: 0.8em;
+  }
+  .container-who-play {
+    height: 150px;
+    font-size: 15px;
+    line-height: 50px;
+  }
+  .icons-participants {
+    font-size: 35px;
+  }
+  .name-participants {
+    font-size: 20px;
+  }
+  .icons-redes {
+    font-size: 25px;
+  }
+  .container-social-media {
+    height: 120px;
+    line-height: 50px;
+  }
+  .text-title {
+    font-size: 2em;
+  }
+  .text-undertitle {
+    font-size: 1em;
+  }
+  .text-description {
+    font-size: 0.5em;
+    padding-bottom: 1.5em;
+  }
+  .container-prices {
+    height: 150px;
+  }
+  .button-number {
+    width: 80px;
+    height: 50px;
+    font-size: 12px;
+  }
 }
 
 /* Laptop */

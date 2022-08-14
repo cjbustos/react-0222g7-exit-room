@@ -131,7 +131,7 @@ function App() {
               id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
-              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+              texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
             />
           </div>
         </section>
