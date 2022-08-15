@@ -14,31 +14,23 @@
   --first-font: "Rationale", sans-serif;
 }
 
-.container-boxes {
-  color: #ffffff;
-  width: 80%;
-  height: 230px;
-  margin: 30px auto;
-  background: linear-gradient(180deg, #404040 0%, #000000 100%);
-  border-radius: 15px;
-  text-align: center;
-  line-height: 120px;
+.box-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.name-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 30px;
+.name-box {
+  font-size: 28px;
   color: var(--white-color);
+  text-align: center;
+  padding: 5px;
 }
 
-.icon-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 50px;
+.icon-box {
+  font-size: 32px;
   color: var(--pink-color);
+  text-align: center;
+  padding: 5px;
 }
 
 @media screen and (max-width: 600px) {

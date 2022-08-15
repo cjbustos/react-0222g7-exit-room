@@ -1,11 +1,14 @@
 import React from "react";
 import "../styles/Boxes.css";
 
-function Boxes(props) {
+function Boxes({ text, children }) {
   return (
-    <div className="container-boxes">
-      <div className="boxes">
-        <p className="boxes-text">{props.texto}</p>
+    <div className="box-container">
+      <div className="name-box">
+        <p>{text}</p>
+      </div>
+      <div className="icon-box">
+        {children}
       </div>
     </div>
   );

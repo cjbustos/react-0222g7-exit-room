@@ -21,20 +21,21 @@ import logo from "./img/logo.png";
 import Card from "./components/Card";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
-import Boxes from "./components/Boxes";
+//import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import CustomModal from "./components/CustomModal";
-import Pictures from "./components/Pictures";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import { createContext, useState } from "react";
 import useAxios from "./hooks/useAxios";
+import Boxes from "./components/Boxes";
 
 export const ShopCartContext = createContext();
 
 function App() {
-  const navItems = [
+
+  /* const navItems = [
     {
       id: 1,
       label: "Salas",
@@ -52,10 +53,10 @@ function App() {
     { id: 3, label: "Precios", subcategory: false, path: "prices" },
     { id: 4, label: "Galería", subcategory: false, path: "products" },
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
-  ];
+  ]; */
 
   let [count, setCount] = useState(0);
-  const counter = () => setCount((count = count + 1));
+  const counter = () => setCount((prevState) => prevState + 1);
 
   const { data } = useAxios('http://localhost:8000/api')
   const { nav } = data
@@ -71,7 +72,7 @@ function App() {
           <a href="/">
             <Image path={logo} width={115} height={110} position={"left"} />
           </a>
-          <Navbar opt={navItems} />
+          <Navbar opt={nav} />
         </header>
 
         {/* MAIN */}
@@ -86,24 +87,22 @@ function App() {
           </div>
         </main>
 
-        {/* BOXES */}
-
         <div className="container-boxes">
-          <div className="name-boxes">
-            <p>Busca tu sucursal</p>
-            <p>Elegi tu sala</p>
-            <p>Reserva turno</p>
-            <p>Arma tu equipo</p>
-            <p>Podras escapar?</p>
-          </div>
-
-          <div className="icon-boxes">
+          <Boxes text={'Busca tu sucursal'}>
             <BsSearch />
+          </Boxes>
+          <Boxes text={'Elegí tu sala'}>
             <BsHandIndexThumb />
+          </Boxes>
+          <Boxes text={'Reservá tu turno'}>
             <BsBookmarkCheck />
+          </Boxes>
+          <Boxes text={'Armá tu equipo'}>
             <FaPeopleArrows />
+          </Boxes>
+          <Boxes text={'¿Podrás escapar?'}>
             <GiExitDoor />
-          </div>
+          </Boxes>
         </div>
 
         {/* SALAS */}
@@ -124,13 +123,15 @@ function App() {
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
               showModal={true}
-              sizeButton={'regular'}
+              labelButton={'RESERVAR'}
+              sizeButton={'small'}
             />
             <Card
               nombre="SCHRöDINGER ROOM"
               imagen="schrödinger"
               texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
               showModal={true}
+              labelButton={'RESERVAR'}
               sizeButton={'small'}
             />
             <Card
@@ -138,6 +139,7 @@ function App() {
               imagen="stranger"
               texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
               showModal={true}
+              labelButton={'RESERVAR'}
               sizeButton={'small'}
             />
           </div>
@@ -167,7 +169,6 @@ function App() {
 
         <div className="container-social-media">
           <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
-
           <div className="icons-redes">
             <BsFacebook />
             <FaInstagramSquare id="instagram" />
@@ -215,14 +216,13 @@ function App() {
             <p className="text-description">
               Los precios varian según la cantidad de jugadores
             </p>
-
             <div className="button-price">
-              <button className="button-number">2 participantes $2000.-</button>
-              <button className="button-number">3 participantes $1800.-</button>
-              <button className="button-number">4 participantes $1600.-</button>
-              <button className="button-number">5 participantes $1500.-</button>
+              <button className="button-number">2 participantes $2000</button>
+              <button className="button-number">3 participantes $1800</button>
+              <button className="button-number">4 participantes $1600</button>
+              <button className="button-number">5 participantes $1500</button>
               <button className="button-number">
-                6+ participantes $1400.-
+                +6 participantes $1400
               </button>
             </div>
           </div>
@@ -248,7 +248,7 @@ function App() {
 
         {/* FOOTER */}
 
-        <footer><Footer text={'Texto integrado al footer'} /></footer>
+        <footer><Footer /></footer>
       </div>
     </ShopCartContext.Provider>
   );

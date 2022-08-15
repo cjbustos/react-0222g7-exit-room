@@ -80,6 +80,19 @@ h2 {
   padding-left: 60px;
 }
 
+/* BOXES */
+
+.container-boxes {
+  width: 80%;
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 46px auto;
+  background: linear-gradient(180deg, #404040 0%, #000000 100%);
+  border-radius: 15px;
+}
+
 /* CARDS */
 
 .container-episodes {
@@ -127,6 +140,7 @@ h2 {
   border-radius: 10px;
   border: 1px solid var(--white-color);
 }
+
 /* PARTICIPANTES */
 
 .container-who-play {
@@ -173,6 +187,7 @@ h2 {
   font-size: 40px;
   margin-top: 20px;
 }
+
 #instagram {
   border-radius: 50%;
 }
@@ -199,15 +214,19 @@ footer {
   .icons-participants {
     font-size: 50px;
   }
+
   .name-participants {
     font-size: 20px;
   }
+
   .container-who-play {
     height: 250px;
   }
+
   .icons-redes {
     font-size: 30px;
   }
+
   .container-social-media {
     height: 180px;
   }

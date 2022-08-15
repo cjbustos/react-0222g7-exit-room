@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Card.css';
 import CustomModal from './CustomModal';
 
-function Card(props) {
-
-  const [showModal, setShowModal] = useState(props.showModal)
+function Card({ nombre, texto, imagen, sizeButton, showModal, labelButton }) {
 
   return (
     <div className="cards-container">
       <div className="cards">
         <img
           className="card-image"
-          src={require(`../img/card-${props.imagen}.jpg`)}
+          src={require(`../img/card-${imagen}.jpg`)}
           alt="Foto exit room"
         />
         <div className="card-text-container">
           <p className="card-name">
-            <span className="card-color-name">{props.nombre} </span>
+            <span className="card-color-name">{nombre} </span>
           </p>
-          <p className="card-text">{props.texto}</p>
+          <p className="card-text">{texto}</p>
         </div>
         {showModal &&
-          <CustomModal sizeButton={props.sizeButton} label={'RESERVAR'}>
-            {props.texto}
-          </CustomModal>
+          <CustomModal sizeButton={sizeButton} label={labelButton}></CustomModal>
         }
       </div>
     </div>
