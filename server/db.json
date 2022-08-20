@@ -1,46 +1,91 @@
 {
-    "api": {
-        "nav": [
-            {
-                "id": 1,
-                "label": "Salas",
-                "subcategory": true,
-                "path": "episode",
-                "content": [
-                    "ALICIA",
-                    "SCHRöDINGER",
-                    "STRANGER ROOM"
-                ]
-            },
-            {
-                "id": 2,
-                "label": "Sucursales",
-                "subcategory": true,
-                "path": "cities",
-                "content": [
-                    "San Telmo",
-                    "Vicente Lopez",
-                    "Palermo"
-                ]
-            },
-            {
-                "id": 3,
-                "label": "Precios",
-                "subcategory": false,
-                "path": "prices"
-            },
-            {
-                "id": 4,
-                "label": "Galería",
-                "subcategory": false,
-                "path": "products"
-            },
-            {
-                "id": 5,
-                "label": "Contacto",
-                "subcategory": false,
-                "path": "contact"
-            }
+  "api": {
+    "nav": [
+      {
+        "id": 1,
+        "label": "Salas",
+        "subcategory": true,
+        "path": "episode",
+        "content": [
+          {
+            "id": 0,
+            "active": true,
+            "name": "ALICIA"
+          },
+          {
+            "id": 1,
+            "active": true,
+            "name": "SCHRöDINGER"
+          },
+          {
+            "id": 2,
+            "active": true,
+            "name": "STRANGER ROOM"
+          },
+          {
+            "id": 3,
+            "active": true,
+            "name": "JOHN WICK"
+          }
         ]
-    }
+      },
+      {
+        "id": 2,
+        "label": "Sucursales",
+        "subcategory": true,
+        "path": "cities",
+        "content": [
+          {
+            "id": 0,
+            "active": true,
+            "name": "San Telmo"
+          },
+          {
+            "id": 1,
+            "active": true,
+            "name": "Saavedra"
+          },
+          {
+            "id": 2,
+            "active": true,
+            "name": "Palermo"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Precios",
+        "subcategory": false,
+        "path": "prices"
+      },
+      {
+        "id": 4,
+        "label": "Galería",
+        "subcategory": false,
+        "path": "products"
+      },
+      {
+        "id": 5,
+        "label": "Contacto",
+        "subcategory": false,
+        "path": "contact"
+      }
+    ],
+    "reserve": [
+      {
+        "date": "20/8/2022",
+        "info": [
+          { "time": "10:00", "isFree": true },
+          { "time": "11:00", "isFree": false }
+        ]
+      },
+      {
+        "date": "21/8/2022",
+        "info": [
+          { "time": "12:00", "isFree": false },
+          { "time": "13:00", "isFree": false }
+        ]
+      }
+    ]
+  }
 }

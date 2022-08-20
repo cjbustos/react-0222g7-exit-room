@@ -27,15 +27,206 @@ import CustomModal from "./components/CustomModal";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
-import { createContext, useState } from "react";
 import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
-
-export const ShopCartContext = createContext();
+import ShoppingCartContextProvider from "./contexts/ShoppingCartContext";
+import BookingContextProvider from "./contexts/BookingContext";
 
 function App() {
 
-  /* const navItems = [
+  //API call
+  const { data } = useAxios('http://localhost:8000/api')
+  const { nav } = data
+
+  return (
+    <ShoppingCartContextProvider>
+      <BookingContextProvider>
+        <div className="App">
+
+          {/* NAVBAR */}
+          <header>
+            <a href="/">
+              <Image path={logo} width={115} height={110} position={"left"} />
+            </a>
+            <Navbar opt={nav} />
+          </header>
+
+          {/* MAIN */}
+          <main>
+            <div className="container">
+              <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
+              <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
+              <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
+                <h3>Ejemplo de texto dentro del componente</h3>
+              </CustomModal>
+            </div>
+          </main>
+
+          <div className="container-boxes">
+            <Boxes text={'Busca tu sucursal'}>
+              <BsSearch />
+            </Boxes>
+            <Boxes text={'Elegí tu sala'}>
+              <BsHandIndexThumb />
+            </Boxes>
+            <Boxes text={'Reservá tu turno'}>
+              <BsBookmarkCheck />
+            </Boxes>
+            <Boxes text={'Armá tu equipo'}>
+              <FaPeopleArrows />
+            </Boxes>
+            <Boxes text={'¿Podrás escapar?'}>
+              <GiExitDoor />
+            </Boxes>
+          </div>
+
+          {/* SALAS */}
+          <section id="episode">
+            <div className="container-episodes">
+              <h2 className="text-title">SALAS</h2>
+              <h3 className="text-undertitle">60 MINUTOS PARA ESCAPAR</h3>
+              <p className="text-description">
+                Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser
+                una pista.
+              </p>
+            </div>
+
+            <div className="cards-container">
+              <Card
+                id={1}
+                active={true}
+                nombre="ALICIA´S ROOM"
+                imagen="alice"
+                texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
+                showModal={true}
+                labelButton={'RESERVAR'}
+                sizeButton={'small'}
+              />
+              <Card
+                id={2}
+                active={true}
+                nombre="SCHRöDINGER ROOM"
+                imagen="schrödinger"
+                texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
+                showModal={true}
+                labelButton={'RESERVAR'}
+                sizeButton={'small'}
+              />
+              <Card
+                id={3}
+                active={true}
+                nombre="STRANGER ROOM"
+                imagen="stranger"
+                texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+                showModal={true}
+                labelButton={'RESERVAR'}
+                sizeButton={'small'}
+              />
+            </div>
+          </section>
+
+          {/* PARTICIPANTES */}
+          <div className="container-who-play">
+            <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
+            <div className="icons-participants">
+              <RiHome4Line />
+              <RiServiceLine />
+              <MdWork />
+              <BsFillPeopleFill />
+            </div>
+            <div className="name-participants">
+              <p>Colegios</p>
+              <p>Familia</p>
+              <p>Empresas</p>
+              <p>Amigos</p>
+            </div>
+          </div>
+
+          {/* REDES */}
+          <div className="container-social-media">
+            <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
+            <div className="icons-redes">
+              <BsFacebook />
+              <FaInstagramSquare id="instagram" />
+              <AiFillTwitterCircle />
+              <FaFacebookMessenger />
+              <BsTelegram />
+            </div>
+          </div>
+
+          {/* SUCURSALES */}
+          <section id="cities">
+            <div className="container-shops">
+              <h2 className="text-title">SUCURSALES</h2>
+              <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
+            </div>
+
+            <div className="cards-container">
+              <Card
+                nombre="San Telmo"
+                imagen="san-telmo"
+                texto="Balcarce 1235"
+                showModal={false}
+              />
+              <Card
+                nombre="Vicente Lopez"
+                imagen="vicente-lopez"
+                texto="Av. del Libertador 2411 "
+                showModal={false}
+              />
+              <Card
+                nombre="Palermo"
+                imagen="palermo"
+                texto="Armenia 1782"
+                showModal={false}
+              />
+            </div>
+          </section>
+
+          {/* PRECIOS */}
+          <section id="prices">
+            <div className="container-prices">
+              <h2 className="text-title">PRECIOS</h2>
+              <p className="text-description">
+                Los precios varian según la cantidad de jugadores
+              </p>
+              <div className="button-price">
+                <button className="button-number">2 participantes $2000</button>
+                <button className="button-number">3 participantes $1800</button>
+                <button className="button-number">4 participantes $1600</button>
+                <button className="button-number">5 participantes $1500</button>
+                <button className="button-number">+6 participantes $1400</button>
+              </div>
+            </div>
+          </section>
+
+          {/* CARROUSEL */}
+          <section id="carrousel">
+            <ImageSlider pictures={pictures} />
+          </section>
+
+          {/* FORM */}
+          <section id="contact">
+            <div className="form-container">
+              <div className="form-contact">
+                <h2 className="text-title">CONTACTO</h2>
+                <Image path={logo} width={115} height={110} />
+              </div>
+              <Form />
+            </div>
+          </section>
+
+          {/* FOOTER */}
+          <footer><Footer /></footer>
+        </div>
+      </BookingContextProvider>
+    </ShoppingCartContextProvider>
+  );
+}
+
+export default App;
+
+/* const navItems = [
     {
       id: 1,
       label: "Salas",
@@ -54,205 +245,3 @@ function App() {
     { id: 4, label: "Galería", subcategory: false, path: "products" },
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ]; */
-
-  let [count, setCount] = useState(0);
-  const counter = () => setCount((prevState) => prevState + 1);
-
-  const { data } = useAxios('http://localhost:8000/api')
-  const { nav } = data
-
-  return (
-    <ShopCartContext.Provider value={{ count, counter }}>
-
-      <div className="App">
-
-        {/* NAVBAR */}
-
-        <header>
-          <a href="/">
-            <Image path={logo} width={115} height={110} position={"left"} />
-          </a>
-          <Navbar opt={nav} />
-        </header>
-
-        {/* MAIN */}
-
-        <main>
-          <div className="container">
-            <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
-            <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-            <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
-              <h3>Texto dentro del Modal</h3>
-            </CustomModal>
-          </div>
-        </main>
-
-        <div className="container-boxes">
-          <Boxes text={'Busca tu sucursal'}>
-            <BsSearch />
-          </Boxes>
-          <Boxes text={'Elegí tu sala'}>
-            <BsHandIndexThumb />
-          </Boxes>
-          <Boxes text={'Reservá tu turno'}>
-            <BsBookmarkCheck />
-          </Boxes>
-          <Boxes text={'Armá tu equipo'}>
-            <FaPeopleArrows />
-          </Boxes>
-          <Boxes text={'¿Podrás escapar?'}>
-            <GiExitDoor />
-          </Boxes>
-        </div>
-
-        {/* SALAS */}
-
-        <section id="episode">
-          <div className="container-episodes">
-            <h2 className="text-title">SALAS</h2>
-            <h3 className="text-undertitle">60 MINUTOS PARA ESCAPAR</h3>
-            <p className="text-description">
-              Dentro de la sala el tiempo vuela, no te duermas! Todo puede ser
-              una pista.
-            </p>
-          </div>
-
-          <div className="cards-container">
-            <Card
-              nombre="ALICIA´S ROOM"
-              imagen="alice"
-              texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
-              showModal={true}
-              labelButton={'RESERVAR'}
-              sizeButton={'small'}
-            />
-            <Card
-              nombre="SCHRöDINGER ROOM"
-              imagen="schrödinger"
-              texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
-              showModal={true}
-              labelButton={'RESERVAR'}
-              sizeButton={'small'}
-            />
-            <Card
-              nombre="STRANGER ROOM"
-              imagen="stranger"
-              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
-              showModal={true}
-              labelButton={'RESERVAR'}
-              sizeButton={'small'}
-            />
-          </div>
-        </section>
-
-        {/* PARTICIPANTES */}
-
-        <div className="container-who-play">
-          <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
-
-          <div className="icons-participants">
-            <RiHome4Line />
-            <RiServiceLine />
-            <MdWork />
-            <BsFillPeopleFill />
-          </div>
-
-          <div className="name-participants">
-            <p>Colegios</p>
-            <p>Familia</p>
-            <p>Empresas</p>
-            <p>Amigos</p>
-          </div>
-        </div>
-
-        {/* REDES */}
-
-        <div className="container-social-media">
-          <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
-          <div className="icons-redes">
-            <BsFacebook />
-            <FaInstagramSquare id="instagram" />
-            <AiFillTwitterCircle />
-            <FaFacebookMessenger />
-            <BsTelegram />
-          </div>
-        </div>
-
-        {/* SUCURSALES */}
-
-        <section id="cities">
-          <div className="container-shops">
-            <h2 className="text-title">SUCURSALES</h2>
-            <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
-          </div>
-
-          <div className="cards-container">
-            <Card
-              nombre="San Telmo"
-              imagen="san-telmo"
-              texto="Balcarce 1235"
-              showModal={false}
-            />
-            <Card
-              nombre="Vicente Lopez"
-              imagen="vicente-lopez"
-              texto="Av. del Libertador 2411 "
-              showModal={false}
-            />
-            <Card
-              nombre="Palermo"
-              imagen="palermo"
-              texto="Armenia 1782"
-              showModal={false}
-            />
-          </div>
-        </section>
-
-        {/* PRECIOS */}
-
-        <section id="prices">
-          <div className="container-prices">
-            <h2 className="text-title">PRECIOS</h2>
-            <p className="text-description">
-              Los precios varian según la cantidad de jugadores
-            </p>
-            <div className="button-price">
-              <button className="button-number">2 participantes $2000</button>
-              <button className="button-number">3 participantes $1800</button>
-              <button className="button-number">4 participantes $1600</button>
-              <button className="button-number">5 participantes $1500</button>
-              <button className="button-number">
-                +6 participantes $1400
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* CARROUSEL */}
-
-        <section id="carrousel">
-          <ImageSlider pictures={pictures} />
-        </section>
-
-        {/* FORM */}
-
-        <section id="contact">
-          <div className="form-container">
-            <div className="form-contact">
-              <h2 className="text-title">CONTACTO</h2>
-              <Image path={logo} width={115} height={110} />
-            </div>
-            <Form />
-          </div>
-        </section>
-
-        {/* FOOTER */}
-
-        <footer><Footer /></footer>
-      </div>
-    </ShopCartContext.Provider>
-  );
-
-}
-
-export default App;

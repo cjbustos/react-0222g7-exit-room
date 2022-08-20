@@ -16,20 +16,14 @@
 
 .with-zero {
     color: var(--blue-color);
-    padding-left: 5px;
 }
 
 .non-zero {
     color: var(--pink-color);
-    padding-left: 5px;
 }
 
-.shop-cart {
-    display: flex;
-    justify-content: center;
-}
 
-.shop-number {
+/* .shop-number {
     font-size: 20px;
     background-color: var(--white-color);
     border-radius: 50%;
@@ -38,4 +32,4 @@
 
 .shop-cart-icon {
     font-size: 24px;
-}
+} */

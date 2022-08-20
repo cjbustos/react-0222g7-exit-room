@@ -1,24 +1,24 @@
 import "../styles/ShoppingCart.css"
 import { useContext, useEffect, useState } from "react"
-import { ShopCartContext } from "../App"
 import { FiShoppingCart } from "react-icons/fi";
+import { ShopppingCartContext } from "../contexts/ShoppingCartContext";
 
 export default function ShoppingCart() {
 
-    const { count } = useContext(ShopCartContext)
+    const { counter } = useContext(ShopppingCartContext)
 
     const [style, setStyle] = useState('with-zero')
 
     useEffect(() => {
-        if (count !== 0) setStyle('non-zero')
-    }, [count, style])
+        if (counter !== 0) setStyle('non-zero')
+    }, [counter, style])
 
     return (
-        <div className="shop-cart">
-            <div className={`${style}`}>
-                <div className="shop-number">{count}</div>
-                <FiShoppingCart className="shop-cart-icon" />
-            </div>
+        <div className={`${style}`}>
+            <ul>
+                <i style={{ padding: 2, fontSize: 24 }}><FiShoppingCart /></i>
+                <i style={{ padding: 2, fontSize: 24 }}>{counter}</i>
+            </ul>
         </div>
     )
 }

@@ -1,14 +1,16 @@
 import "../styles/CustomModal.css"
-import React, { useContext, useState } from "react";
-import { ShopCartContext } from "../App";
+import React, { useState } from "react";
 import ReactModal from "react-modal";
 import Button from "./Button";
+import { ShopppingCartContext } from "../contexts/ShoppingCartContext";
+import { useContext } from "react";
 
 ReactModal.setAppElement("#root")
 
 const CustomModal = ({ label, sizeButton, children }) => {
 
-    const { counter } = useContext(ShopCartContext)
+    const { updateCounter } = useContext(ShopppingCartContext)
+
     const [isOpen, setIsOpen] = useState(false)
 
     function toggleModal() {
@@ -16,8 +18,8 @@ const CustomModal = ({ label, sizeButton, children }) => {
     }
 
     const handleModalClose = () => {
-        counter()
         toggleModal()
+        updateCounter()
     }
 
     return (
