@@ -23,14 +23,14 @@ function Card(props) {
           </p>
           <p className="card-text">{props.texto}</p>
         </div>
-        {showModal &&
-          <CustomModal sizeButton={props.sizeButton} label={'RESERVAR'}>
-            <Text text={'Este es un texto 1'} />
-            <Text text={'Este es un texto 2'} />
-            <Text text={'Este es un texto 3'} />
-            <Image path={logo} width={115} height={110} position={"left"} />
+        {showModal && (
+          <CustomModal sizeButton={props.sizeButton} label={"RESERVAR"}>
+            <Image path={logo} width={115} height={110} position={"center"} />
+            <Text text={"Este es un texto 1"} />
+            <Text text={"Este es un texto 2"} />
+            <Text text={"Este es un texto 3"} />
           </CustomModal>
-        }
+        )}
       </div>
     </div>
   );

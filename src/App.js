@@ -32,9 +32,12 @@ import { createContext, useState } from "react";
 import useAxios from "./hooks/useAxios";
 import { useMediaQuery } from "react-responsive";
 
+
 export const ShopCartContext = createContext();
 
 function App() {
+  
+  // NAVBAR
   const navItems = [
     {
       id: 1,
@@ -55,6 +58,7 @@ function App() {
     { id: 5, label: "Contacto", subcategory: false, path: "contact" },
   ];
 
+  // SHOPCART
   let [count, setCount] = useState(0);
   const counter = () => setCount((count = count + 1));
 
@@ -64,7 +68,7 @@ function App() {
   return (
     <ShopCartContext.Provider value={{ count, counter }}>
       <div className="App">
-         {/* NAVBAR */}
+        {/* NAVBAR */}
 
         <header>
           <a href="/">
@@ -79,7 +83,7 @@ function App() {
           <div className="container">
             <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
             <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-            <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
+            <CustomModal sizeButton={"regular"} label={"RESERVAR SALA"}>
               <h3>Texto dentro del Modal</h3>
             </CustomModal>
           </div>
@@ -124,7 +128,7 @@ function App() {
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
               showModal={true}
-              sizeButton={'regular'}
+              sizeButton={"regular"}
             />
             <Card
               id="schrodinger"
@@ -132,19 +136,18 @@ function App() {
               imagen="schrödinger"
               texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
               showModal={true}
-              sizeButton={'small'}
+              sizeButton={"small"}
             />
             <Card
               id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
-<<<<<<< HEAD
+              // <<<<<<< HEAD
               texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
-=======
-              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+              // =======
               showModal={true}
-              sizeButton={'small'}
->>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628
+              sizeButton={"small"}
+              // {/* >>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628 */}
             />
           </div>
         </section>
@@ -254,11 +257,12 @@ function App() {
 
         {/* FOOTER */}
 
-        <footer><Footer text={'Texto integrado al footer'} /></footer>
+        <footer>
+          <Footer text={"Texto integrado al footer"} />
+        </footer>
       </div>
     </ShopCartContext.Provider>
   );
-
 }
 
 export default App;
