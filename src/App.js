@@ -142,12 +142,13 @@ function App() {
               id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
-              // <<<<<<< HEAD
+<<<<<<< HEAD
               texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
-              // =======
+=======
+              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
               showModal={true}
-              sizeButton={"small"}
-              // {/* >>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628 */}
+              sizeButton={'small'}
+>>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628
             />
           </div>
         </section>
