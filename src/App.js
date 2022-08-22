@@ -144,7 +144,11 @@ function App() {
               imagen="stranger"
               texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
               showModal={true}
+
               sizeButton={"small"}
+
+              sizeButton={'small'}
+
             />
           </div>
         </section>
