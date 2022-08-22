@@ -128,7 +128,7 @@ function App() {
               imagen="alice"
               texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
               showModal={true}
-              sizeButton={"regular"}
+              sizeButton={"small"}
             />
             <Card
               id="schrodinger"
@@ -142,13 +142,9 @@ function App() {
               id="stranger"
               nombre="STRANGER ROOM"
               imagen="stranger"
-<<<<<<< HEAD
               texto="The upside down is here! Podrás escapar de la maldad que esta llegando a Hawkins?"
-=======
-              texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
               showModal={true}
-              sizeButton={'small'}
->>>>>>> 2b1821d1616581ee2a12422d98356d3aa10ff628
+              sizeButton={"small"}
             />
           </div>
         </section>
@@ -156,7 +152,8 @@ function App() {
         {/* PARTICIPANTES */}
 
         <div className="container-who-play">
-          <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
+          <h2 className="text-title">¿QUIENES PUEDEN PARTICIPAR?</h2>
+
 
           <div className="icons-participants">
             <RiHome4Line />

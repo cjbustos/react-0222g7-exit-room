@@ -17,12 +17,14 @@ function Card(props) {
           src={require(`../img/card-${props.imagen}.jpg`)}
           alt="Foto exit room"
         />
+
         <div className="card-text-container">
           <p className="card-name">
             <span className="card-color-name">{props.nombre} </span>
           </p>
           <p className="card-text">{props.texto}</p>
         </div>
+
         {showModal && (
           <CustomModal sizeButton={props.sizeButton} label={"RESERVAR"}>
             <Image path={logo} width={115} height={110} position={"center"} />

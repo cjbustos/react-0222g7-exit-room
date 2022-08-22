@@ -2,10 +2,10 @@ import '../styles/Button.css'
 
 const Button = ({ type = 'button', onClick, children, ...rest }) => {
     return (
-        <button type={type} onClick={onClick} {...rest}>
-            {children}
-        </button>
-    )
+      <button type={type} onClick={onClick} {...rest}>
+        {children}
+      </button>
+    );
 }
 
 export default Button

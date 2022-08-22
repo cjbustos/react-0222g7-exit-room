@@ -27,6 +27,7 @@
 .shop-cart {
     display: flex;
     justify-content: center;
+    margin: 1em;
 }
 
 .shop-number {
@@ -38,4 +39,5 @@
 
 .shop-cart-icon {
     font-size: 24px;
+    margin-left: -20px;
 }
