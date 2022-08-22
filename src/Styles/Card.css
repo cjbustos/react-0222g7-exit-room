@@ -86,26 +86,28 @@
 
   .card-text {
     font-size: 0.8em;
-    margin-bottom: 1em;
   }
-
-  #stranger, .card-text {
-    margin-bottom: 1em;
-  }
-}
-
-/* TabletDevice */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-}
-
-/* Laptop */
-@media screen and (min-device-width: 1024px) {
 }
 
 /* Desktop */
-@media screen and (min-device-width: 1200px) {
-}
+@media screen and (min-width: 1200px) {
+  .cards-container {
+    gap: 10em;
+  }
 
-/* BigScreen */
-@media screen and (min-device-width: 1201px) {
+  .cards {
+    width: 9em;
+    margin-top: 0;
+  }
+
+  .card-image {
+    height: 10em;
+    width: 10em;
+    box-shadow: 3px 5px 15px var(--grey-color);
+  }
+
+  .card-name {
+    font-size: 1.2em;
+  }
+
 }

@@ -16,18 +16,18 @@
 
 .button-small {
     width: 10em;
-    height: 2em;
+    height: 0.13em;
     width: fit-content;
     height: fit-content;
     /*  width: 10em;
     height: 2em; */
     color: #FFFFFF;
     background-color: #0C9D9C;
-    padding: 2px 14px;
+    padding: 0.13em 0.9em;
     font-family: var(--first-font);
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid var(--blue-color);
+    font-size: 0.9em;
+    border-radius: 0.3em;
+    border: 0.06em solid var(--blue-color);
 }
 
 .button-regular {
@@ -35,30 +35,40 @@
     height: fit-content;
     color: #FFFFFF;
     background-color: #0C9D9C;
-    padding: 2px 14px;
-    border-radius: 5px;
+    padding: 0.13em 0.9em;
+    border-radius: 0.3em;
     font-family: var(--first-font);
-    font-size: 28px;
+    font-size: 1.8em;
+    border: 0.06em solid var(--blue-color);
+}
+
+.button-regular:hover {
+    text-shadow: 0 0 0.6em var(--white-color), 0 0 1.3em var(--white-color),
+    0 0 1.8em var(--white-color), 0 0 2.5em var(--white-color), 0 0 4.3em var(--blue-color),
+    0 0 5em var(--white-color), 0 0 6.25em var(--white-color);
+}
+
+.button-small:hover {
+  text-shadow: 0 0 0.6em var(--white-color), 0 0 1.3em var(--white-color),
+    0 0 1.8em var(--white-color), 0 0 2.5em var(--white-color), 0 0 4.3em var(--blue-color),
+    0 0 5em var(--white-color), 0 0 6.25em var(--white-color);
 }
 
 /* REPONSIVE */
-
+    
 /* MobileDevice */
 @media screen and (max-width: 480px) {
     .button-small {
         width: 5em;
         height: 2em;
     }
+    .button-regular {
+        width: 8em;
+        height: 1.7em;
+        font-size: 1.3em;
+    }
 }
 
-/* TabletDevice */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
-
-/* Laptop */
-@media screen and (min-device-width: 1024px) {}
-
 /* Desktop */
-@media screen and (min-device-width: 1200px) {}
+@media screen and (min-device-width: 75em) {}
 
-/* BigScreen */
-@media screen and (min-device-width: 1201px) {}
