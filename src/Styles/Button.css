@@ -15,27 +15,32 @@
 }
 
 .button-small {
-    width: fit-content;
-    height: fit-content;
-   /*  width: 10em;
-    height: 2em; */
-    color: #FFFFFF;
-    background-color: #0C9D9C;
-    padding: 2px 14px;
-    font-family: var(--first-font);
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid var(--blue-color);
+  width: fit-content;
+  height: fit-content;
+  color: #ffffff;
+  background-color: #0c9d9c;
+  padding: 2px 14px;
+  font-family: var(--first-font);
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid var(--blue-color);
 }
 
 .button-regular {
-    width: fit-content;
-    height: fit-content;
-    color: #FFFFFF;
-    background-color: #0C9D9C;
-    padding: 2px 14px;
-    border-radius: 5px;
-    font-family: var(--first-font);
-    font-size: 28px;
-    border: 1px solid var(--blue-color);
+  width: fit-content;
+  height: fit-content;
+  color: #ffffff;
+  background-color: #0c9d9c;
+  padding: 2px 14px;
+  border-radius: 5px;
+  font-family: var(--first-font);
+  font-size: 28px;
+  border: 1px solid var(--blue-color);
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }

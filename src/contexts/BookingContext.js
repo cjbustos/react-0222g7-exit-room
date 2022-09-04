@@ -1,26 +1,22 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer} from "react";
+import orderReducer from "../reducers/orderReducer";
 
 export const BookingContext = createContext()
 
 const BookingContextProvider = (props) => {
 
-    const [orders, setOrders] = useState(['order1', 'order2', 'order3'])
+    //----With 'state' implementation----
+    //const [orders, setOrders] = useState([])
+    //const uploadOrder = (obj) => setOrders([...orders, obj])
+
+    //----With 'reducer' implementation----
+    const [orders, dispatch] = useReducer(orderReducer, [])
 
     return (
-        <BookingContext.Provider value={{ orders, setOrders }}>
+        <BookingContext.Provider value={{ orders, dispatch }}>
             {props.children}
         </BookingContext.Provider>
     )
 }
 
 export default BookingContextProvider
-
-/* 
-{
-    id: 0,
-    episodeName: 'Without name!',
-    cityName: 'Buenos Aires',
-    playingDate: '',
-    numberOfPlayers: 2,
-    reserveDate: ''
-} */

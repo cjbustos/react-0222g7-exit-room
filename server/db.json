@@ -73,17 +73,58 @@
     ],
     "reserve": [
       {
-        "date": "20/8/2022",
+        "date": "4/9/2022",
         "info": [
-          { "time": "10:00", "isFree": true },
-          { "time": "11:00", "isFree": false }
+          { "time": "8:30", "isFree": true },
+          { "time": "10:30", "isFree": false },
+          { "time": "11:30", "isFree": true },
+          { "time": "12:30", "isFree": true },
+          { "time": "13:30", "isFree": false },
+          { "time": "14:30", "isFree": true }
         ]
       },
       {
-        "date": "21/8/2022",
+        "date": "5/9/2022",
         "info": [
-          { "time": "12:00", "isFree": false },
-          { "time": "13:00", "isFree": false }
+          { "time": "11:00", "isFree": true },
+          { "time": "12:30", "isFree": false },
+          { "time": "13:30", "isFree": true },
+          { "time": "15:30", "isFree": true },
+          { "time": "16:30", "isFree": false },
+          { "time": "18:30", "isFree": true }
+        ]
+      },
+      {
+        "date": "6/9/2022",
+        "info": [
+          { "time": "14:00", "isFree": false },
+          { "time": "15:30", "isFree": false },
+          { "time": "16:30", "isFree": true },
+          { "time": "17:30", "isFree": true },
+          { "time": "18:30", "isFree": false },
+          { "time": "19:30", "isFree": true }
+        ]
+      },
+      {
+        "date": "7/9/2022",
+        "info": [
+          { "time": "14:00", "isFree": false },
+          { "time": "15:30", "isFree": false },
+          { "time": "16:30", "isFree": true },
+          { "time": "17:30", "isFree": true },
+          { "time": "18:30", "isFree": false },
+          { "time": "19:30", "isFree": true }
+        ]
+      },
+      {
+        "date": "8/9/2022",
+        "info": [
+          { "time": "8:45", "isFree": true },
+          { "time": "10:30", "isFree": false },
+          { "time": "12:30", "isFree": true },
+          { "time": "19:30", "isFree": true },
+          { "time": "20:30", "isFree": false },
+          { "time": "21:45", "isFree": true }
         ]
       }
     ]

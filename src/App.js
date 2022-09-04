@@ -23,7 +23,6 @@ import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 //import Boxes from "./components/Boxes";
 import Image from "./components/Image";
-import CustomModal from "./components/CustomModal";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
@@ -31,6 +30,7 @@ import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
 import ShoppingCartContextProvider from "./contexts/ShoppingCartContext";
 import BookingContextProvider from "./contexts/BookingContext";
+import Button from "./components/Button";
 
 function App() {
 
@@ -56,9 +56,9 @@ function App() {
             <div className="container">
               <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
               <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-              <CustomModal sizeButton={'regular'} label={"RESERVAR SALA"}>
-                <h3>Ejemplo de texto dentro del componente</h3>
-              </CustomModal>
+              <Button className="button-regular" onClick={() => window.location.href='#episode'}>
+                RESERVAR SALA
+              </Button>
             </div>
           </main>
 
@@ -95,7 +95,7 @@ function App() {
               <Card
                 id={1}
                 active={true}
-                nombre="ALICIA´S ROOM"
+                name="ALICIA´S ROOM"
                 imagen="alice"
                 texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
                 showModal={true}
@@ -105,7 +105,7 @@ function App() {
               <Card
                 id={2}
                 active={true}
-                nombre="SCHRöDINGER ROOM"
+                name="SCHRöDINGER ROOM"
                 imagen="schrödinger"
                 texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
                 showModal={true}
@@ -115,7 +115,7 @@ function App() {
               <Card
                 id={3}
                 active={true}
-                nombre="STRANGER ROOM"
+                name="STRANGER ROOM"
                 imagen="stranger"
                 texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
                 showModal={true}
@@ -163,19 +163,19 @@ function App() {
 
             <div className="cards-container">
               <Card
-                nombre="San Telmo"
+                name="San Telmo"
                 imagen="san-telmo"
                 texto="Balcarce 1235"
                 showModal={false}
               />
               <Card
-                nombre="Vicente Lopez"
+                name="Vicente Lopez"
                 imagen="vicente-lopez"
                 texto="Av. del Libertador 2411 "
                 showModal={false}
               />
               <Card
-                nombre="Palermo"
+                name="Palermo"
                 imagen="palermo"
                 texto="Armenia 1782"
                 showModal={false}

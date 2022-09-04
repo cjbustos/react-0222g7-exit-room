@@ -1,23 +1,23 @@
 import "../styles/ShoppingCart.css"
 import { useContext, useEffect, useState } from "react"
 import { FiShoppingCart } from "react-icons/fi";
-import { ShopppingCartContext } from "../contexts/ShoppingCartContext";
+import { BookingContext } from "../contexts/BookingContext";
 
 export default function ShoppingCart() {
 
-    const { counter } = useContext(ShopppingCartContext)
+    const { orders } = useContext(BookingContext)
 
     const [style, setStyle] = useState('with-zero')
 
     useEffect(() => {
-        if (counter !== 0) setStyle('non-zero')
-    }, [counter, style])
+        if (orders.length !== 0) setStyle('non-zero')
+    }, [orders, style])
 
     return (
         <div className={`${style}`}>
             <ul>
-                <i style={{ padding: 2, fontSize: 24 }}><FiShoppingCart /></i>
-                <i style={{ padding: 2, fontSize: 24 }}>{counter}</i>
+                <i style={{ padding: 2, fontSize: 24 }}><FiShoppingCart onClick={() => console.log(orders)} /></i>
+                <i style={{ padding: 2, fontSize: 24 }}>{orders.length}</i>
             </ul>
         </div>
     )

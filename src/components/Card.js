@@ -1,10 +1,8 @@
 import React from 'react';
 import '../styles/Card.css';
 import CustomModal from './CustomModal';
-import Order from './Order';
-import OrderList from './OrderList';
 
-function Card({ id, active, nombre, texto, imagen, sizeButton, showModal, labelButton }) {
+function Card({ name, texto, imagen, sizeButton, showModal, labelButton }) {
 
   return (
     <div className="cards-container">
@@ -16,14 +14,12 @@ function Card({ id, active, nombre, texto, imagen, sizeButton, showModal, labelB
         />
         <div className="card-text-container">
           <p className="card-name">
-            <span className="card-color-name">{nombre} </span>
+            <span className="card-color-name">{name} </span>
           </p>
           <p className="card-text">{texto}</p>
         </div>
         {showModal &&
-          <CustomModal sizeButton={sizeButton} label={labelButton}>
-            <Order name={nombre} />
-          </CustomModal>
+          <CustomModal name={name} sizeButton={sizeButton} label={labelButton} />
         }
       </div>
     </div>
