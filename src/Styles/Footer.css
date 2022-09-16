@@ -1,0 +1,14 @@
+:root {
+    --pink-color: #c65385;
+    --blue-color: #0c9d9c;
+    --black-color: #111111;
+    --white-color: #ffffff;
+    --grey-color: #EEE0FE;
+    --first-font: "Rationale", sans-serif;
+  }
+
+.react-icons {
+    color: var(--blue-color);
+    vertical-align: middle;
+    size: 1em;
+  }
