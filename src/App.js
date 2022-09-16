@@ -36,7 +36,7 @@ function App() {
 
   //API call
   const { data } = useAxios('http://localhost:8000/api')
-  const { nav } = data
+  const { navbar } = data
 
   return (
     <ShoppingCartContextProvider>
@@ -48,7 +48,7 @@ function App() {
             <a href="/">
               <Image path={logo} width={115} height={110} position={"left"} />
             </a>
-            <Navbar opt={nav} />
+            <Navbar opt={navbar} />
           </header>
 
           {/* MAIN */}

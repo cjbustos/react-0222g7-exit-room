@@ -31,7 +31,7 @@ main {
   width: 100%;
   background-image: url(../img/main-background.jpeg);
   background-size: cover;
-  opacity: 0.75;
+  /* opacity: 0.75; */
 }
 
 /* TEXTOS */

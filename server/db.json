@@ -127,6 +127,30 @@
           { "time": "21:45", "isFree": true }
         ]
       }
+    ],
+    "navbar":[
+      {
+        "label": "Salas",
+        "path": "episode",
+        "episode": ["ALICIA", "SCHRöDINGER", "STRANGER ROOM", "JOHN WICK"]
+      },
+      {
+        "label": "Sucursales",
+        "path": "location",
+        "location": ["Palermo", "Belgrano", "Congreso"]
+      },
+      {
+        "label": "Precios",
+        "path": "prices"
+      },
+      {
+        "label": "Galería",
+        "path": "products"
+      },
+      {
+        "label": "Contacto",
+        "path": "contact"
+      }
     ]
   }
 }

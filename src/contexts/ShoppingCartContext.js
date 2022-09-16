@@ -4,11 +4,14 @@ export const ShopppingCartContext = createContext();
 
 const ShoppingCartContextProvider = (props) => {
 
-    const [counter, setCounter] = useState(0);
-    const updateCounter = () => setCounter((prevState) => prevState + 1);
+    //const [counter, setCounter] = useState(0);
+    //const updateCounter = () => setCounter((prevState) => prevState + 1);
+
+    const [showOrders, setShowOrders] = useState(false);
+    const display = () => setShowOrders(!showOrders)
 
     return (
-        <ShopppingCartContext.Provider value={{ counter, updateCounter }}>
+        <ShopppingCartContext.Provider value={{ showOrders, display }}>
             {props.children}
         </ShopppingCartContext.Provider>
     )

@@ -1,0 +1,78 @@
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
+}
+
+ul#checkout {
+}
+
+ul#checkout a {
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+ul#checkout,
+ul#checkout ul,
+ul#checkout li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+ul#checkout li {
+  vertical-align: middle;
+}
+
+ul#checkout > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Revisar propiedad float */
+  float: left;
+  color: var(--white-color);
+  background-color: green;
+  border-radius: 15px;
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+}
+
+ul#checkout > li > a:hover {
+  box-shadow: -1px 2px 3px rgb(0, 0, 0);
+}
+
+ul#itemList {
+  padding: 10px;
+  width: 279px;
+  float: left;
+  position: absolute;
+  display: none;
+  margin-bottom: 10px;
+}
+
+ul#itemList li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+ul#itemList li a {
+}
+
+ul#checkout li:hover ul#itemList {
+  display: block;
+  position: absolute;
+  font-size: 10pt;
+  background-color: grey;
+  width: 279px;
+  color: #ccc;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 10px;
+  float: left;
+  margin-top: 27px;
+}

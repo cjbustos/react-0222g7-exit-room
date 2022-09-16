@@ -7,22 +7,21 @@
 
 ul {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 110px;
+    background-color: #111111;
     list-style-type: none;
     margin: 0;
     padding: 0 38px;
-    background-color: #111111;
     overflow: hidden;
-    align-items: center;
-    justify-content: flex-end;
 }
 
 li {
     font-family: "Rationale", sans-serif;
     font-size: 20px;}
 
-li a,
-.dropbtn {
+li a{
     display: inline-block;
     color: white;
     text-align: center;
@@ -58,11 +57,11 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
     border-radius: 3px 3px 3px 3px;
     background-color: #b8ebeb;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */

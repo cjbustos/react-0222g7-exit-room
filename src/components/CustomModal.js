@@ -12,24 +12,25 @@ ReactModal.setAppElement("#root");
 const CustomModal = ({ name, label, sizeButton }) => {
 
     const { data } = useAxios("http://localhost:8000/api");
-    const { nav, reserve } = data;
+    const { reserve, navbar } = data;
 
-    //Local variables
-    const today = new Date();
-    let strToday = today.toLocaleDateString('es');
+    // Local variables
+    // const today = new Date();
+    // let strToday = today.toLocaleDateString('es');
 
-    //Global context
-    //const { updateCounter } = useContext(ShopppingCartContext);
+    // Global context
+    // const { updateCounter } = useContext(ShopppingCartContext);
     const { dispatch } = useContext(BookingContext);
 
-    //Local states
+    // Modal state
     const [isOpen, setIsOpen] = useState(false);
+    // For active/inactive inputs
     const [active, setActive] = useState(false);
     const [shopCart, setShopCart] = useState({
         id: uuidv4(),
         episode: name,
-        city: 'Palermo',
-        date: strToday,
+        city: '',
+        date: '',
         info: ''
     })
 
@@ -46,26 +47,24 @@ const CustomModal = ({ name, label, sizeButton }) => {
 
     const handleChange = (e) => {
         setShopCart({
-            ...shopCart,
-            [e.target.name] : e.target.value
+            ...shopCart, [e.target.name] : e.target.value
         });
     };
 
     const updateShoppingCart = (order) => {
-        //uploadOrder(order)
         //With 'dispatch' to 'reducer'
-        dispatch({type: ACTIONS.ADD_ORDER, payload: order})
+        dispatch({ type: ACTIONS.ADD_ORDER, payload: order })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert( `Chequee los datos antes de hacer su reserva:
+        alert( `Desea realizar la siguiente reserva:
                 Sala: ${shopCart.episode} 
                 Sucursal: ${shopCart.city} 
                 Fecha: ${shopCart.date} 
                 Horario: ${shopCart.info}`
                 )
-        const finalCheck = window.confirm('Confirma su reserva?');
+        const finalCheck = window.confirm('¿Confirma la reserva?');
         if(!finalCheck){
             return
         } else {
@@ -74,12 +73,12 @@ const CustomModal = ({ name, label, sizeButton }) => {
         }
     };
 
-    function fillComboCities(emptyArr) {
-        if (nav) {
-            nav.forEach((item) => {
-                if (item.id === 2) {
-                    for (let city of item.content) {
-                        emptyArr.push(city.name);
+    function fillComboLocation(emptyArr) {
+        if (navbar) {
+            navbar.forEach((item) => {
+                if ('location' in item) {
+                    for (let location of item.location) {
+                        emptyArr.push(location);
                     }
                 }
             });
@@ -98,55 +97,51 @@ const CustomModal = ({ name, label, sizeButton }) => {
 
     function fillComboAvailableTime(emptyArr){
         reserve
-        .filter(f => f.date === shopCart.date)
-        .map(e => e.info
-            .filter(f => f.isFree)
-            .map(e => emptyArr.push(e.time))
+            .filter(f => f.date === shopCart.date)
+            .map(e => e.info
+                .filter(f => f.isFree)
+                .map(e => emptyArr.push(e.time))
         )    
         return emptyArr
     }
 
     //Fill combos
-    const cities = fillComboCities([]);
     const dates = fillComboDates([]);
-    const time = fillComboAvailableTime([])
+    const time = fillComboAvailableTime([]);
+    const location = fillComboLocation([]);
 
     return (
         <div>
-            <Button className={`button-${sizeButton}`} onClick={toggleModal}>
-                {label}
-            </Button>
+            <Button className={`button-${sizeButton}`} onClick={toggleModal}>{label}</Button>
             <ReactModal isOpen={isOpen} onRequestClose={toggleModal} className="Modal" overlayClassName="Overlay">
                 <h1>{name}</h1>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        Elija una sucursal:
-                        <select value={shopCart.city} name="city" disabled={active} onChange={handleChange}>
-                            {cities.map((el, index) => <option key={index} value={el}>{el}</option>)}
+                        Seleccionar sucursal:
+                        <select defaultValue={shopCart.city} name="city" disabled={active} onChange={handleChange}>
+                            <option value={shopCart.city} disabled>Seleccionar opcion</option>
+                            {location.map((el, index) => <option key={index} value={el}>{el}</option>)}
                         </select>
                     </label>
                     <label>
-                        Elija la fecha:
-                        <select value={shopCart.date} name="date" disabled={active} onChange={handleChange}>
+                        Seleccionar fecha:
+                        <select defaultValue={shopCart.date} name="date" disabled={active} onChange={handleChange}>
+                            <option value={shopCart.date} disabled>Seleccionar opcion</option>
                             {dates.map((el, index) => <option key={index} value={el}>{el}</option>)}
                         </select>
                     </label>
                     <label>
-                        Elija un horario:
+                        Seleccionar horario:
                         <select defaultValue={shopCart.info} name="info" disabled={active} onChange={handleChange}>
-                            <option value={shopCart.info} disabled>Select an Option</option>
+                            <option value={shopCart.info} disabled>Seleccionar opcion</option>
                             {time.map((el, index) => <option key={index} value={el}>{el}</option>)}
                         </select>
                     </label>
                     <div className="modal-dialog-ok-button">
-                        <Button className={`button-${sizeButton}`} type="submit" disabled={active} onClick={handleSubmit}>
-                            {label}
-                        </Button>
+                        <Button className={`button-${sizeButton}`} type="submit" disabled={active} onClick={handleSubmit}>{label}</Button>
                     </div>
                     <div className="modal-dialog-close-button">
-                        <Button className={`button-${sizeButton}`} onClick={handleModalClose}>
-                            Cerrar
-                        </Button>
+                        <Button className={`button-${sizeButton}`} onClick={handleModalClose}>Cerrar</Button>
                     </div>
                 </form>
             </ReactModal>
@@ -155,3 +150,16 @@ const CustomModal = ({ name, label, sizeButton }) => {
 };
 
 export default CustomModal;
+
+/* function fillComboCities(emptyArr) {
+        if (nav) {
+            nav.forEach((item) => {
+                if (item.id === 2) {
+                    for (let city of item.content) {
+                        emptyArr.push(city.name);
+                    }
+                }
+            });
+        }
+        return emptyArr
+    } */
