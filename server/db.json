@@ -1,81 +1,34 @@
 {
   "api": {
-    "nav": [
+    "navbar": [
       {
-        "id": 1,
         "label": "Salas",
-        "subcategory": true,
         "path": "episode",
-        "content": [
-          {
-            "id": 0,
-            "active": true,
-            "name": "ALICIA"
-          },
-          {
-            "id": 1,
-            "active": true,
-            "name": "SCHRöDINGER"
-          },
-          {
-            "id": 2,
-            "active": true,
-            "name": "STRANGER ROOM"
-          },
-          {
-            "id": 3,
-            "active": true,
-            "name": "JOHN WICK"
-          }
-        ]
+        "episode": ["ALICIA", "SCHRöDINGER", "STRANGER ROOM"]
       },
       {
-        "id": 2,
         "label": "Sucursales",
-        "subcategory": true,
-        "path": "cities",
-        "content": [
-          {
-            "id": 0,
-            "active": true,
-            "name": "San Telmo"
-          },
-          {
-            "id": 1,
-            "active": true,
-            "name": "Saavedra"
-          },
-          {
-            "id": 2,
-            "active": true,
-            "name": "Palermo"
-          }
-        ]
+        "path": "location",
+        "location": ["San Telmo", "Vicente Lopez", "Palermo"]
       },
       {
-        "id": 3,
         "label": "Precios",
-        "subcategory": false,
         "path": "prices"
       },
       {
-        "id": 4,
         "label": "Galería",
-        "subcategory": false,
         "path": "products"
       },
       {
-        "id": 5,
         "label": "Contacto",
-        "subcategory": false,
         "path": "contact"
       }
     ],
     "reserve": [
       {
-        "date": "4/9/2022",
+        "date": "18/09/2022",
         "info": [
-          { "time": "8:30", "isFree": true },
+          { "time": "9:30", "isFree": true },
           { "time": "10:30", "isFree": false },
           { "time": "11:30", "isFree": true },
           { "time": "12:30", "isFree": true },
@@ -84,9 +37,9 @@
         ]
       },
       {
-        "date": "5/9/2022",
+        "date": "19/09/2022",
         "info": [
-          { "time": "11:00", "isFree": true },
+          { "time": "11:30", "isFree": true },
           { "time": "12:30", "isFree": false },
           { "time": "13:30", "isFree": true },
           { "time": "15:30", "isFree": true },
@@ -95,7 +48,7 @@
         ]
       },
       {
-        "date": "6/9/2022",
+        "date": "20/09/2022",
         "info": [
           { "time": "14:00", "isFree": false },
           { "time": "15:30", "isFree": false },
@@ -106,7 +59,7 @@
         ]
       },
       {
-        "date": "7/9/2022",
+        "date": "21/09/2022",
         "info": [
           { "time": "14:00", "isFree": false },
           { "time": "15:30", "isFree": false },
@@ -117,7 +70,7 @@
         ]
       },
       {
-        "date": "8/9/2022",
+        "date": "22/09/2022",
         "info": [
           { "time": "8:45", "isFree": true },
           { "time": "10:30", "isFree": false },
@@ -126,30 +79,6 @@
           { "time": "20:30", "isFree": false },
           { "time": "21:45", "isFree": true }
         ]
-      }
-    ],
-    "navbar":[
-      {
-        "label": "Salas",
-        "path": "episode",
-        "episode": ["ALICIA", "SCHRöDINGER", "STRANGER ROOM", "JOHN WICK"]
-      },
-      {
-        "label": "Sucursales",
-        "path": "location",
-        "location": ["Palermo", "Belgrano", "Congreso"]
-      },
-      {
-        "label": "Precios",
-        "path": "prices"
-      },
-      {
-        "label": "Galería",
-        "path": "products"
-      },
-      {
-        "label": "Contacto",
-        "path": "contact"
       }
     ]
   }

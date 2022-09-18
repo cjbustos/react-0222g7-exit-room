@@ -18,13 +18,12 @@ export default function ShoppingCart() {
 
     return (
         <div className={`${style}`}>
-            <ul>
-                <li style={{ padding: 2, fontSize: 24 }}><FiShoppingCart onMouseOver={() => display()} /></li>
-                {/* <li style={{ padding: 2, fontSize: 24 }}>{orders.length}</li> */}
+            <li><FiShoppingCart onClick={() => display()} />
+            <li>{orders.length}</li>
                 {
-                    showOrders && <List orderList={orders} />
+                    showOrders && <List list={orders} />
                 }
-            </ul>
+            </li>
         </div>
     )
 }
