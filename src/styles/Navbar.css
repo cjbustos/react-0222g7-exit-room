@@ -16,97 +16,80 @@
 
 ul {
   display: flex;
+  height: 110px;
+  list-style-type: none;
+  gap: 2em;
+  /* margin: 0; */
+  /* padding: 0 38px; */
+  background-color: var(--black-color);
+  overflow: hidden;
   align-items: center;
   justify-content: flex-end;
-  height: 110px;
-  background-color: #111111;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 38px;
-  overflow: hidden;
 }
 
 li {
-  font-family: "Rationale", sans-serif;
+  font-family: var(--first-font);
   font-size: 20px;
 }
 
 li a {
   display: inline-block;
-  color: white;
+  color: var(--white-color);
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
 }
 
-li:hover, li:focus-within {
-  background: var(--pink-color);
-  cursor: pointer;
-}
+.shop-cart-icon:hover
+ {
+  border-radius: 50%;
+  padding: 1em;
+  background-color: var(--blue-color);
+} 
 
-li:focus-within a {
-  outline: none;
-}
+.nav-options:hover
+ {
+  border-radius: 1em;
+  background-color: var(--blue-color);
+} 
 
-ul li ul {
-  background: var(--black-color);
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-}
-
-ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-ul li ul li {
-  clear: both;
-  width: 100%;
-}
-
-/*
-li a:hover,
-.dropdown:hover .dropbtn {
-    border-radius: 3px 3px 3px 3px;
-    background-color: #bf54ad;
+.dropdown:hover {
+  /* border-radius: 3px 3px 3px 3px;
+  background-color: var(--pink-color); */
 }
 
 li.dropdown {
-    display: inline-block;
+  display: inline-block;
+}
+
+ul.dropdown {
+  display: block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    padding: 5px;
+  display: none;
+  position: absolute;
+  background-color: var(--white-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 5px;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: var(--black-color);
+  font-size: 0.8em;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-content a:hover {
-    border-radius: 3px 3px 3px 3px;
-    background-color: #b8ebeb;
+  border-radius: 3px 3px 3px 3px;
+  background-color: var(--pink-color);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
-
-*/

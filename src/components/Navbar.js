@@ -11,11 +11,12 @@ const Navbar = (props) => {
     return (
         <nav>
             <ul>
-                {opt.map((elem, index) => <Link
-                    key={index}
-                    label={elem.label}
-                    path={elem.path}
-                />)}
+                {opt
+                    .map((elem, index) => <Link
+                        key={index}
+                        label={elem.label}
+                        path={elem.path}
+                    />)}
                 <ShoppingCart />
             </ul>
         </nav>
