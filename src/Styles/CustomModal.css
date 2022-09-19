@@ -9,13 +9,29 @@
   --first-font: "Rationale", sans-serif;
 }
 
+.box-name {
+  font-size: 5em;
+}
 .Modal {
-  position: absolute;
-  top: 100px;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: 40px auto;
+  background-image: linear-gradient(
+    to bottom,
+    var(--black-color),
+    var(--black-color),
+    #191b1c,
+    #1e201f,
+    #242522
+  );
+  border-radius: 20px;
+  box-shadow: 3px 5px 20px var(--grey-color);
+  /* top: 100px;
   left: 100px;
   right: 100px;
-  bottom: 100px;
-  background-color: hwb(0 7% 93% / 0.9);
+  bottom: 100px; */
+  /* background-color: hwb(0 7% 93% / 0.9); */
 }
 
 .Overlay {
@@ -24,12 +40,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, #000000 0%, #b9a4b6 90%);
+  background: linear-gradient(180deg, var(--black-color) 0%, #b9a4b6 90%);
 }
 
 .modal-dialog {
   text-align: center;
-}
+  }
 
 .modal-dialog-ok-button {
   position: absolute;
@@ -43,7 +59,7 @@
   right: 10px;
 }
 
-.box-content{
+.box-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,11 +67,13 @@
 }
 
 .box-content select {
-  width: 150px;
+  width: 350px;
   height: 24px;
-  color: rgb(100, 206, 200);
+  color: var(--white-color);
+  font-family: var(--first-font);
   font-size: 14px;
   border: 2px solid var(--blue-color);
-  margin: 18px;
+  border-radius: 5px;
+  margin: 25px;
   background-color: rgb(30, 56, 61);
 }

@@ -33,22 +33,24 @@ import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
 
 function App() {
-
   //API call
-  const { data } = useAxios('http://localhost:8000/api')
-  const { navbar } = data
+  const { data } = useAxios("http://localhost:8000/api");
+  const { navbar } = data;
 
   return (
     <ShoppingCartContextProvider>
       <BookingContextProvider>
         <div className="App">
-
           {/* NAVBAR */}
           <header>
-            <a href="/">
-              <Image path={logo} width={115} height={110} position={"left"} />
-            </a>
-            <Navbar opt={navbar} />
+            <div className="logo1">
+              <a href="/">
+                <Image path={logo} width={115} height={110} position={"left"} />
+              </a>
+            </div>
+            <div>
+              <Navbar opt={navbar} />
+            </div>
           </header>
 
           {/* MAIN */}
@@ -56,26 +58,29 @@ function App() {
             <div className="container">
               <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
               <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-              <Button className="button-regular" onClick={() => window.location.href='#episode'}>
+              <Button
+                className="button-regular"
+                onClick={() => (window.location.href = "#episode")}
+              >
                 RESERVAR SALA
               </Button>
             </div>
           </main>
 
           <div className="container-boxes">
-            <Boxes text={'Busca tu sucursal'}>
+            <Boxes text={"Busca tu sucursal"}>
               <BsSearch />
             </Boxes>
-            <Boxes text={'Elegí tu sala'}>
+            <Boxes text={"Elegí tu sala"}>
               <BsHandIndexThumb />
             </Boxes>
-            <Boxes text={'Reservá tu turno'}>
+            <Boxes text={"Reservá tu turno"}>
               <BsBookmarkCheck />
             </Boxes>
-            <Boxes text={'Armá tu equipo'}>
+            <Boxes text={"Armá tu equipo"}>
               <FaPeopleArrows />
             </Boxes>
-            <Boxes text={'¿Podrás escapar?'}>
+            <Boxes text={"¿Podrás escapar?"}>
               <GiExitDoor />
             </Boxes>
           </div>
@@ -99,8 +104,8 @@ function App() {
                 imagen="alice"
                 texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
                 showModal={true}
-                labelButton={'RESERVAR'}
-                sizeButton={'small'}
+                labelButton={"RESERVAR"}
+                sizeButton={"small"}
               />
               <Card
                 id={2}
@@ -109,8 +114,8 @@ function App() {
                 imagen="schrödinger"
                 texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
                 showModal={true}
-                labelButton={'RESERVAR'}
-                sizeButton={'small'}
+                labelButton={"RESERVAR"}
+                sizeButton={"small"}
               />
               <Card
                 id={3}
@@ -119,8 +124,8 @@ function App() {
                 imagen="stranger"
                 texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
                 showModal={true}
-                labelButton={'RESERVAR'}
-                sizeButton={'small'}
+                labelButton={"RESERVAR"}
+                sizeButton={"small"}
               />
             </div>
           </section>
@@ -195,7 +200,9 @@ function App() {
                 <button className="button-number">3 participantes $1800</button>
                 <button className="button-number">4 participantes $1600</button>
                 <button className="button-number">5 participantes $1500</button>
-                <button className="button-number">+6 participantes $1400</button>
+                <button className="button-number">
+                  +6 participantes $1400
+                </button>
               </div>
             </div>
           </section>
@@ -217,7 +224,9 @@ function App() {
           </section>
 
           {/* FOOTER */}
-          <footer><Footer /></footer>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </BookingContextProvider>
     </ShoppingCartContextProvider>
