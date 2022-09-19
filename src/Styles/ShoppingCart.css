@@ -14,13 +14,21 @@
   --first-font: "Rationale", sans-serif;
 }
 
-/* .with-zero {
+.with-zero a {
+  color: var(--blue-color);
+}
+
+.non-zero a {
+  color: var(--pink-color);
+}
+
+.with-zero {
   color: var(--blue-color);
 }
 
 .non-zero {
   color: var(--pink-color);
-} */
+}
 
 .shop-container {
   display: flex;
@@ -30,7 +38,6 @@
 }
 
 .shop-number {
-  color: var(--blue-color);
   font-size: 20px;
   background-color: var(--white-color);
   border-radius: 50%;
@@ -43,5 +50,5 @@
 }
 
 .shop-cart-icon:hover {
-  color: var(--blue-color);
+  /* color: var(--blue-color); */
 }
