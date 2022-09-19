@@ -25,7 +25,8 @@
 .shop-container{
   display: flex;
   justify-content: center;
-  margin-right: 3em;
+  margin-right: 8em;
+  margin-left: 3.5em;
 }
 
 .shop-number {
@@ -37,6 +38,6 @@
 }
 
 .shop-cart-icon {
-    font-size: 24px;
+    font-size: 30px;
     margin-left: -1em;
 }

@@ -3,7 +3,6 @@ import { useContext, useEffect, useState } from "react"
 import { FiShoppingCart } from "react-icons/fi";
 import { BookingContext } from "../contexts/BookingContext";
 import { ShopppingCartContext } from "../contexts/ShoppingCartContext";
-import List from "./List";
 import CustomModal from "./CustomModal";
 
 export default function ShoppingCart() {
@@ -21,26 +20,31 @@ export default function ShoppingCart() {
     }, [orders, style])
 
     return (
-        <div className="shop-container">
-            <div>
-                <li className="dropdown">
-                    <a href={"#".concat("/")}>{<FiShoppingCart className="shop-cart-icon" />}</a>
-                    {/* <FiShoppingCart className="shop-cart-icon" /> */}
-                    {
-                        <div className="dropdown-content">
-                            {
-                                orders.map(e => <a key={e} href={"#".concat("/")}>{e.episode}</a>)
-                            }
-                        </div>
-                    }
-                </li>
-            </div>
-            <div>
-                <div className="shop-number">{orders.length}</div>
-            </div>
+      <div className="shop-container">
+        <div>
+          <li className="dropdown">
+            <ol className="list">
+              <a href={"#".concat("/")}>
+                {<FiShoppingCart className="shop-cart-icon" />}
+              </a>
+              {/* <FiShoppingCart className="shop-cart-icon" /> */}
+              {
+                <div className="dropdown-content">
+                  {orders.map((e) => (
+                    <a key={e} href={"#".concat("/")}>
+                      {e.episode}
+                    </a>
+                  ))}
+                </div>
+              }
+            </ol>
+          </li>
         </div>
-
-    )
+        <div>
+          <div className="shop-number">{orders.length}</div>
+        </div>
+      </div>
+    );
 }
 
 {/* <div className="shop-cart">
