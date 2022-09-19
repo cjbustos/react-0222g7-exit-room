@@ -31,6 +31,7 @@ import Boxes from "./components/Boxes";
 import ShoppingCartContextProvider from "./contexts/ShoppingCartContext";
 import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
+import CustomModal from "./components/CustomModal";
 
 function App() {
   //API call
@@ -132,7 +133,7 @@ function App() {
 
           {/* PARTICIPANTES */}
           <div className="container-who-play">
-            <h1>¿QUIENES PUEDEN PARTICIPAR?</h1>
+            <h2 className="text-title">¿QUIENES PUEDEN PARTICIPAR?</h2>
             <div className="icons-participants">
               <RiHome4Line />
               <RiServiceLine />
@@ -149,7 +150,7 @@ function App() {
 
           {/* REDES */}
           <div className="container-social-media">
-            <h3 className="text-undertitle">Seguinos en nuestras redes</h3>
+            <h2 className="text-title">Seguinos en nuestras redes</h2>
             <div className="icons-redes">
               <BsFacebook />
               <FaInstagramSquare id="instagram" />

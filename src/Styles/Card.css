@@ -13,18 +13,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15em;
+  gap: 5em;
+  margin-left: 45px;
 }
 
 .cards {
   width: 18em;
   position: relative;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .card-image {
-  height: 15em;
-  width: 15em;
+  height: 12em;
+  width: 12em;
   border-radius: 20px;
   margin-bottom: 20px;
   outline: 1px solid var(--white-color);

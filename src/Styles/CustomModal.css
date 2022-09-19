@@ -10,28 +10,18 @@
 }
 
 .box-name {
-  font-size: 5em;
+  font-size: 3em;
+  margin-top: 1.8em;
 }
 .Modal {
   position: relative;
   width: 80%;
-  height: 80%;
+  height: 90%;
   margin: 40px auto;
-  background-image: linear-gradient(
-    to bottom,
-    var(--black-color),
-    var(--black-color),
-    #191b1c,
-    #1e201f,
-    #242522
-  );
+  background-image: url("../img/reservationRoom.jpg");
+  background-size: 100% 100%;
   border-radius: 20px;
   box-shadow: 3px 5px 20px var(--grey-color);
-  /* top: 100px;
-  left: 100px;
-  right: 100px;
-  bottom: 100px; */
-  /* background-color: hwb(0 7% 93% / 0.9); */
 }
 
 .Overlay {
@@ -45,18 +35,22 @@
 
 .modal-dialog {
   text-align: center;
-  }
+}
 
 .modal-dialog-ok-button {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 .modal-dialog-close-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .box-content {
@@ -77,3 +71,4 @@
   margin: 25px;
   background-color: rgb(30, 56, 61);
 }
+

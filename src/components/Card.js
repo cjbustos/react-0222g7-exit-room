@@ -18,9 +18,13 @@ function Card({ name, texto, imagen, sizeButton, showModal, labelButton }) {
           </p>
           <p className="card-text">{texto}</p>
         </div>
-        {showModal &&
-          <CustomModal name={name} sizeButton={sizeButton} label={labelButton} />
-        }
+        {showModal && (
+          <CustomModal
+            name={name}
+            sizeButton={sizeButton}
+            label={labelButton}
+          />
+        )}
       </div>
     </div>
   );
