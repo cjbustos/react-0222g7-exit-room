@@ -9,6 +9,15 @@
   --first-font: "Rationale", sans-serif;
 }
 
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black-color);
+}
+
 .box-name {
   font-size: 3em;
   margin-top: 1.8em;
@@ -21,16 +30,6 @@
   background-image: url("../img/reservationRoom.jpg");
   background-size: 100% 100%;
   border-radius: 20px;
-  box-shadow: 3px 5px 20px var(--grey-color);
-}
-
-.Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, var(--black-color) 0%, #b9a4b6 90%);
 }
 
 .modal-dialog {
