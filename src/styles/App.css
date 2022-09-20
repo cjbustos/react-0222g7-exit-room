@@ -6,15 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --pink-color: #c65385;
-  --blue-color: #0c9d9c;
-  --black-color: #111111;
-  --white-color: #ffffff;
-  --grey-color: #404040;
-  --first-font: "Rationale", sans-serif;
-}
-
 .App {
   font-family: "Rationale", sans-serif;
 }
@@ -27,11 +18,12 @@ body {
 }
 
 main {
-  height: 460px;
+  height: 28em;
   width: 100%;
   background-image: url(../img/main-background.jpeg);
   background-size: cover;
-  /* opacity: 0.75; */
+  opacity: 0.75;
+  margin-top: 1em;
 }
 
 /* TEXTOS */
@@ -40,7 +32,6 @@ h1,
 h2 {
   color: var(--white-color);
   font-family: var(--first-font);
-  padding: 5px;
 }
 
 .h2-main {
@@ -145,6 +136,7 @@ h2 {
   text-align: center;
   line-height: 100px;
   margin: 30px auto;
+  opacity: 0.75;
 }
 
 .icons-redes {
@@ -172,11 +164,8 @@ h2 {
   background-image: url(../img/redes-fondo.jpg);
   text-align: center;
   line-height: 3em;
-}
-
-.button-number:hover {
-  background-color: var(--white-color);
-  color: var(--pink-color);
+  margin-top: 3em;
+  opacity: 0.75;
 }
 
 .button-price {
@@ -190,12 +179,17 @@ h2 {
   height: 4em;
   margin: 0.2em auto;
   color: var(--white-color);
-  background-color: var(--pink-color);
+  background-color: var(--invisible-color);
   font-size: 1.1em;
   font-family: var(--first-font);
   border-radius: 0.6em;
-  border: 0.06em solid var(--white-color);
+  border: 0.1em solid var(--blue-color);
 }
+
+.button-number:hover {
+  animation: text-flicker 2s linear forwards;
+}
+
 
 /* FOOTER */
 

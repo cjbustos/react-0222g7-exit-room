@@ -59,12 +59,15 @@ function App() {
             <div className="container">
               <h1>¿PODES ESCAPAR EN 60 MINUTOS?</h1>
               <h2 className="h2-main">Desafiar tus cinco sentidos es clave</h2>
-              <Button
-                className="button-regular"
-                onClick={() => (window.location.href = "#episode")}
-              >
-                RESERVAR SALA
-              </Button>
+              <div className="button-neon">
+                <Button
+                  className="button-regular"
+                  onClick={() => (window.location.href = "#episode")}
+                >
+                  <span class="first">RESERVAR</span>
+                  <span class="second"> SALA</span>
+                </Button>
+              </div>
             </div>
           </main>
 
@@ -103,7 +106,9 @@ function App() {
                 active={true}
                 name="ALICIA´S ROOM"
                 imagen="alice"
-                texto="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
+                textoA="Caiste un mundo inimaginable, un mundo de fantasia. Podrás encontrar la salida?"
+                textoB="Dificultad: ●●●○○"
+                textoC="Jugadores: 2 a 6"
                 showModal={true}
                 labelButton={"RESERVAR"}
                 sizeButton={"small"}
@@ -113,7 +118,9 @@ function App() {
                 active={true}
                 name="SCHRöDINGER ROOM"
                 imagen="schrödinger"
-                texto="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
+                textoA="Famoso experimento mental. Podrás liberte antes de convertirte el gato en la bolsa?"
+                textoB="Dificultad: ●●●●●"
+                textoC="Jugadores: 2 a 8"
                 showModal={true}
                 labelButton={"RESERVAR"}
                 sizeButton={"small"}
@@ -123,7 +130,9 @@ function App() {
                 active={true}
                 name="STRANGER ROOM"
                 imagen="stranger"
-                texto="The upside down is here! Podrás escapar de la maldad que se avecina?"
+                textoA="The upside down is here! Podrás escapar de la maldad que se avecina?"
+                textoB="Dificultad: ●●●●○"
+                textoC="Jugadores: 2 a 6"
                 showModal={true}
                 labelButton={"RESERVAR"}
                 sizeButton={"small"}
@@ -133,7 +142,7 @@ function App() {
 
           {/* PARTICIPANTES */}
           <div className="container-who-play">
-            <h2 className="text-title">¿QUIENES PUEDEN PARTICIPAR?</h2>
+            <h2 className="text-title">¿Quienes pueden participar?</h2>
             <div className="icons-participants">
               <RiHome4Line />
               <RiServiceLine />
@@ -171,19 +180,19 @@ function App() {
               <Card
                 name="San Telmo"
                 imagen="san-telmo"
-                texto="Balcarce 1235"
+                textoA="Balcarce 1235"
                 showModal={false}
               />
               <Card
                 name="Vicente Lopez"
                 imagen="vicente-lopez"
-                texto="Av. del Libertador 2411 "
+                textoA="Av. del Libertador 2411 "
                 showModal={false}
               />
               <Card
                 name="Palermo"
                 imagen="palermo"
-                texto="Armenia 1782"
+                textoA="Armenia 1782"
                 showModal={false}
               />
             </div>

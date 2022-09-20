@@ -21,6 +21,7 @@
 .slick-slide img {
   margin: auto;
   width: 50%;
+  opacity: 0.75;
 }
 
 .text-slider {

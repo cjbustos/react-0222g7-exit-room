@@ -172,7 +172,7 @@ const CustomModal = ({ name, label, sizeButton }) => {
               className={`button-${sizeButton}`}
               onClick={handleModalClose}
             >
-              Cerrar
+              CERRAR
             </Button>
           </div>
         </form>

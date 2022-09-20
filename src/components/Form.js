@@ -57,10 +57,12 @@ const Form = () => {
             name="mensaje"
             onChange={handleInputChange}
           />
-
-          <button className="button-form" type="submit">
-            ENVIAR
-          </button>
+          <div className="button-neon">
+            <button className="button-regular" type="submit">
+              <span class="first">ENV</span>
+              <span class="second">IAR</span>
+            </button>
+          </div>
         </div>
       </form>
     </Fragment>

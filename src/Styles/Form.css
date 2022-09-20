@@ -10,11 +10,11 @@
 }
 
 .form-container {
-  width: 80%;
-  margin: 40px auto;
+  width: 50%;
+  margin: 2.5em auto;
   background-image: linear-gradient(to bottom, #111111, #111111, #191b1c, #1e201f, #242522);
-  border-radius: 20px;
-  box-shadow: 3px 5px 20px var(--grey-color);
+  border-radius: 1.25em;
+  box-shadow: 0.1em 0.3em 1.25em var(--white-color);
 }
 
 .form-contact {
@@ -34,45 +34,29 @@
 }
 
 .name-form {
-  height: 50px;
-  width: 80%;
-  margin: 10px;
-  font-size: 25px;
+  height: 3em;
+  width: 60%;
+  margin: 0.6em;
+  font-size: 1em;
   font-family: var(--first-font);
   background-color: var(--white-color);
   color: var(--black-color);
-  border-radius: 10px;
-  box-shadow: 3px 5px 20px var(--pink-color);
+  border-radius: 0.6em;
+  box-shadow: 0.1em 0.3em 1.25em var(--pink-color);
 }
 
 .comments-form {
-  height: 100px;
-  width: 80%;
+  height: 6em;
+  width: 60%;
   background-color: var(--white-color);
   color: var(--black-color);
   border-radius: 10px;
-  margin: 20px;
-  font-size: 25px;
+  margin: 0.5em;
+  font-size: 1em;
   font-family: var(--first-font);
-  box-shadow: 3px 5px 20px var(--pink-color);
+  box-shadow: 0.1em 0.3em 1.25em var(--pink-color);
 }
 
-.button-form {
-  height: 50px;
-  width: 300px;
-  background-color: var(--pink-color);
-  color: var(--white-color);
-  font-weight: bold;
-  font-family: var(--first-font);
-  font-size: 25px;
-  border-radius: 15px;
-  margin: 20px;
-}
-
-.button-form:hover{
- background-color: var(--blue-color); 
- 
-}
 
 
 
