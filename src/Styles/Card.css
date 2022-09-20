@@ -9,28 +9,44 @@
   --first-font: "Rationale", sans-serif;
 }
 
+/* .container-episodes {
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+.container-shops {
+  height: 120px;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
+} */
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5em;
-  margin-left: 45px;
+  margin-left: 2.8em;
+  line-height: 1.5em;
+
 }
 
 .cards {
   width: 18em;
   position: relative;
-  margin-top: 10px;
+  margin-top: 0.6em;
 }
 
 .card-image {
   height: 12em;
   width: 12em;
-  border-radius: 20px;
-  margin-bottom: 20px;
+  border-radius: 1.3em;
+  margin-bottom: 1.3em;
   outline: 1px solid var(--white-color);
-  outline-offset: -8px;
-  box-shadow: 3px 5px 20px var(--grey-color);
+  outline-offset: -0.5em;
+  box-shadow: 0.19em 0.3em 1.3em var(--grey-color);
   object-fit: cover;
   transition: transform 0.75s;
 }

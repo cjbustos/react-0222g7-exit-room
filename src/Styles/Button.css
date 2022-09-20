@@ -33,15 +33,12 @@
   animation: border-flicker 2s linear forwards;
 }
 
-.button-small {
-  width: 7em;
-  height: 2em;
-  color: var(--white-color);
-  background-color: var(--invisible-color);
-  font-family: var(--first-font);
-  font-size: 18px;
-  border-radius: 5px;
-  border: 0.2em solid var(--blue-color);
+.button-neon:hover .second {
+  animation: text-flicker 2s linear forwards;
+}
+
+.button-neon:hover .first {
+  animation: letter-flicker 3s linear infinite;
 }
 
 .button-regular {
@@ -52,18 +49,22 @@
   border: 0.2em solid var(--invisible-color);
 }
 
+.button-small {
+  width: 7em;
+  height: 2em;
+  color: var(--white-color);
+  background-color: var(--invisible-color);
+  font-family: var(--first-font);
+  font-size: 18px;
+  border-radius: 5px;
+  border: 0.1em solid var(--blue-color);
+}
+
 .button-small:hover {
   animation: text-flicker 2s linear forwards;
 }
 .second {
   font-weight: 600;
-}
-.button-neon:hover .second {
-  animation: text-flicker 2s linear forwards;
-}
-
-.button-neon:hover .first {
-  animation: letter-flicker 3s linear infinite;
 }
 
 @keyframes text-flicker {

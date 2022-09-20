@@ -14,7 +14,7 @@
   margin: 2.5em auto;
   background-image: linear-gradient(to bottom, #111111, #111111, #191b1c, #1e201f, #242522);
   border-radius: 1.25em;
-  box-shadow: 0.1em 0.3em 1.25em var(--white-color);
+  box-shadow: 0.1em 0.1em 0.1em var(--white-color);
 }
 
 .form-contact {

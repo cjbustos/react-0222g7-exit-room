@@ -37,7 +37,7 @@ h2 {
 .h2-main {
   color: var(--white-color);
   font-family: var(--first-font);
-  padding: 5px;
+  padding: 0.3em;
   margin-bottom: 1em;
 }
 
@@ -60,44 +60,28 @@ h2 {
   font-family: var(--first-font-family);
   color: var(--white-color);
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 3em;
 }
 
 .container {
   height: auto;
   width: 50%;
   float: left;
-  padding-top: 60px;
-  padding-left: 60px;
+  padding-top: 3.75em;
+  padding-left: 3.75em;
 }
 
 /* BOXES */
 
 .container-boxes {
   width: 80%;
-  height: 180px;
+  height: 11.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 46px auto;
+  margin: 2.8em auto;
   background: linear-gradient(180deg, #404040 0%, #000000 100%);
-  border-radius: 15px;
-}
-
-/* CARDS */
-
-.container-episodes {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-}
-
-.container-shops {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
+  border-radius: 0.9em;
 }
 
 /* PARTICIPANTES */
@@ -130,12 +114,12 @@ h2 {
 /* REDES */
 
 .container-social-media {
-  height: 200px;
+  height: 12.5em;
   width: 100%;
   background-image: url(../img/redes-fondo.jpg);
   text-align: center;
-  line-height: 100px;
-  margin: 30px auto;
+  line-height: 6.25em;
+  margin: 1.8em auto;
   opacity: 0.75;
 }
 
@@ -144,8 +128,8 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
-  font-size: 40px;
-  margin-top: 20px;
+  font-size: 2.5em;
+  margin-top: 1.25em;
 }
 
 #instagram {
@@ -159,11 +143,10 @@ h2 {
 /* PRECIOS */
 
 .container-prices {
-  height: 15.6em;
+  height: 14em;
   width: 100%;
   background-image: url(../img/redes-fondo.jpg);
   text-align: center;
-  line-height: 3em;
   margin-top: 3em;
   opacity: 0.75;
 }
@@ -188,19 +171,27 @@ h2 {
 
 .button-number:hover {
   animation: text-flicker 2s linear forwards;
+  animation: border-flicker 2s linear forwards;
 }
 
+.button-number:hover .second {
+  animation: text-flicker 2s linear forwards;
+}
+
+.button-number:hover .first {
+  animation: letter-flicker 3s linear infinite;
+}
 
 /* FOOTER */
 
 footer {
   color: var(--grey-color);
-  height: 80px;
+  height: 5em;
   width: 100%;
   background-color: var(--black-color);
   text-align: center;
-  font-size: 24px;
-  line-height: 80px;
+  font-size: 1.5em;
+  line-height: 2em;
 }
 
 /* REPONSIVE */

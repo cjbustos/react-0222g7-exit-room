@@ -16,8 +16,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
-// ICONS FOOTER
-import { FiKey } from "react-icons/fi";
 // COMPONENTS
 import logo from "./img/logo.png";
 import Card from "./components/Card";
@@ -208,12 +206,25 @@ function App() {
                 Los precios varian según la cantidad de jugadores
               </p>
               <div className="button-price">
-                <button className="button-number">2 participantes $2000</button>
-                <button className="button-number">3 participantes $1800</button>
-                <button className="button-number">4 participantes $1600</button>
-                <button className="button-number">5 participantes $1500</button>
                 <button className="button-number">
-                  +6 participantes $1400
+                  <span class="first">2 participantes</span>
+                  <span class="second"> $2000</span>
+                </button>
+                <button className="button-number">
+                  <span class="first">3 participantes</span>
+                  <span class="second"> $1800</span>
+                </button>
+                <button className="button-number">
+                  <span class="first">4 participantes</span>
+                  <span class="second"> $1600</span>
+                </button>
+                <button className="button-number">
+                  <span class="first">5 participantes</span>
+                  <span class="second"> $1500</span>
+                </button>
+                <button className="button-number">
+                  <span class="first">+6 participantes</span>
+                  <span class="second"> $1400</span>
                 </button>
               </div>
             </div>
@@ -237,6 +248,7 @@ function App() {
 
           {/* FOOTER */}
           <footer>
+            <hr />
             <Footer />
             <h6 className="footer-text">
               EXIT ROOM - SALAS DE ESCAPE EN BUENOS AIRES / SEDES Palermo,
