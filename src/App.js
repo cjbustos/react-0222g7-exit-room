@@ -64,8 +64,8 @@ function App() {
                   className="button-regular"
                   onClick={() => (window.location.href = "#episode")}
                 >
-                  <span class="first">RESERVAR</span>
-                  <span class="second"> SALA</span>
+                  <span className="first">RESERVAR</span>
+                  <span className="second"> SALA</span>
                 </Button>
               </div>
             </div>
@@ -161,11 +161,11 @@ function App() {
           <div className="container-social-media">
             <h2 className="text-title">Seguinos en nuestras redes</h2>
             <div className="icons-redes">
-              <BsFacebook />
+              <BsFacebook id="facebook" />
               <FaInstagramSquare id="instagram" />
-              <AiFillTwitterCircle />
-              <FaFacebookMessenger />
-              <BsTelegram />
+              <AiFillTwitterCircle id="twitter" />
+              <FaFacebookMessenger id="messenger" />
+              <BsTelegram id="telegram" />
             </div>
           </div>
 
