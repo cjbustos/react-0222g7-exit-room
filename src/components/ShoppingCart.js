@@ -7,7 +7,6 @@ import { BookingContext } from "../contexts/BookingContext";
 export default function ShoppingCart() {
 
   const { orders } = useContext(BookingContext)
-  //const { showOrders, display } = useContext(ShopppingCartContext);
   const [style, setStyle] = useState('with-zero')
 
   useEffect(() => {

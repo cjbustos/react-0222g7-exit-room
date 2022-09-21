@@ -28,10 +28,8 @@ import ImageSlider from "./components/ImageSlider";
 import pictures from "./components/Pictures";
 import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
-import ShoppingCartContextProvider from "./contexts/ShoppingCartContext";
 import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
-import CustomModal from "./components/CustomModal";
 
 function App() {
   //API call
@@ -39,7 +37,6 @@ function App() {
   const { navbar } = data;
 
   return (
-    <ShoppingCartContextProvider>
       <BookingContextProvider>
         <div className="App">
           {/* NAVBAR */}
@@ -259,7 +256,6 @@ function App() {
           </footer>
         </div>
       </BookingContextProvider>
-    </ShoppingCartContextProvider>
   );
 }
 

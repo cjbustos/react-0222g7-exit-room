@@ -23,7 +23,7 @@ const Form = () => {
   };
 
   return (
-    <Fragment>
+    <>
       <form className="container-inputs" onSubmit={enviarDatos}>
         <div className="input-form">
           <input
@@ -65,7 +65,7 @@ const Form = () => {
           </div>
         </div>
       </form>
-    </Fragment>
+    </>
   );
 };
 
