@@ -71,19 +71,6 @@ h2 {
   padding-left: 3.75em;
 }
 
-/* BOXES */
-
-.container-boxes {
-  width: 80%;
-  height: 11.25em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.8em auto;
-  background: linear-gradient(180deg, #404040 0%, #000000 100%);
-  border-radius: 0.9em;
-}
-
 /* PARTICIPANTES */
 
 .container-who-play {
@@ -200,160 +187,75 @@ footer {
 
 @media screen and (max-width: 640px) {
 main {
-  height: 15em;
-  text-align: left;
+  height: 13em;
+  width: 100%;
+  background-size: 100% 100%;
+  opacity: 0.50;
 }
 
 h1,
 h2 {
   font-size: 1em; 
+  margin-top: -2.5em;
 }
 
-.h2-main, h1 {
-  padding: 0.5em;
+.h2-main {
+  margin-top: 0.5em;
 }
 
 .text-title {
-  font-size: 2.5em;
-  text-align: center;
-  font-family: var(--first-font);
-  color: var(--white-color);
+  font-size: 2em;
+  margin-top: 0.5em;
 }
 
 .text-undertitle {
   font-size: 1em;
-  font-family: var(--first-font-family);
-  color: var(--white-color);
-  text-align: center;
 }
 
 .text-description {
-  font-size: 1em;
-  font-family: var(--first-font-family);
-  color: var(--white-color);
-  text-align: center;
-  padding-bottom: 3em;
-}
-
-.container {
-  height: auto;
-  width: 50%;
-  float: left;
-  padding-top: 3.75em;
-  padding-left: 3.75em;
-}
-
-/* BOXES */
-
-.container-boxes {
-  width: 80%;
-  height: 11.25em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.8em auto;
-  background: linear-gradient(180deg, #404040 0%, #000000 100%);
-  border-radius: 0.9em;
+  font-size: 0.8em;
 }
 
 /* PARTICIPANTES */
 
 .container-who-play {
-  height: 14em;
-  width: 100%;
-  background-color: #404040;
-  text-align: center;
-  line-height: 4em;
-  margin: 1.8em 0;
+  margin-top: 8em;
+  height: 10em;
 }
 
 .icons-participants {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 4em;
-  color: var(--blue-color);
+  font-size: 2em;
 }
 
 .name-participants {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 2em;
-  color: var(--white-color);
+  font-size: 1em;
 }
 
 /* REDES */
 
 .container-social-media {
-  height: 14.2em;
-  width: 100%;
-  background-image: url(../img/redes-fondo.jpg);
-  text-align: center;
-  line-height: 6.25em;
-  margin: 1.8em auto;
-  opacity: 0.75;
+  height: 11em;
 }
 
 .icons-redes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3em;
-  font-size: 2.5em;
-  margin-top: 1.25em;
-}
-
-#instagram {
-  border-radius: 50%;
-}
-
-#instagram:hover, #facebook:hover, #twitter:hover, #messenger:hover, #telegram:hover {
-  animation: border-flicker 2s linear forwards;
-  padding: 0.1em;
-  border-radius: 50%;
+  gap: 0.5em;
+  font-size: 2em;
+  margin-top: 0.5em;
 }
 
 /* PRECIOS */
 
 .container-prices {
-  height: 14em;
-  width: 100%;
-  background-image: url(../img/redes-fondo.jpg);
-  text-align: center;
-  margin-top: 3em;
-  opacity: 0.75;
-}
-
-.button-price {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  margin-top: 8em;
+  height: 15em;
 }
 
 .button-number {
-  width: 6em;
+  width: 5em;
   height: 4em;
-  margin: 0.2em auto;
-  color: var(--white-color);
-  background-color: var(--invisible-color);
-  font-size: 1.1em;
-  font-family: var(--first-font);
-  border-radius: 0.6em;
-  border: 0.1em solid var(--blue-color);
-}
-
-.button-number:hover {
-  animation: text-flicker 2s linear forwards;
-  animation: border-flicker 2s linear forwards;
-}
-
-.button-number:hover .second {
-  animation: text-flicker 2s linear forwards;
-}
-
-.button-number:hover .first {
-  animation: letter-flicker 3s linear infinite;
+  font-size: 1em;
+  margin-bottom: 2em;
+  margin-top: -1em;
 }
 
 /* FOOTER */

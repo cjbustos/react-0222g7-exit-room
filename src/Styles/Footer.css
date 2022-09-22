@@ -94,3 +94,13 @@
       0 0 0.75em -0.063em var(--blue-color) inset;
   }
 }
+
+/* REPONSIVE */
+
+/* MobileDevice */
+@media screen and (max-width: 640px) {
+.footer-text {
+  margin-bottom: -1em;
+}
+
+}

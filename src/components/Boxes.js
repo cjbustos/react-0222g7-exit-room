@@ -3,7 +3,7 @@ import "../styles/Boxes.css";
 
 function Boxes({ text, children }) {
   return (
-    <div className="box-container">
+    <div className="container">
       <div className="name-box">
         <p>{text}</p>
       </div>

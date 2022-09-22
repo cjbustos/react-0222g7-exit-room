@@ -57,6 +57,14 @@
   box-shadow: 0.1em 0.3em 1.25em var(--pink-color);
 }
 
+/* REPONSIVE */
+
+/* MobileDevice */
+@media screen and (max-width: 640px) {
+.form-container {
+  width: 85%;
+}
+}
 
 
 

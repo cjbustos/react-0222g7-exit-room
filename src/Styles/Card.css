@@ -9,20 +9,6 @@
   --first-font: "Rationale", sans-serif;
 }
 
-/* .container-episodes {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-}
-
-.container-shops {
-  height: 120px;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-} */
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -71,8 +57,25 @@
   margin-bottom: 1em;
 }
 
-/* MEDIA QUERY */
+/* RESPONSIVE */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
+.cards {
+  width: 80%;
+}
+.cards-container {
+width: 80%;
+margin-bottom: -3em;
+}
+
+.card-image {
+  height: 8em;
+  width: 8em;
+}
+
+.card-textA, .card-textB, .card-textC {
+  width: 80%;
+  font-size: 0.8em;
+}
 
 }
