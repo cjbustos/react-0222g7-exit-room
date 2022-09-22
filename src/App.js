@@ -199,7 +199,6 @@ function App() {
           </div>
         </section>
 
-<<<<<<< Updated upstream
         {/* PRECIOS */}
         <section id="prices">
           <div className="container-prices">
@@ -209,88 +208,57 @@ function App() {
             </p>
             <div className="button-price">
               <button className="button-number">
-                <span class="first">2 participantes</span>
-                <span class="second"> $2000</span>
+                <span className="first">2 participantes</span>
+                <span className="second"> $2000</span>
               </button>
               <button className="button-number">
-                <span class="first">3 participantes</span>
-                <span class="second"> $1800</span>
+                <span className="first">3 participantes</span>
+                <span className="second"> $1800</span>
               </button>
               <button className="button-number">
-                <span class="first">4 participantes</span>
-                <span class="second"> $1600</span>
+                <span className="first">4 participantes</span>
+                <span className="second"> $1600</span>
               </button>
               <button className="button-number">
-                <span class="first">5 participantes</span>
-                <span class="second"> $1500</span>
+                <span className="first">5 participantes</span>
+                <span className="second"> $1500</span>
               </button>
               <button className="button-number">
-                <span class="first">+6 participantes</span>
-                <span class="second"> $1400</span>
+                <span className="first">+6 participantes</span>
+                <span className="second"> $1400</span>
               </button>
-=======
-          {/* PRECIOS */}
-          <section id="prices">
-            <div className="container-prices">
-              <h2 className="text-title">PRECIOS</h2>
-              <p className="text-description">
-                Los precios varian según la cantidad de jugadores
-              </p>
-              <div className="button-price">
-                <button className="button-number">
-                  <span className="first">2 participantes</span>
-                  <span className="second"> $2000</span>
-                </button>
-                <button className="button-number">
-                  <span className="first">3 participantes</span>
-                  <span className="second"> $1800</span>
-                </button>
-                <button className="button-number">
-                  <span className="first">4 participantes</span>
-                  <span className="second"> $1600</span>
-                </button>
-                <button className="button-number">
-                  <span className="first">5 participantes</span>
-                  <span className="second"> $1500</span>
-                </button>
-                <button className="button-number">
-                  <span className="first">+6 participantes</span>
-                  <span className="second"> $1400</span>
-                </button>
-              </div>
->>>>>>> Stashed changes
             </div>
           </div>
         </section>
-
-        {/* CARROUSEL */}
-        <section id="carrousel">
-          <ImageSlider pictures={pictures} />
-        </section>
-
-        {/* FORM */}
-        <section id="contact">
-          <div className="form-container">
-            <div className="form-contact">
-              <h2 className="text-title">CONTACTO</h2>
-              <Image path={logo} width={115} height={110} />
-            </div>
-            <Form />
-          </div>
-        </section>
-
-        {/* FOOTER */}
-        <footer>
-          <hr />
-          <Footer />
-          <h6 className="footer-text">
-            EXIT ROOM - SALAS DE ESCAPE EN BUENOS AIRES / SEDES Palermo, Vicente
-            Lopez y San Telmo
-          </h6>
-
-          <h6 className="footer-text">info@exitroom.com.ar</h6>
-        </footer>
       </div>
+
+      {/* CARROUSEL */}
+      <section id="carrousel">
+        <ImageSlider pictures={pictures} />
+      </section>
+
+      {/* FORM */}
+      <section id="contact">
+        <div className="form-container">
+          <div className="form-contact">
+            <h2 className="text-title">CONTACTO</h2>
+            <Image path={logo} width={115} height={110} />
+          </div>
+          <Form />
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer>
+        <hr />
+        <Footer />
+        <h6 className="footer-text">
+          EXIT ROOM - SALAS DE ESCAPE EN BUENOS AIRES / SEDES Palermo, Vicente
+          Lopez y San Telmo
+        </h6>
+
+        <h6 className="footer-text">info@exitroom.com.ar</h6>
+      </footer>
     </BookingContextProvider>
   );
 }
