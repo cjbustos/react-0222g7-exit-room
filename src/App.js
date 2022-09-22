@@ -20,7 +20,7 @@ import { BsTelegram } from "react-icons/bs";
 import logo from "./img/logo.png";
 import Card from "./components/Card";
 import Form from "./components/Form";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
@@ -30,6 +30,7 @@ import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
 import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
+import Navbar from "./components/Navbar2";
 
 function App() {
   //API call
@@ -41,12 +42,13 @@ function App() {
       <div className="App">
         {/* NAVBAR */}
         <header>
-          <div className="logo1">
+          {/* <div className="logo1">
             <a href="/">
               <Image path={logo} width={115} height={110} position={"left"} />
             </a>
-          </div>
+          </div> */}
           <div>
+            {/* <Navbar opt={navbar} /> */}
             <Navbar opt={navbar} />
           </div>
         </header>

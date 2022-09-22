@@ -10,6 +10,7 @@ import { BookingContext } from "../contexts/BookingContext";
 ReactModal.setAppElement("#root");
 
 const CustomModal = ({ name, label, sizeButton }) => {
+
   const { data } = useAxios("http://localhost:8000/api");
   const { reserve, navbar } = data;
   const { dispatch } = useContext(BookingContext);

@@ -3,15 +3,20 @@ import { useContext, useEffect, useState } from "react"
 import { FiShoppingCart } from "react-icons/fi";
 import { RiDeleteBin7Fill } from "react-icons/ri";
 import { BookingContext } from "../contexts/BookingContext";
+import { ACTIONS } from "../reducers/orderReducer";
 
 export default function ShoppingCart() {
 
-  const { orders } = useContext(BookingContext)
+  const { orders, dispatch } = useContext(BookingContext)
   const [style, setStyle] = useState('with-zero')
 
   useEffect(() => {
     if (orders.length !== 0) setStyle('non-zero')
   }, [orders, style])
+
+  const deleteOrder = (id) => {
+    dispatch({ type: ACTIONS.REMOVE_ORDER, payload: id });
+  };
 
   return (
     <div className={`${style}`}>
@@ -27,7 +32,7 @@ export default function ShoppingCart() {
                   {orders.map((e, index) => (
                     <a key={index} href={"#".concat("/")}>
                       {e.episode}
-                      <RiDeleteBin7Fill color="grey" onClick={() => console.log(e)} />
+                      <RiDeleteBin7Fill color="grey" onClick={() => deleteOrder(e.id)} />
                     </a>
                   ))}
                 </div>

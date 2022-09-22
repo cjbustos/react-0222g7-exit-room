@@ -2,6 +2,7 @@ import "../styles/Navbar.css";
 import Link from "./Link";
 import ShoppingCart from "./ShoppingCart";
 
+
 const Navbar = (props) => {
   const { opt } = props;
 
