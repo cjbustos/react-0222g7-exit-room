@@ -199,6 +199,7 @@ function App() {
           </div>
         </section>
 
+<<<<<<< Updated upstream
         {/* PRECIOS */}
         <section id="prices">
           <div className="container-prices">
@@ -227,6 +228,37 @@ function App() {
                 <span class="first">+6 participantes</span>
                 <span class="second"> $1400</span>
               </button>
+=======
+          {/* PRECIOS */}
+          <section id="prices">
+            <div className="container-prices">
+              <h2 className="text-title">PRECIOS</h2>
+              <p className="text-description">
+                Los precios varian según la cantidad de jugadores
+              </p>
+              <div className="button-price">
+                <button className="button-number">
+                  <span className="first">2 participantes</span>
+                  <span className="second"> $2000</span>
+                </button>
+                <button className="button-number">
+                  <span className="first">3 participantes</span>
+                  <span className="second"> $1800</span>
+                </button>
+                <button className="button-number">
+                  <span className="first">4 participantes</span>
+                  <span className="second"> $1600</span>
+                </button>
+                <button className="button-number">
+                  <span className="first">5 participantes</span>
+                  <span className="second"> $1500</span>
+                </button>
+                <button className="button-number">
+                  <span className="first">+6 participantes</span>
+                  <span className="second"> $1400</span>
+                </button>
+              </div>
+>>>>>>> Stashed changes
             </div>
           </div>
         </section>
@@ -264,23 +296,3 @@ function App() {
 }
 
 export default App;
-
-/* const navItems = [
-    {
-      id: 1,
-      label: "Salas",
-      subcategory: true,
-      path: "episode",
-      content: ["ALICIA", "SCHRöDINGER", "STRANGER ROOM"],
-    },
-    {
-      id: 2,
-      label: "Sucursales",
-      subcategory: true,
-      path: "cities",
-      content: ["San Telmo", "Vicente Lopez", "Palermo"],
-    },
-    { id: 3, label: "Precios", subcategory: false, path: "prices" },
-    { id: 4, label: "Galería", subcategory: false, path: "products" },
-    { id: 5, label: "Contacto", subcategory: false, path: "contact" },
-  ]; */
