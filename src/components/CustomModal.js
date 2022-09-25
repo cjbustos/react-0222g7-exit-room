@@ -15,9 +15,8 @@ const CustomModal = ({ name, label, sizeButton }) => {
   const { reserve, navbar } = data;
   const { dispatch } = useContext(BookingContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState(false);
   const [shoppingCart, setShoppingCart] = useState({
-    id: uuidv4(),
+    id: "",
     episode: name,
     city: "",
     date: "",
@@ -42,24 +41,17 @@ const CustomModal = ({ name, label, sizeButton }) => {
   };
 
   const updateShoppingCart = (order) => {
-    //With 'dispatch' to 'reducer'
+    // With 'dispatch' to 'reducer'
     dispatch({ type: ACTIONS.ADD_ORDER, payload: order });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Desea realizar la siguiente reserva:
-                Sala: ${shoppingCart.episode} 
-                Sucursal: ${shoppingCart.city} 
-                Fecha: ${shoppingCart.date} 
-                Horario: ${shoppingCart.info}`);
-    const finalCheck = window.confirm("¿Confirma la reserva?");
-    if (!finalCheck) {
-      return;
-    } else {
-      updateShoppingCart(shoppingCart);
-      setActive(!active);
-    }
+    // Add the id
+    shoppingCart.id = uuidv4();
+    updateShoppingCart(shoppingCart);
+    // Close modal
+    toggleModal()
   };
 
   function fillComboLocation(emptyArr) {
@@ -103,78 +95,34 @@ const CustomModal = ({ name, label, sizeButton }) => {
       <Button className={`button-${sizeButton}`} onClick={toggleModal}>
         {label}
       </Button>
-      <ReactModal
-        isOpen={isOpen}
-        onRequestClose={toggleModal}
-        className="Modal"
-        overlayClassName="Overlay"
-      >
+      <ReactModal isOpen={isOpen} onRequestClose={toggleModal} className="Modal" overlayClassName="Overlay">
         <form onSubmit={handleSubmit}>
           <div className="box-content">
             <h1 className="box-name">{name}</h1>
-            <select
-              defaultValue={shoppingCart.city}
-              name="city"
-              disabled={active}
-              onChange={handleChange}
-            >
-              <option value={shoppingCart.city} disabled>
-                Seleccione sucursal
-              </option>
-              {location.map((el, index) => (
-                <option key={index} value={el}>
-                  {el}
-                </option>
-              ))}
+            <select defaultValue={shoppingCart.city} name="city" onChange={handleChange}>
+              <option value={shoppingCart.city} disabled>Seleccione sucursal</option>
+              {location.map((location, index) => (
+                <option key={index} value={location}>{location}</option>
+                  ))}
             </select>
-            <select
-              defaultValue={shoppingCart.date}
-              name="date"
-              disabled={active}
-              onChange={handleChange}
-            >
-              <option value={shoppingCart.date} disabled>
-                Seleccione fecha
-              </option>
-              {dates.map((el, index) => (
-                <option key={index} value={el}>
-                  {el}
-                </option>
-              ))}
+            <select defaultValue={shoppingCart.date} name="date" onChange={handleChange}>
+              <option value={shoppingCart.date} disabled>Seleccione fecha</option>
+              {dates.map((date, index) => (
+                <option key={index} value={date}>{date}</option>
+                  ))}
             </select>
-            <select
-              defaultValue={shoppingCart.info}
-              name="info"
-              disabled={active}
-              onChange={handleChange}
-            >
-              <option value={shoppingCart.info} disabled>
-                Seleccionar opcion
-              </option>
-              {time.map((el, index) => (
-                <option key={index} value={el}>
-                  {el}
-                </option>
-              ))}
+            <select defaultValue={shoppingCart.info} name="info" onChange={handleChange}>
+              <option value={shoppingCart.info} disabled>Seleccionar opcion</option>
+              {time.map((time, index) => (
+                <option key={index} value={time}>{time}</option>
+                  ))}
             </select>
           </div>
           <div className="modal-dialog-ok-button">
-            <Button
-              className={`button-${sizeButton}`}
-              type="submit"
-              disabled={active}
-              onClick={handleSubmit}
-            >
-              {label}
-            </Button>
+            <Button className={`button-${sizeButton}`} type="submit" onClick={handleSubmit}>{label}</Button>
           </div>
           <div className="modal-dialog-close-button">
-            <Button
-              className={`button-${sizeButton}`}
-              onClick={handleModalClose}
-            >
-              CERRAR
-            </Button>
+            <Button className={`button-${sizeButton}`} onClick={handleModalClose}>CERRAR</Button>
           </div>
         </form>
       </ReactModal>
