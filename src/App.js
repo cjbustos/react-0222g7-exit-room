@@ -16,6 +16,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
+// ICON FOOTER
+import { TbArrowBigUpLines } from "react-icons/tb";
 // COMPONENTS
 import logo from "./img/logo.png";
 import Card from "./components/Card";
@@ -252,7 +254,11 @@ function App() {
 
       {/* FOOTER */}
       <footer>
-        <hr />
+        <div className="light">
+          <div id="lineh1"></div>
+          <div id="lineh2"></div>
+        </div>
+
         <Footer />
         <h6 className="footer-text">
           EXIT ROOM - SALAS DE ESCAPE EN BUENOS AIRES / SEDES Palermo, Vicente
@@ -261,6 +267,9 @@ function App() {
 
         <h6 className="footer-text">info@exitroom.com.ar</h6>
       </footer>
+      <a href="#" class="arrow">
+        <TbArrowBigUpLines />
+      </a>
     </BookingContextProvider>
   );
 }

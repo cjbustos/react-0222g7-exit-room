@@ -20,9 +20,9 @@ body {
 main {
   height: 28em;
   width: 100%;
-  background-image: url(../img/main-background.jpeg);
+  background-image: url(../img/Imagen-Main.jpg);
   background-size: cover;
-  opacity: 0.75;
+  /* opacity: 0.75; */
   margin-top: 1em;
 }
 
@@ -171,18 +171,6 @@ h2 {
   animation: letter-flicker 3s linear infinite;
 }
 
-/* FOOTER */
-
-footer {
-  color: var(--grey-color);
-  height: 5em;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 2em;
-}
-
 /* REPONSIVE */
 
 @media screen and (max-width: 640px) {
@@ -190,7 +178,7 @@ main {
   height: 13em;
   width: 100%;
   background-size: 100% 100%;
-  opacity: 0.50;
+  /* opacity: 0.50; */
 }
 
 h1,

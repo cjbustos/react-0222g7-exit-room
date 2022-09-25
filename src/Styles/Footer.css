@@ -7,93 +7,89 @@
     --first-font: "Rationale", sans-serif;
   }
 
+footer {
+  color: var(--grey-color);
+  height: 5em;
+  width: 100%;
+  background-color: var(--black-color);
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
 .react-icons {
     color: var(--blue-color);
     vertical-align: middle;
     size: 1em;
   }
+  
+  .arrow {
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--white-color);
+  background-color: var(--blue-color);
+  box-shadow: 0 0 10px var(--blue-color), 0 0 40px var(--blue-color), 0 0 80px var(--blue-color);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  line-height: 40px;
+  color: var(--white-color);
+  font-size: 20px;
+  border-radius: 50%;
+}
+.arrow:hover {
+  animation: text-flicker 2s linear forwards;
+}
 
   hr {
-    border:0.1em solid var(--blue-color);
-    background-color: var(--Blue-color);
     height: 0.2em;
     width: 100%;
+    background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+   background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat; 
+  transition: background-size 400ms;
   }
 
-  hr {
-    animation: border-flicker 100s linear forwards;
+  hr:hover {
+    animation: 100s linear forwards;
+    background-size: 0 3px, 100% 3px;
   }
 
-   hr:hover {
-    animation: border-flicker 10s linear forwards;
-  }
-
-  @keyframes border-flicker {
-  2% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  3% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  5% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  6% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  7% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  9% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  13% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  16% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  18% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  22% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  34% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  36% {
-    border: 0.1em solid var(--darkBlue-color);
-    box-shadow: none;
-  }
-  54% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-  100% {
-    border: 0.1em solid var(--blue-color);
-    box-shadow: 0 0 1em -0.063em var(--blue-color),
-      0 0 0.75em -0.063em var(--blue-color) inset;
-  }
-}
+		#lineh1{
+			/* position: absolute; */
+			height: 2px;
+			background: var(--pink-color);
+			animation: lineH 4s 5s infinite linear;
+		}
+		#lineh2{
+			position: relative;
+			top: 100px;
+			height: 2px;
+			background: var(--blue-color);
+			animation: lineH 5s 1s infinite 
+		}
+    
+    @keyframes lineH{
+			0%{
+				width: 0%;
+			}
+			100%{
+        width: 95%;opacity: 0;
+      }
+    }
 
 /* REPONSIVE */
 
@@ -102,5 +98,4 @@
 .footer-text {
   margin-bottom: -1em;
 }
-
 }
