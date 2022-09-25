@@ -11,7 +11,7 @@ export default function ShoppingCart() {
   const [style, setStyle] = useState('with-zero')
 
   useEffect(() => {
-    if (orders.length !== 0) setStyle('non-zero')
+    orders.length !== 0 ? setStyle('non-zero') : setStyle('with-zero')
   }, [orders, style])
 
   const deleteOrder = (id) => {
@@ -32,6 +32,7 @@ export default function ShoppingCart() {
                   {orders.map((e, index) => (
                     <a key={index} href={"#".concat("/")}>
                       {e.episode}
+                      {e.date}
                       <RiDeleteBin7Fill color="grey" onClick={() => deleteOrder(e.id)} />
                     </a>
                   ))}
