@@ -18,7 +18,7 @@ export default function Navbar(props) {
       <nav className="navigation">
         <div className="logo1">
           <a href="/">
-            <Image path={logo} width={115} height={110} position={"left"} />
+            <Image path={logo} width={90} height={90} position={"left"} />
           </a>
         </div>
         <button

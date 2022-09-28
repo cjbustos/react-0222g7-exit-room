@@ -34,7 +34,7 @@
 
 /* MobileDevice */
 @media screen and (max-width: 640px) {
-.slick-slide img {
-  width: 90%;
-}
+  .slick-slide img {
+    width: 90%;
+  }
 }

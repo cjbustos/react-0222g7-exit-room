@@ -1,11 +1,11 @@
 :root {
-    --pink-color: #c65385;
-    --blue-color: #0c9d9c;
-    --black-color: #111111;
-    --white-color: #ffffff;
-    --grey-color: #EEE0FE;
-    --first-font: "Rationale", sans-serif;
-  }
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --grey-color: #eee0fe;
+  --first-font: "Rationale", sans-serif;
+}
 
 footer {
   color: var(--grey-color);
@@ -18,17 +18,18 @@ footer {
 }
 
 .react-icons {
-    color: var(--blue-color);
-    vertical-align: middle;
-    size: 1em;
-  }
-  
-  .arrow {
+  color: var(--blue-color);
+  vertical-align: middle;
+  size: 1em;
+}
+
+.arrow {
   height: 40px;
   width: 40px;
   border: 2px solid var(--white-color);
   background-color: var(--blue-color);
-  box-shadow: 0 0 10px var(--blue-color), 0 0 40px var(--blue-color), 0 0 80px var(--blue-color);
+  box-shadow: 0 0 10px var(--blue-color), 0 0 40px var(--blue-color),
+    0 0 80px var(--blue-color);
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -42,60 +43,35 @@ footer {
   animation: text-flicker 2s linear forwards;
 }
 
-  hr {
-    height: 0.2em;
-    width: 100%;
-    background:
-    linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 1)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-  );
-  background-size: 100% 3px, 0 3px;
-   background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat; 
-  transition: background-size 400ms;
-  }
+#lineh1 {
+  /* position: absolute; */
+  height: 2px;
+  background: var(--pink-color);
+  animation: lineH 4s 5s infinite linear;
+}
+#lineh2 {
+  position: relative;
+  top: 100px;
+  height: 2px;
+  background: var(--blue-color);
+  animation: lineH 5s 1s infinite;
+}
 
-  hr:hover {
-    animation: 100s linear forwards;
-    background-size: 0 3px, 100% 3px;
+@keyframes lineH {
+  0% {
+    width: 0%;
   }
-
-		#lineh1{
-			/* position: absolute; */
-			height: 2px;
-			background: var(--pink-color);
-			animation: lineH 4s 5s infinite linear;
-		}
-		#lineh2{
-			position: relative;
-			top: 100px;
-			height: 2px;
-			background: var(--blue-color);
-			animation: lineH 5s 1s infinite 
-		}
-    
-    @keyframes lineH{
-			0%{
-				width: 0%;
-			}
-			100%{
-        width: 95%;opacity: 0;
-      }
-    }
+  100% {
+    width: 95%;
+    opacity: 0;
+  }
+}
 
 /* REPONSIVE */
 
 /* MobileDevice */
 @media screen and (max-width: 640px) {
-.footer-text {
-  margin-bottom: -1em;
-}
+  .footer-text {
+    margin-bottom: -1em;
+  }
 }

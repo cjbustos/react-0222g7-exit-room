@@ -2,7 +2,7 @@
   position: relative;
   background-color: var(--black-color);
   margin-top: 1em;
-  height: 6em;
+  height: 5em;
 }
 
 .logo1 {
@@ -188,39 +188,41 @@ ul.dropdown {
 }
 
 @media screen and (max-width: 550px) {
-.hamburger {
-  display: block;
-}
+  .hamburger {
+    display: block;
+  }
 
-.navigation-menu ul {
-  flex-direction: column;
-  position: absolute;
-  top: 6em;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to top, var(--black-color) 0%, var(--blue-color) 100%);
-  border-top: 1px solid var(--black-color);
-  display: none;
-}
+  .navigation-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      var(--black-color) 0%,
+      var(--blue-color) 100%
+    );
+    border-top: 1px solid var(--black-color);
+    display: none;
+  }
 
-.navigation-menu li {
-  text-align: center;
-  margin: 0;
-}
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
 
-.navigation-menu li {
-  color: var(--white-color);
-  width: 100%;
-  padding: 1.5rem 0;
-}
+  .navigation-menu li {
+    color: var(--white-color);
+    width: 100%;
+    padding: 1.5rem 0;
+  }
 
-.navigation-menu li:hover {
-  
-  animation: text-flickercool 2s linear forwards;
-}
+  .navigation-menu li:hover {
+    animation: text-flickercool 2s linear forwards;
+  }
 
-.navigation-menu.expanded ul {
-  display: block;
-}
-
+  .navigation-menu.expanded ul {
+    display: block;
+  }
 }

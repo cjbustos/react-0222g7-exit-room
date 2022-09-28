@@ -123,7 +123,11 @@ h2 {
   border-radius: 50%;
 }
 
-#instagram:hover, #facebook:hover, #twitter:hover, #messenger:hover, #telegram:hover {
+#instagram:hover,
+#facebook:hover,
+#twitter:hover,
+#messenger:hover,
+#telegram:hover {
   animation: border-flicker 2s linear forwards;
   padding: 0.1em;
   border-radius: 50%;
@@ -174,88 +178,87 @@ h2 {
 /* REPONSIVE */
 
 @media screen and (max-width: 640px) {
-main {
-  height: 13em;
-  width: 100%;
-  background-size: 100% 100%;
-  /* opacity: 0.50; */
-}
+  main {
+    height: 13em;
+    width: 100%;
+    background-size: 100% 100%;
+    /* opacity: 0.50; */
+  }
 
-h1,
-h2 {
-  font-size: 1em; 
-  margin-top: -2.5em;
-}
+  h1,
+  h2 {
+    font-size: 1em;
+    margin-top: -2.5em;
+  }
 
-.h2-main {
-  margin-top: 0.5em;
-}
+  .h2-main {
+    margin-top: 0.5em;
+  }
 
-.text-title {
-  font-size: 2em;
-  margin-top: 0.5em;
-}
+  .text-title {
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
 
-.text-undertitle {
-  font-size: 1em;
-}
+  .text-undertitle {
+    font-size: 1em;
+  }
 
-.text-description {
-  font-size: 0.8em;
-}
+  .text-description {
+    font-size: 0.8em;
+  }
 
-/* PARTICIPANTES */
+  /* PARTICIPANTES */
 
-.container-who-play {
-  margin-top: 8em;
-  height: 10em;
-}
+  .container-who-play {
+    margin-top: 8em;
+    height: 10em;
+  }
 
-.icons-participants {
-  font-size: 2em;
-}
+  .icons-participants {
+    font-size: 2em;
+  }
 
-.name-participants {
-  font-size: 1em;
-}
+  .name-participants {
+    font-size: 1em;
+  }
 
-/* REDES */
+  /* REDES */
 
-.container-social-media {
-  height: 11em;
-}
+  .container-social-media {
+    height: 11em;
+  }
 
-.icons-redes {
-  gap: 0.5em;
-  font-size: 2em;
-  margin-top: 0.5em;
-}
+  .icons-redes {
+    gap: 0.5em;
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
 
-/* PRECIOS */
+  /* PRECIOS */
 
-.container-prices {
-  margin-top: 8em;
-  height: 15em;
-}
+  .container-prices {
+    margin-top: 8em;
+    height: 15em;
+  }
 
-.button-number {
-  width: 5em;
-  height: 4em;
-  font-size: 1em;
-  margin-bottom: 2em;
-  margin-top: -1em;
-}
+  .button-number {
+    width: 5em;
+    height: 4em;
+    font-size: 1em;
+    margin-bottom: 2em;
+    margin-top: -1em;
+  }
 
-/* FOOTER */
+  /* FOOTER */
 
-footer {
-  color: var(--grey-color);
-  height: 5em;
-  width: 100%;
-  background-color: var(--black-color);
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 2em;
-}
-
+  footer {
+    color: var(--grey-color);
+    height: 5em;
+    width: 100%;
+    background-color: var(--black-color);
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2em;
+  }
 }

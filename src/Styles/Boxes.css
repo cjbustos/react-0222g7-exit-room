@@ -26,11 +26,10 @@
   line-height: 3em;
 }
 
-.name-box{
+.name-box {
   font-size: 1.25em;
   color: var(--white-color);
   text-align: center;
-  
 }
 
 .icon-box {
@@ -41,23 +40,22 @@
 }
 
 @media screen and (max-width: 640px) {
+  .box-container {
+    width: 80%;
+    height: 25em;
+    flex-wrap: wrap;
+    line-height: 1.2em;
+  }
 
-.box-container {
-  width: 80%;
-  height: 25em;
-  flex-wrap: wrap;
-  line-height: 1.2em;
-}
+  .name-box {
+    font-size: 1em;
+    margin-right: 3.5em;
+    margin-top: -4em;
+  }
 
-.name-box{
-  font-size: 1em;
-  margin-right: 3.5em;
-  margin-top: -4em;
-}
-
-.icon-box {
-  font-size: 2.5em;
-  margin-bottom: -10em;
-  margin-right: 2em;
-}
+  .icon-box {
+    font-size: 2.5em;
+    margin-bottom: -10em;
+    margin-right: 2em;
+  }
 }

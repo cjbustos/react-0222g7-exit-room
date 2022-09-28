@@ -263,11 +263,11 @@ button[disabled] {
 
 @media screen and (max-width: 640px) {
   .button-neon {
-  width: 10em;
-  height: 2.1em;
+    width: 10em;
+    height: 2.1em;
   }
-  
+
   .button-regular {
-  font-size: 1.3em;
-}
+    font-size: 1.3em;
+  }
 }

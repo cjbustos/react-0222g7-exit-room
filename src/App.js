@@ -22,8 +22,6 @@ import { TbArrowBigUpLines } from "react-icons/tb";
 import logo from "./img/logo.png";
 import Card from "./components/Card";
 import Form from "./components/Form";
-//import Navbar from "./components/Navbar";
-//import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
 import ImageSlider from "./components/ImageSlider";
@@ -44,13 +42,7 @@ function App() {
       <div className="App">
         {/* NAVBAR */}
         <header>
-          {/* <div className="logo1">
-            <a href="/">
-              <Image path={logo} width={115} height={110} position={"left"} />
-            </a>
-          </div> */}
           <div>
-            {/* <Navbar opt={navbar} /> */}
             <Navbar opt={navbar} />
           </div>
         </header>
@@ -104,7 +96,6 @@ function App() {
 
           <div className="cards-container">
             <Card
-              id={1}
               active={true}
               name="ALICIA´S ROOM"
               imagen="alice"
@@ -116,7 +107,6 @@ function App() {
               sizeButton={"small"}
             />
             <Card
-              id={2}
               active={true}
               name="SCHRöDINGER ROOM"
               imagen="schrödinger"
@@ -128,7 +118,6 @@ function App() {
               sizeButton={"small"}
             />
             <Card
-              id={3}
               active={true}
               name="STRANGER ROOM"
               imagen="stranger"
@@ -246,7 +235,7 @@ function App() {
         <div className="form-container">
           <div className="form-contact">
             <h2 className="text-title">CONTACTO</h2>
-            <Image path={logo} width={115} height={110} />
+            <Image path={logo} width={90} height={90} />
           </div>
           <Form />
         </div>

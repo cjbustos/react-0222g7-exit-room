@@ -12,14 +12,21 @@
 .form-container {
   width: 50%;
   margin: 2.5em auto;
-  background-image: linear-gradient(to bottom, #111111, #111111, #191b1c, #1e201f, #242522);
+  background-image: linear-gradient(
+    to bottom,
+    #111111,
+    #111111,
+    #191b1c,
+    #1e201f,
+    #242522
+  );
   border-radius: 1.25em;
   box-shadow: 0.1em 0.1em 0.1em var(--white-color);
 }
 
 .form-contact {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
 }
 
@@ -61,11 +68,7 @@
 
 /* MobileDevice */
 @media screen and (max-width: 640px) {
-.form-container {
-  width: 85%;
+  .form-container {
+    width: 85%;
+  }
 }
-}
-
-
-
-

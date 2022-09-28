@@ -8,7 +8,7 @@
       },
       {
         "label": "Sucursales",
-        "path": "location",
+        "path": "cities",
         "location": ["San Telmo", "Vicente Lopez", "Palermo"]
       },
       {

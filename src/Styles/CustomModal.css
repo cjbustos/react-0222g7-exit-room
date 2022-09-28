@@ -49,7 +49,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
 
 .box-content {
@@ -75,19 +74,18 @@
 
 /* MobileDevice */
 @media screen and (max-width: 640px) {
-.box-name {
-  font-size: 2.5em;
-  margin-top: 1.8em;
-}
+  .box-name {
+    font-size: 2.5em;
+    margin-top: 1.8em;
+  }
 
-.box-content select {
-  width: 18em;
-  height: 2em;
-}
+  .box-content select {
+    width: 18em;
+    height: 2em;
+  }
 
-.Modal {
-  height: 80%;
-  margin: 40px auto;
-}
-
+  .Modal {
+    height: 80%;
+    margin: 40px auto;
+  }
 }
