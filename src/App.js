@@ -22,7 +22,7 @@ import { TbArrowBigUpLines } from "react-icons/tb";
 import logo from "./img/logo.png";
 import Card from "./components/Card";
 import Form from "./components/Form";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 //import Boxes from "./components/Boxes";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
@@ -32,6 +32,7 @@ import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
 import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
+import Navbar from "./components/Navbar2";
 
 function App() {
   //API call

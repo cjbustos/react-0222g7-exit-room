@@ -1,118 +1,50 @@
-.navigation {
-  position: relative;
-  background-color: var(--black-color);
-  margin-top: 1em;
-  height: 6em;
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo1 {
+:root {
+  --pink-color: #c65385;
+  --blue-color: #0c9d9c;
+  --black-color: #111111;
+  --white-color: #ffffff;
+  --first-font: "Rationale", sans-serif;
+}
+
+.logo1{
   margin: 0.5em 2em;
-  height: 1em;
-  width: 1em;
-}
-
-.navigation-menu {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1em;
 }
 
 ul {
   display: flex;
-  flex-direction: row;
-}
-
-.navigation-menu li {
+  height: 110px;
   list-style-type: none;
-}
-
-.navigation-menu li a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-}
-
-ul,
-.cart {
-  list-style-type: none;
-  gap: 3em;
-  font-size: 1.1em;
+  gap: 2em;
+  background-color: var(--black-color);
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1em;
 }
 
 li a {
+  display: inline-block;
   color: var(--white-color);
   text-align: center;
   padding: 0.6em;
   text-decoration: none;
 }
 
-a:hover {
+li:hover {
   border-radius: 2em;
-  color: var(--blue-color);
-  animation: text-flickercool 2s linear forwards;
+  background-color: var(--blue-color);
 }
 
-@keyframes text-flickercool {
-  2% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  3% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  6% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  9% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  11% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  14% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  18% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  32% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  33% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  37% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  39% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  43% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  46% {
-    color: var(--pink-color);
-    text-shadow: none;
-  }
-  47% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
-  100% {
-    color: var(--blue-color);
-    text-shadow: 0 0 1em var(--blue-color);
-  }
+.list {
+  background-color: var(--black-color);
 }
 
 li.dropdown {
@@ -125,7 +57,7 @@ ul.dropdown {
 
 .dropdown:hover {
   border-radius: 5px;
-  background-color: var(--black-color);
+  background-color: var(--pink-color);
 }
 
 .dropdown-content {
@@ -156,74 +88,4 @@ ul.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* REPONSIVE */
-
-@media screen and (max-width: 640px) {
-}
-
-.logo1 {
-  margin: 0 0.5em;
-}
-
-.hamburger {
-  border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: var(--blue-color);
-  cursor: pointer;
-  /* transition: background-color 0.2s ease-in-out; */
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  transform: translateY(-50%);
-  display: none;
-}
-
-.hamburger:hover {
-  background-color: var(--blue-color);
-}
-
-@media screen and (max-width: 550px) {
-  .hamburger {
-    display: block;
-  }
-
-  .navigation-menu ul {
-    flex-direction: column;
-    position: absolute;
-    top: 6em;
-    left: 0;
-    width: 100%;
-    /* height: calc(55vh - 55px); */
-    background: linear-gradient(
-      to top,
-      var(--black-color) 0%,
-      var(--blue-color) 100%
-    );
-    border-top: 1px solid var(--black-color);
-    display: none;
-  }
-
-  .navigation-menu li {
-    text-align: center;
-    margin: 0;
-  }
-
-  .navigation-menu li {
-    color: var(--white-color);
-    width: 100%;
-    padding: 1.5rem 0;
-  }
-
-  .navigation-menu li:hover {
-    animation: text-flickercool 2s linear forwards;
-  }
-
-  .navigation-menu.expanded ul {
-    display: block;
-  }
 }

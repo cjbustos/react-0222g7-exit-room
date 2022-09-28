@@ -5,7 +5,7 @@
   --blue-color: #0c9d9c;
   --black-color: #111111;
   --white-color: #ffffff;
-  --grey-color: #eee0fe;
+  --grey-color: #EEE0FE;
   --first-font: "Rationale", sans-serif;
 }
 
@@ -16,6 +16,7 @@
   gap: 5em;
   margin-left: 2.8em;
   line-height: 1.5em;
+
 }
 
 .cards {
@@ -59,23 +60,22 @@
 /* RESPONSIVE */
 
 @media screen and (max-width: 640px) {
-  .cards {
-    width: 80%;
-  }
-  .cards-container {
-    width: 80%;
-    margin-bottom: -3em;
-  }
+.cards {
+  width: 80%;
+}
+.cards-container {
+width: 80%;
+margin-bottom: -3em;
+}
 
-  .card-image {
-    height: 8em;
-    width: 8em;
-  }
+.card-image {
+  height: 8em;
+  width: 8em;
+}
 
-  .card-textA,
-  .card-textB,
-  .card-textC {
-    width: 80%;
-    font-size: 0.8em;
-  }
+.card-textA, .card-textB, .card-textC {
+  width: 80%;
+  font-size: 0.8em;
+}
+
 }
