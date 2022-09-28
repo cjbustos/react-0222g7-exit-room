@@ -24,19 +24,19 @@ footer {
 }
 
 .arrow {
-  height: 40px;
-  width: 40px;
-  border: 2px solid var(--white-color);
+  height: 3em;
+  width: 3em;
+  border: 0.13em solid var(--white-color);
   background-color: var(--blue-color);
-  box-shadow: 0 0 10px var(--blue-color), 0 0 40px var(--blue-color),
-    0 0 80px var(--blue-color);
+  box-shadow: 0 0 10px var(--blue-color), 0 0 3em var(--blue-color),
+    0 0 5em var(--blue-color);
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.3em;
+  right: 1.3em;
   text-align: center;
-  line-height: 40px;
+  line-height: 3em;
   color: var(--white-color);
-  font-size: 20px;
+  font-size: 1.3em;
   border-radius: 50%;
 }
 .arrow:hover {
@@ -44,15 +44,14 @@ footer {
 }
 
 #lineh1 {
-  /* position: absolute; */
-  height: 2px;
+  height: 0.13em;
   background: var(--pink-color);
   animation: lineH 4s 5s infinite linear;
 }
 #lineh2 {
   position: relative;
-  top: 100px;
-  height: 2px;
+  top: 6em;
+  height: 0.13em;
   background: var(--blue-color);
   animation: lineH 5s 1s infinite;
 }

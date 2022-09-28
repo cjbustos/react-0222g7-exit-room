@@ -26,10 +26,10 @@
   position: relative;
   width: 80%;
   height: 90%;
-  margin: 40px auto;
+  margin: 2.5em auto;
   background-image: url("../img/reservation3.jpg");
   background-size: 100% 100%;
-  border-radius: 20px;
+  border-radius: 1.25em;
 }
 
 .modal-dialog {
@@ -59,14 +59,14 @@
 }
 
 .box-content select {
-  width: 350px;
-  height: 24px;
+  width: 22em;
+  height: 1.5em;
   color: var(--white-color);
   font-family: var(--first-font);
-  font-size: 14px;
-  border: 2px solid var(--blue-color);
-  border-radius: 5px;
-  margin: 25px;
+  font-size: 0.8em;
+  border: 0.1em solid var(--blue-color);
+  border-radius: 0.3em;
+  margin: 1.6em;
   background-color: rgb(30, 56, 61);
 }
 
@@ -86,6 +86,6 @@
 
   .Modal {
     height: 80%;
-    margin: 40px auto;
+    margin: 3em auto;
   }
 }

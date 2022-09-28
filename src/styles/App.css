@@ -22,7 +22,6 @@ main {
   width: 100%;
   background-image: url(../img/Imagen-Main.jpg);
   background-size: cover;
-  /* opacity: 0.75; */
   margin-top: 1em;
 }
 
