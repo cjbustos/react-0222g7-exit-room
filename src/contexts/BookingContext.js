@@ -5,10 +5,6 @@ export const BookingContext = createContext()
 
 const BookingContextProvider = (props) => {
 
-    //----With 'state' implementation----
-    //const [orders, setOrders] = useState([])
-    //const uploadOrder = (obj) => setOrders([...orders, obj])
-
     //----With 'reducer' implementation----
     const [orders, dispatch] = useReducer(orderReducer, [])
 
