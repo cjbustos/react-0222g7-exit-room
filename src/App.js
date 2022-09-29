@@ -30,13 +30,12 @@ import useAxios from "./hooks/useAxios";
 import Boxes from "./components/Boxes";
 import BookingContextProvider from "./contexts/BookingContext";
 import Button from "./components/Button";
-import Navbar from "./components/Navbar2";
+import Navbar from "./components/Navbar";
 
 function App() {
   //API call
   const { data } = useAxios("http://localhost:8000/api");
   const { navbar } = data;
-  console.log(navbar);
 
   return (
     <BookingContextProvider>
