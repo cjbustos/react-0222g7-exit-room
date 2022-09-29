@@ -36,6 +36,7 @@ function App() {
   //API call
   const { data } = useAxios("http://localhost:8000/api");
   const { navbar } = data;
+  console.log(navbar);
 
   return (
     <BookingContextProvider>
@@ -161,7 +162,7 @@ function App() {
         </div>
 
         {/* SUCURSALES */}
-        <section id="cities">
+        <section id="location">
           <div className="container-shops">
             <h2 className="text-title">SUCURSALES</h2>
             <h3 className="text-undertitle">Busca tu sucursal mas cercana</h3>
@@ -226,7 +227,7 @@ function App() {
       </div>
 
       {/* CARROUSEL */}
-      <section id="carrousel">
+      <section id="products">
         <ImageSlider pictures={pictures} />
       </section>
 

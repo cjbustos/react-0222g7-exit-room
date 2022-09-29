@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/Navbar2.css";
 import Link from "./Link";
 import ShoppingCart from "./ShoppingCart";
-import { HiMenuAlt3 } from "react-icons/hi";
 import logo from "../img/logo.png";
 import Image from "./Image";
 
